@@ -7,5 +7,5 @@ Design assets: [http://wp.regaltheme.com/mim/)
 ### Authors
 [Ieva](https://github.com/ievaskyriene)
 [Viktoras](https://github.com/ViktorasZigaras)
-[Tadeuš]
+[Tadeuš](https://github.com/teklithuania)
 [Tomas]
