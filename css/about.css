@@ -1,0 +1,67 @@
+.flex {
+    display: flex;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.horizontal-line > div {
+    background-color: #bcbcbc;
+    height: 2px;
+    margin: 0 auto;
+}
+
+    .horizontal-line > div.top-line {
+        width: 45px;
+        margin-bottom: 5px;
+    }
+
+    .horizontal-line > div.bottom-line {
+        width: 80px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+.section {
+    border: 2px solid blue;
+    padding: 100px 25px;
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+    .section-title > h2 {
+        color: #494949;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+.about-area {
+
+}
+
+.light-bg {
+    background-color: #FFF;
+    /* background-color: orange; */
+}
+
+.area {
+    padding: 0 15px;
+}
