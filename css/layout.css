@@ -28,8 +28,12 @@
     --margin-11: calc( var(--col-11) + 3 * var(--gap) );
     --margin-12: calc( var(--col-12) + 3 * var(--gap) );
 }
+.add {
+    background-color: yellow;
+}
 
-.container {
+.container,
+.container-full {
     display: inline-block;
     width: 100%;
     padding: 100px 0;
@@ -38,6 +42,11 @@
         display: inline-block;
         width: 1200px;
         margin: 0 calc(50% - 600px);
+    }
+    .container-full > .row {
+        display: inline-block;
+        width: 100%;
+        padding: 0 20px;
     }
     .row > .col-1, .row > .col-2, .row > .col-3, .row > .col-4,
     .row > .col-5, .row > .col-6, .row > .col-7, .row > .col-8,
