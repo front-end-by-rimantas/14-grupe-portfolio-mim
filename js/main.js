@@ -1,3 +1,5 @@
+
+/*
 import from './reset.js';
 import from'./main.js';
 import from'./main.js';
@@ -12,4 +14,4 @@ import from'./blog.js';
 import from'./contacts.js';
 import from'./site-navigation.js';
 import from'./side-menu.js';
-import from'./footer.js';
+import from'./footer.js';*/
