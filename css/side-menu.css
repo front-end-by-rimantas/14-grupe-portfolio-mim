@@ -1,13 +1,14 @@
 .side-menu {
-    display: none;
+    display: inline-block;
     float: left;
     width: 300px;
     height: 100vh;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -380px;
     background-color: #2B2B2B;
-    transition: all 0.2s;
+    -webkit-transition: all .8s ease 0s;
+    transition: all .8s ease 0s;
 }
     .side-menu .element {
         display: inline-block;
@@ -78,5 +79,7 @@
         text-transform: capitalize;
     }
     .show-side-menu {
-        display: inline-block;
+        right: 0;
+        -webkit-transition: all .4s ease 0s;
+        transition: all .4s ease 0s;
     }
