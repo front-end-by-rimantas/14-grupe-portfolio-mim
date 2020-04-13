@@ -1,3 +1,6 @@
+#main_header {
+    position: relative;
+}
 .container.header{
     padding: 50px 0;
 }

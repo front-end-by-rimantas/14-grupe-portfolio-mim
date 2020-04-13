@@ -1,0 +1,82 @@
+.side-menu {
+    display: none;
+    float: left;
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #2B2B2B;
+    transition: all 0.2s;
+}
+    .side-menu .element {
+        display: inline-block;
+        float: left;
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+        line-height: 16px;
+        border-bottom: 1px solid #555555;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+        color: #ffffff;
+    }
+    .side-menu .hov-dark:hover {
+        background-color: #000000;
+        transition: all 0.2s;
+    }
+    .side-menu .element:last-child {
+        border: none;
+    }
+    .side-menu .element-one {
+        position: relative;
+    }
+        .side-menu .element-one > img {
+            display: inline-block;
+            padding: 77px 0 50px 0;
+            margin-left: calc(50% - 64px);
+            opacity: 100%;
+            transition: all 5s;
+        }
+    .element-one > img:hover {
+        opacity: 30%;
+        transition: all 1s;
+    }
+        .side-menu .element-one > .close {
+            display: inline-block;
+            float: left;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 8px;
+            font-size: 30px;
+            line-height: 30px;
+            margin-top: -2px;
+            opacity: 30%;
+            transition: all 0.5s;
+        }
+    .element-one > .close:hover{
+        opacity: 100%;
+        transition: all 0.5s;
+    }
+    .element .menu-item {
+        display: inline-block;
+        float: left;
+        position: absolute;
+        padding: 5px;
+        font-size: 12px;
+        line-height: 12px;
+        border-radius: 5px;
+        margin:-3px 0 0 -66px;
+        cursor: default;
+        text-transform: capitalize;
+        background-color: yellow;
+        color: rgb(247, 33, 33);
+    }
+    .side-menu #dark {
+        text-transform: capitalize;
+    }
+    .show-side-menu {
+        display: inline-block;
+    }
