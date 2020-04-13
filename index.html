@@ -12,6 +12,7 @@
 </head>
 <body>
     <!-- HEADER Start -->
+<header id="main_header">
     <div class="container header">
         <div class="row">
             <div class = "col-12">
@@ -32,13 +33,38 @@
                 </nav>
                 </div>
             </div>
-            
         </div> 
     </div>
+        <div class="side-menu">
+            <div class="element bot-border element-one">
+                <div class="close fa fa-times-circle-o"></div>
+                <img src="./img/light-logo.png" alt="Logo">
+            </div>
+            <nav>
+                <div id="transferSideMenu">
+                    Side menu content
+                </div>
+                <div class="element bot-border hov-dark">
+                    <div class="menu-item">Update notice!</div>
+                    <a href="#">Update &#38 notice</a>
+                </div>
+                <div class="element bot-border hov-dark">
+                    <a href="#">Pricing &#38 timeline</a>
+                </div>
+                <div class="element bot-border hov-dark">
+                    <div class="menu-item">New Updated!</div>
+                    <a href="#">Portfolio details</a>
+                </div>
+                <div class="element bot-border hov-dark" id="dark">
+                    <a href="#">Prising &#38 timeline <span>( Dark Version )</span></a>
+                </div>
+            </nav>
+        </div>
+</header>
     <!-- HEADER End -->
 
     <!-- INTRODUCTION Start -->
-    <div class="container introduction">
+    <div class="container introduction" id="intro">
         <div class="row">
             <div class = "col-6">
                 <div class = "text">
@@ -51,17 +77,13 @@
             </div>
             <div class = "col-6">
                 <img src="./img/author.png" alt="author">
-            </div>
-
-            
-
-            
+            </div> 
         </div>
     </div>
     <!-- INTRODUCTION End -->
 
     <!-- ABOUT ME Start -->
-    <div class="container">
+    <div class="container" id="about_me">
         <div class="row">
             
         </div>
@@ -69,7 +91,7 @@
     <!-- ABOUT ME End -->
 
     <!-- EXPIERENCE Start -->
-    <div class="container">
+    <div class="container" id="expierence">
         <div class="row">
             
         </div>
@@ -77,7 +99,7 @@
     <!-- EXPIERENCE End -->
 
     <!-- PORTFOLIO Start -->
-    <div class="container">
+    <div class="container" id="portfolio">
         <div class="row">
             
         </div>
@@ -85,7 +107,7 @@
     <!-- PORTFOLIO End -->
 
     <!-- SERVICES Start -->
-    <div class="container">
+    <div class="container" id="services">
         <div class="row">
             
         </div>
@@ -93,7 +115,7 @@
     <!-- SERVICES End -->
 
     <!-- TESTIMONIALS Start -->
-    <div class="container">
+    <div class="container" id="testimonials">
         <div class="row">
             
         </div>
@@ -101,7 +123,7 @@
     <!-- TESTIMONIALS End -->
 
     <!-- BLOG Start -->
-    <div class="container">
+    <div class="container" id="blog">
         <div class="row">
             
         </div>
@@ -109,7 +131,7 @@
     <!-- BLOG End -->
 
     <!-- CONTACTS Start -->
-    <div class="container">
+    <div class="container" id="contacts">
         <div class="row">
             
         </div>
@@ -117,13 +139,14 @@
     <!-- CONTACTS End -->
 
     <!-- FOOTER Start -->
-    <div class="container">
+    <div class="container" id="main_footer">
         <div class="row">
             
         </div>
     </div>
     <!-- FOOTER End -->
 
+    <script src="./js/data.js"></script>
     <script src="./js/main.js" type = "module"></script>
 </body>
 
