@@ -18,7 +18,7 @@
     .gallery > .gallery-list > .item.size-2 {
         grid-row: span 2 / auto;
     }
-img {
-    object-fit: cover;
-    width: 100%;
-}
+    .item > img {
+        object-fit: cover;
+        width: 100%;
+    }
