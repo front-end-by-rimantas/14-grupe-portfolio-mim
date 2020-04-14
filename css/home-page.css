@@ -2,7 +2,10 @@
 @import './font-awesome.css';
 @import './layout.css';
 @import './main.css';
+
 @import './header.css';
+@import './side-menu.css';
+@import './site-navigation.css';
 @import './introduction.css';
 @import './about.css';
 @import './experience.css';
@@ -11,6 +14,4 @@
 @import './testimonials.css';
 @import './blog.css';
 @import './contacts.css';
-@import './site-navigation.css';
-@import './side-menu.css';
 @import './footer.css';
