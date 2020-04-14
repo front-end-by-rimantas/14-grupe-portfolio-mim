@@ -1,108 +1,93 @@
-.container-exp {
-    background-color: #f5f5f5;
-
+/* background color */
+.container.exp{
+    background-color:#f5f5f5;
 }
 
-    .content {
-        display: inline-block;
-        width: 100%;
-        padding: 100px 70px;
-        margin-left: auto;
-        margin-right: auto;
-        
+
+/* Section title start */
+.section-title {
+    margin: 0 0 50px;
+    ;
+}
+
+    .section-title > h2 {
+        color: #494949;
+        text-transform: uppercase;
+        margin: 0 0 15px;
     }
 
-    .experience:nth-child(1){
-        margin-bottom: 100px;
+    .text-center {
+        text-align: center;
     }
 
-        .content h2 {
-            text-align: center;
-            font-size: 32px;
-            color: #494949;
-            text-transform: uppercase;
-            margin: 0 0 15px;
+.horizontal-line > div {
+    background-color: #bcbcbc;
+    height: 2px;
+    margin: 0 auto;
+}
+    .horizontal-line > div.top-line {
+        width: 45px;
+        margin-bottom: 5px;
+    }
+    .horizontal-line > div.bottom-line {
+        width: 80px;
+    }
+/* section title end */
+
+/* Section content start */
+
+.expierence-box {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    /* margin-bottom: 40px; */
+}
+
+.expierence-box:nth-child(1){
+    margin-bottom: 40px;
+}
+
+    .exp-time{
+        width: 30%;
+        float: left;
+        color: #939393;
+    }
+        .exp-time > .dashed-line {
+
+        }
+        .exp-time > i {
+            float: left;
             position: relative;
-            
-        }
-        .content .top-line {
-            background-color: #bcbcbc;
-            height: 2px;
-            width: 50px;
-            left: calc( 50% - 25px );
-            position: absolute;
-        }
-        .content .bot-line {
-            background-color: #bcbcbc;
-            height: 2px;
-            width: 100px;
-            left: calc( 50% - 50px );
-            position: absolute;
-            margin: 3px;
         }
 
-        .job-exp {
-            display: inline-block;
-            width: 100%;
-            margin-top: 30px;
+        .exp-time > p,
+        .experience > p {
+            font-size: 15px;
+            line-height: 22px;
+            color: #939393;
+            margin: 15px 0;
         }
-            .left-colum{
-                display: inline-block;
-                width: 50%;
-                float: left;
-                padding: 0 15px;
-            }
-            
-            
-            .experience i {
-                font-size: 20px;
-                position: relative;
-            }
-            .jobs{
-                display: inline-block;
-                width: 70%;
-                position: relative;
-                float: right;
-                padding-left: 40px;
-            }
-                    .jobs > h3 {
-                        color: #5e5e5e;
-                        font-size: 20px;
-                        line-height: 20px;
-                        position: absolute;
-                        top:-20px;
-                        font-weight: 600;
-                    }
-                    .jobs > p {
-                        margin: 10px 0;
-                    }
-                    .experience p {
-                        color: #a1a1a1;
-                        position: relative;
-                        font-size: 15px;
-                        line-height: 20px;
-                    }
-                    
-                .job-year {
-                    display: inline-block;
-                    width: 30%;
-                    float: left;
-                    color: #a1a1a1;
-                }
-                    .job-year > h3 {
-                        width: 100%;
-                        position: relative;
-                        font-size: 18px;
-                        font-weight: 400;
-                    }
-                    .job-year > p {
-                        position: absolute;
-                        
-                    }
-                
-                .right-colum{
-                    display: inline-block;
-                    width: 50%;
-                    float: left;
-                    padding: 0 15px;
-                }
+
+        .exp-time > h4 {
+            font-size: 18px;
+            line-height: 18px;
+            font-weight: 400;
+            color: #696969;
+        }
+    .experience {
+        width: 70%;
+        float: left;
+        padding-left: 40px;
+        position: relative;
+    }
+
+        .experience > h3 {
+            font-size: 20px;
+            line-height: 20px;
+            color: #5e5e5e;
+            position: absolute;
+            top: -22px;
+        }
+
+
+/* Section content end */
