@@ -1,0 +1,118 @@
+#main_header {
+    position: relative;
+}
+.container.header{
+    padding: 50px 0;
+}
+
+.container.header,
+.container.introduction
+{
+    background-color: #f5f5f5;
+    
+}
+
+        .header > .row nav{
+            display: inline-block;
+            float: right;
+            padding-top: 10px;
+        
+        }
+
+            .header > .row nav a{
+                text-decoration: none;
+                color: #a1a1a1;
+                text-transform: uppercase;
+                font-family: Montserrat;
+                font-size: 14px;
+                line-height: 40px;
+                font-weight: 400;
+                padding: 10px;
+                letter-spacing: .4px;
+            }
+
+            .row nav .menuIcon{
+                display: inline-block;
+                padding-top: 12px;
+                padding-left: 10px;
+            }
+
+                .row nav .mIcon{
+                    width: 15px;
+                    height: 2px;
+                    background-color: #a1a1a1;
+                    margin: 3px 0;  
+                }
+        
+    .introduction{
+        padding: 0;
+    }
+
+        .introduction > .row{
+            display: inline-block;
+
+        }
+
+            .introduction > .row .text{
+                display: inline-block;
+                margin-top: 250px;
+            }
+
+                h5{
+                color: #919191;
+                text-transform: uppercase;
+                font-family: 'montserratsemibold';
+                font-size: 16px;
+                letter-spacing: 1px;
+                margin: 0 0 15px;
+                font-weight: 700;
+                text-transform: uppercase;
+                }
+
+                h1{
+                color: #414141;
+                font-size: 44px;
+                line-height: 28px;
+                margin: 0 0 15px;
+                font-family: 'Montserrat',sans-serif;
+                font-weight: 700;
+                text-transform: uppercase;
+                }
+
+                .text > p{
+                    color: #6a6a6a;
+                    font-family: 'Poppins';
+                    font-size: 15px;
+                    line-height: 28px;
+                    padding-bottom: 45px;
+                    word-break: keep-all;
+                }
+
+                .text > a{
+                    color: white;
+                    font-family: 'montserratsemibold';
+                    text-decoration: none;
+                    background-color: #393939;
+                    padding: 15px 50px;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                }
+
+                .text > a:hover{
+                    background-color: black;
+                    transition: 10ms;
+                }
+
+
+
+        .introduction img{
+            display: inline-block;
+            float: right;
+            
+        }
+
+
+
+                
+
