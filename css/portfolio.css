@@ -51,7 +51,7 @@
             color: #ffffff;
             cursor: pointer;
         }
-        .item .bot-text {
+        .item > .bot-text {
             display: inline-block;
             position: absolute;
             bottom: 0;
@@ -62,25 +62,28 @@
             transition: all 1s ease;
 
         }
-        .item .bot-text > a {
-            font-size: 25px;
-            line-height: 30px;
-            text-decoration: none;
-            color: transparent;
-            transition: all 1s ease;
-        }
-        .item:hover > .bot-text {
-            margin: 0 0 35px 35px;
-            transition: all 1s ease;
+    .item .bot-text > .portfolio-link {
+        font-size: 20px;
+        line-height: 20px;
+        text-decoration: none;
+        color: transparent;
+        transition: all 1s ease;
+        font-family: 'Montserrat',sans-serif;
+    }
+    .item:hover > .bot-text {
+        margin: 0 0 35px 35px;
+        transition: all 1s ease;
 
-        }
-        .item:hover a {
-            color: var(--color-hover-paragraph);
-        }
-        .item:hover p {
-            color: var(--color-hover-secondary);
-        }
-        
+    }
+    .item:hover .portfolio-link {
+        color: var(--color-hover-paragraph);
+    }
+    .item .portfolio-link:hover {
+        color: rgb(0, 0, 0);
+    }
+    .item:hover .description {
+        color: var(--color-hover-secondary);
+    }
     .item > img {
         object-fit: cover;
         width: 100%;

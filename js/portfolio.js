@@ -22,24 +22,37 @@ function renderPortfolio(worksList) {
                             <div class="fa fa-link"></div>
                             </div>
                             <div class="bot-text">
-                                    <a href="${work.link ? work.link : '#'}">${work.content}</a>
-                                    <p>${work.description}</p>
+                                    <a href="${work.link ? work.link : '#'}" class="portfolio-link">${work.content}</a>
+                                    <p class="description">${work.description}</p>
                                 </div>
                         </div>`;
     }
+    // headeris
 
+    let headerHTML = `<div class="section-title text-center">
+                            <h2>About Me</h2>
+                            <div class="horizontal-line">
+                                <div class="top-line"></div>
+                                <div class="bottom-line"></div>
+                            </div>
+                        </div>`;
     // apjungti viska i vientisa HTML
-    HTML += `<div class="gallery">
-                <div class="filter">
-                    ${filterHTML}
-                </div>
-                <div class="gallery-list">
-                    ${galleryHTML}
+    HTML += `<div class="row">
+                ${headerHTML}
+                <div class="col-12">
+                    <div class="gallery">
+                        <div class="filter">
+                            ${filterHTML}
+                        </div>
+                        <div class="gallery-list">
+                            ${galleryHTML}
+                        </div>
+                    </div>
                 </div>
             </div>`;
 
     // pilna HTML iterpiame i DOM
-    const DOMgallery = document.querySelector('#portfolio-gallery');
+    const DOMgallery = document.querySelector('#portfolio');
     DOMgallery.innerHTML = HTML;
 
     // prikabinti evet listener, kad galeti filtruoti darbus
