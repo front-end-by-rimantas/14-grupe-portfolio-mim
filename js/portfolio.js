@@ -7,10 +7,23 @@ function renderPortfolio(worksList) {
 
 
     // sugeneruoti filtravima
-    filterHTML = `<div class="item">filter</div>
-                <div class="item">filter</div>
-                <div class="item">filter</div>
-                <div class="item">filter</div>`;
+    let uniqueTags = [];
+    for (let i = 0; i < worksList.length; i++) {
+        const tags = worksList[i].tags;
+        for (let t = 0; t < tags.length; t++) { 
+            if (uniqueTags.indexOf(tags[t]) === -1) {
+                uniqueTags.push(tags[t]);
+            } 
+        }
+    }  
+    console.log(uniqueTags); 
+
+
+    
+    filterHTML = `<div class="item">All</div>`;
+    for (let i = 0; i < uniqueTags.length; i++) {
+        filterHTML += `<div class="item">${uniqueTags[i]}</div>`;
+    }
                 
     // sugeneruoti darbus
     for (let i=0; i<worksList.length; i++) {
