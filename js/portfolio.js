@@ -11,15 +11,15 @@ function renderPortfolio(worksList) {
     for (let i = 0; i < worksList.length; i++) {
         const tags = worksList[i].tags;
         for (let t = 0; t < tags.length; t++) { 
-            if (uniqueTags.indexOf(tags[t]) === -1) {
-                uniqueTags.push(tags[t]);
+            if (uniqueTags.indexOf(tags[t].toLowerCase()) === -1) {
+                uniqueTags.push(tags[t].toLowerCase());
             } 
         }
     }  
     
     filterHTML = `<div class="item horizontal-line">All</div>`;
     for (let i = 0; i < uniqueTags.length; i++) {
-        filterHTML += `<div class="item">${uniqueTags[i]}</div>`;
+        filterHTML += `<div class="item">${uniqueTags[i].toLowerCase()}</div>`;
     }
 
 
@@ -27,7 +27,8 @@ function renderPortfolio(worksList) {
     // sugeneruoti darbus
     for (let i=0; i<worksList.length; i++) {
         const work = worksList[i];
-        galleryHTML += `<div class="item ${work.size === 2 ? 'size-2' : ''}">
+        galleryHTML += `<div class="item ${work.size === 2 ? 'size-2' : ''}"
+                            data-tags="${work.tags}">
                             <img src="./img/portfolio/${work.photo.src}" 
                                 alt="${work.photo.alt}" class="portfolio-img">
                             <div class="hover">
@@ -68,23 +69,36 @@ function renderPortfolio(worksList) {
     DOMgallery.innerHTML = HTML;
 
     // prikabinti evet listener, kad galeti filtruoti darbus
-
-
+    const filters = DOMgallery.querySelectorAll('.filter > .item');
+    for (let i = 0; i < filters.length; i++) {
+        const element = filters[i];
+        element.addEventListener('click', filterGallery);
+    };
     return;
+}
+function filterGallery( event ) {
+    document.querySelector('.filter > .item.horizontal-line').classList.remove('horizontal-line');
+    event.target.classList.add('horizontal-line');
+
+    const filterTag = event.target.textContent.toLowerCase();
+    const works = document.querySelectorAll('.gallery > .gallery-list > .item');
+    if (filterTag === 'all') {
+        for (let i = 0; i < works.length; i++) {
+            works[i].classList.remove('hide');
+        }
+        return;
+    }
+   
+    for (let i = 0; i < works.length; i++) {
+        const work = works[i];
+        const hasTags = works[i].dataset.tags.toLowerCase().split(',').indexOf(filterTag);
+        if (hasTags >= 0) {
+            work.classList.remove('hide')
+        } else {
+            work.classList.add('hide')
+        }
+    }
+    
 }
 
 renderPortfolio(works);
-    // event listener
-    const item = document.querySelector('.filter .item');
-   
-    item.addEventListener('click', function () {
-    
-    return item.classList.add("horizontal-line");
-    
-    });
-    // const times = document.querySelector('#main_header .fa-times');
-    // times.addEventListener('click', function () {
-
-    // return mainHeader.classList.remove("show-menu");
-
-    // });
