@@ -16,14 +16,13 @@ function renderPortfolio(worksList) {
             } 
         }
     }  
-    console.log(uniqueTags); 
-
-
     
-    filterHTML = `<div class="item">All</div>`;
+    filterHTML = `<div class="item horizontal-line">All</div>`;
     for (let i = 0; i < uniqueTags.length; i++) {
         filterHTML += `<div class="item">${uniqueTags[i]}</div>`;
     }
+
+
                 
     // sugeneruoti darbus
     for (let i=0; i<worksList.length; i++) {
@@ -75,10 +74,17 @@ function renderPortfolio(worksList) {
 }
 
 renderPortfolio(works);
+    // event listener
+    const item = document.querySelector('.filter .item');
+   
+    item.addEventListener('click', function () {
+    
+    return item.classList.add("horizontal-line");
+    
+    });
+    // const times = document.querySelector('#main_header .fa-times');
+    // times.addEventListener('click', function () {
 
+    // return mainHeader.classList.remove("show-menu");
 
-
-
-
-
-export default works;
+    // });

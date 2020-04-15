@@ -116,3 +116,26 @@
     .item:hover .description {
         color: var(--color-hover-secondary);
     }
+    .row .filter > .item {
+        position: relative;
+    }
+    .row .filter > .item::after {
+        display: inline-block;
+        content: '';
+        position: absolute;
+        height: 1px;
+        left: 50%;
+        right: 51%;
+        bottom: 19px;
+        background-color: var(--color-hover-paragraph);
+        transition: all 0.3s;
+    }
+    .row .filter > .horizontal-line::after {
+        left: 10%;
+        right: 10%;
+    }
+    .row .filter > .item:hover::after,
+    .row .filter > .item.active::after {
+        left: 10%;
+        right: 10%;
+    }
