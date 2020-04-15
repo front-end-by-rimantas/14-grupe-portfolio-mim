@@ -16,6 +16,8 @@
         .gallery > .gallery-list > .item {
             grid-row: span 1 / auto;
             position: relative;
+            overflow: hidden;
+
         }
         .gallery > .gallery-list > .item.size-2 {
             grid-row: span 2 / auto;
@@ -30,13 +32,6 @@
             overflow: hidden;
             background-color: rgba(255, 255, 255, 0.589);
         }
-        .gallery .item:hover > .hover{
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            display: inline-block;
-        }
         .item .hover > .fa-link {
             display: inline-block;
             position: absolute;
@@ -47,7 +42,7 @@
             border-radius: 50%;
             font-size: 30px;
             line-height: 30px;
-            background-color: var(--color-hover-primary);
+            background-color: var(--color-hover-primary-transparent);
             color: #ffffff;
             cursor: pointer;
         }
@@ -62,18 +57,35 @@
             transition: all 1s ease;
 
         }
-    .item .bot-text > .portfolio-link {
-        font-size: 20px;
-        line-height: 20px;
-        text-decoration: none;
-        color: transparent;
-        transition: all 1s ease;
-        font-family: 'Montserrat',sans-serif;
+        .item .bot-text > .portfolio-link {
+            font-size: 20px;
+            line-height: 20px;
+            text-decoration: none;
+            color: transparent;
+            transition: all 1s ease;
+            font-family: 'Montserrat',sans-serif;
+        }
+        
+    .item > .portfolio-img {
+        object-fit: cover;
+        height: auto;
+        width: auto;
+        transition: all .5s;
+        transform: scale(1,1);
     }
+        .gallery .item:hover > .hover{
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            display: inline-block;
+        }
+    .item:hover .portfolio-img {
+        transform: scale(1.2,1.2);
+        }
     .item:hover > .bot-text {
         margin: 0 0 35px 35px;
         transition: all 1s ease;
-
     }
     .item:hover .portfolio-link {
         color: var(--color-hover-paragraph);
@@ -83,10 +95,4 @@
     }
     .item:hover .description {
         color: var(--color-hover-secondary);
-    }
-    .item > img {
-        object-fit: cover;
-        width: 100%;
-        z-index: -1;
-
     }

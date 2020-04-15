@@ -17,7 +17,7 @@ function renderPortfolio(worksList) {
         const work = worksList[i];
         galleryHTML += `<div class="item ${work.size === 2 ? 'size-2' : ''}">
                             <img src="./img/portfolio/${work.photo.src}" 
-                                alt="${work.photo.alt}">
+                                alt="${work.photo.alt}" class="portfolio-img">
                             <div class="hover">
                             <div class="fa fa-link"></div>
                             </div>
