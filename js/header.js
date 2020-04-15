@@ -24,7 +24,6 @@ fixedHeader();
 
 
 function headerScroll(){
-console.log(window.scrollY)
     //einamoji scrolo vieta (aukstis)
     //susidarome sarasa
     let links = [];
@@ -44,7 +43,6 @@ console.log(window.scrollY)
        }
     }
    
-    console.log(links)
     //randame aukscio pozicija
     let sectionHeigths = [];
         for (let i = 0; i<links.length; i++){
@@ -58,12 +56,10 @@ console.log(window.scrollY)
             }
         }
 
-    console.log(height)       
     let wantedSection = 0;
     //nustatome kuri is dominanciu yra artimiausia mano esamai pozicijai
     for(let i=0; i<sectionHeigths.length; i++){
         const sectionH = sectionHeigths[i];
-        console.log(sectionH)
 
         if(sectionH <= height){
             wantedSection = i;
@@ -77,7 +73,6 @@ console.log(window.scrollY)
             
 
 
-    console.log(links[wantedSection])
 
    
     document.querySelector(`#main_header nav > a.active`).classList.remove('active');
