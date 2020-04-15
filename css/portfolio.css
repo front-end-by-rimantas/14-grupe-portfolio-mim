@@ -1,6 +1,7 @@
 .gallery {
     display: inline-block;
     width: 100%;
+    position: relative;
 }
     .gallery > .filter {
         display: inline-block;
@@ -12,13 +13,77 @@
         gap: 15px;
         grid-auto-flow: dense;
     }
-    .gallery > .gallery-list > .item {
-        grid-row: span 1 / auto;
-    }
-    .gallery > .gallery-list > .item.size-2 {
-        grid-row: span 2 / auto;
-    }
+        .gallery > .gallery-list > .item {
+            grid-row: span 1 / auto;
+            position: relative;
+        }
+        .gallery > .gallery-list > .item.size-2 {
+            grid-row: span 2 / auto;
+        }
+        .gallery .item > .hover {
+            display: none;
+            position: absolute;
+            top: 50%;
+            bottom: 50%;
+            right: 50%;
+            left: 50%;
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0.589);
+        }
+        .gallery .item:hover > .hover{
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            display: inline-block;
+        }
+        .item .hover > .fa-link {
+            display: inline-block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 30px;
+            line-height: 30px;
+            background-color: var(--color-hover-primary);
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .item .bot-text {
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            margin: 0 0 -45px 35px;
+            transition: all 3s ease;
+            color: transparent;
+            transition: all 1s ease;
+
+        }
+        .item .bot-text > a {
+            font-size: 25px;
+            line-height: 30px;
+            text-decoration: none;
+            color: transparent;
+            transition: all 1s ease;
+        }
+        .item:hover > .bot-text {
+            margin: 0 0 35px 35px;
+            transition: all 1s ease;
+
+        }
+        .item:hover a {
+            color: var(--color-hover-paragraph);
+        }
+        .item:hover p {
+            color: var(--color-hover-secondary);
+        }
+        
     .item > img {
         object-fit: cover;
         width: 100%;
+        z-index: -1;
+
     }

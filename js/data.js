@@ -40,6 +40,9 @@ const works = [
             alt: 'Headphone'
         },
         title: 'Headphone',
+        link: '#',
+        content: 'New Portfolio',
+        description: 'Garden',
         tags: ['design', 'new'],
         size: 2
     },
@@ -49,6 +52,9 @@ const works = [
             alt: 'Headset'
         },
         title: 'Headset',
+        link: '#',
+        content: 'Portfolio Three',
+        description: 'Garden',
         tags: ['design', 'print'],
         size: 1
     },    
@@ -58,6 +64,9 @@ const works = [
             alt: 'Bottle'
         },
         title: 'Bottle',
+        link: '#',
+        content: 'Portfolio One',
+        description: 'Fliyer',
         tags: ['new', 'print'],
         size: 2
     },    
@@ -67,6 +76,9 @@ const works = [
             alt: 'Chair'
         },
         title: 'Chair',
+        link: '#',
+        content: 'Mim Contrary To Three',
+        description: 'Poster',
         tags: ['print', '3D work'],
         size: 1
     },
@@ -76,6 +88,9 @@ const works = [
             alt: 'Liquid'
         },
         title: 'Liquid',
+        link: '#',
+        content: 'Contrary To Popular Belief',
+        description: 'Book Cover',
         tags: ['print'],
         size: 1
     },
@@ -85,6 +100,9 @@ const works = [
             alt: 'Box'
         },
         title: 'Box',
+        link: '#',
+        content: 'Contrary To Popular Belief',
+        description: 'HTML',
         tags: ['web', 'new', '3D work'],
         size: 2
     },
@@ -94,6 +112,9 @@ const works = [
             alt: 'Clock'
         },
         title: 'Clock',
+        link: '#',
+        content: 'Popular Belief Three',
+        description: 'Graphics',
         tags: ['web', 'design'],
         size: 2
     },
@@ -103,6 +124,9 @@ const works = [
             alt: 'Hygiene'
         },
         title: 'Hygiene',
+        link: '#',
+        content: 'Contrary To Popular Belief',
+        description: 'WordPress',
         tags: ['web'],
         size: 1
     }

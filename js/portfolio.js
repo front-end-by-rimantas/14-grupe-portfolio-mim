@@ -18,6 +18,13 @@ function renderPortfolio(worksList) {
         galleryHTML += `<div class="item ${work.size === 2 ? 'size-2' : ''}">
                             <img src="./img/portfolio/${work.photo.src}" 
                                 alt="${work.photo.alt}">
+                            <div class="hover">
+                            <div class="fa fa-link"></div>
+                            </div>
+                            <div class="bot-text">
+                                    <a href="${work.link ? work.link : '#'}">${work.content}</a>
+                                    <p>${work.description}</p>
+                                </div>
                         </div>`;
     }
 
