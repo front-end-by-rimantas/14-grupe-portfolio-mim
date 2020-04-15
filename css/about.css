@@ -6,7 +6,7 @@
     text-align: center;
 }
 
-p {
+.p {
     font-family: 'Poppins',sans-serif;
     color: #767676;
     font-size: 14px;
@@ -16,7 +16,7 @@ p {
     text-align: justify;
 }
 
-a {
+.a {
     outline: none;
     cursor: pointer;
     text-decoration: none;
