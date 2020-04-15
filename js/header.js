@@ -12,19 +12,28 @@ function openOverlay (){
 window.addEventListener('scroll', funcScroll);
 
 function funcScroll(){
-   
-
     return
 }
 
-function headerScroll(){
+window.addEventListener('scroll', () => {
+    headerScroll();  
+    fixedHeader();
+});
+headerScroll();
+fixedHeader();
 
+
+function headerScroll(){
+console.log(window.scrollY)
     //einamoji scrolo vieta (aukstis)
-    //const height = window.scrollY
     //susidarome sarasa
     let links = [];
     let DOMlinks = document.querySelectorAll(".header > .row nav a");
-    console.log(DOMlinks);
+    const headerHeight = document.querySelector("#main_header").offsetHeight;
+    const height = window.scrollY + headerHeight;
+
+
+
 
     for(let i = 0; i<DOMlinks.length; i++){
         const link = DOMlinks[i];
@@ -33,59 +42,65 @@ function headerScroll(){
        if(split.length > 1){
         links.push("#" + split[1]);
        }
-    
     }
-
+   
     console.log(links)
-
     //randame aukscio pozicija
     let sectionHeigths = [];
         for (let i = 0; i<links.length; i++){
             const link = links[i];
-            console.log(link);
             if (link === "#"){
                 sectionHeigths.push(0);
                 
             }else{
                 const section = document.querySelector(link);
-
-                //neveikia, nes nera ko matuoti, nera sekciju
-                console.log(section.offSetTop)
-                sectionHeigths.push("??")
-
+                sectionHeigths.push(section.offsetTop)
             }
         }
-        console.log(sectionHeigths);
 
-
+    console.log(height)       
+    let wantedSection = 0;
     //nustatome kuri is dominanciu yra artimiausia mano esamai pozicijai
+    for(let i=0; i<sectionHeigths.length; i++){
+        const sectionH = sectionHeigths[i];
+        console.log(sectionH)
+
+        if(sectionH <= height){
+            wantedSection = i;
+        }else{
+            break;
+        }
+    }
         //jeigu randame artimiausia dominancia
             //pries tia buvusi nuoroda header > nav netenka active klases
             //naujoji nuoroda
+            
 
+
+    console.log(links[wantedSection])
+
+   
+    document.querySelector(`#main_header nav > a.active`).classList.remove('active');
+    document.querySelector(`#main_header nav > a[href = "${links[wantedSection]}"]`).classList.add('active');
     return;
 
 }
 
-headerScroll()
 
-//neveikia kol kas
+
 
 function fixedHeader() {
     let firstHeader = document.querySelector('.container.header')
-    console.log(firstHeader)
+    
 
     if (window.scrollY > 200) {
         firstHeader.classList.add('fixedHeader');
         firstHeader.classList.add('logoMin');
     }
-    if (window.scrollY === 0 ) {
+    else {
         firstHeader.classList.remove('fixedHeader');
         firstHeader.classList.remove('logoMin');
     }
-
-
     return
 }
 
-fixedHeader()
