@@ -1,4 +1,5 @@
 import sidemenu from './sidemenu.js';
+import filterGallery from './portfolio.js';
 
 // import from './reset.js';
 // import from'./header.js';
