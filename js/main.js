@@ -1,7 +1,9 @@
 "use strict"
 
 import sidemenu from './layout/sidemenu.js';
+import filterGallery from './layout/portfolio.js';
 import AboutSectionClass from'./layout/about.js';
+import { headerScroll, fixedHeader } from'./layout/header.js';
 
 /*
 import from './reset.js';
@@ -19,4 +21,7 @@ import from'./contacts.js';
 import from'./site-navigation.js';
 import from'./footer.js';*/
 
-new AboutSectionClass('about')
+headerScroll();
+fixedHeader();
+
+new AboutSectionClass('about');

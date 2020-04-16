@@ -9,6 +9,8 @@ export default class SkillClass {
 
     initMeth() {
         this.renderMeth()
+        this.skillBarDom.addEventListener('show', () => {console.log(this.percentage);
+        })
     }
 
     renderMeth() {
@@ -32,9 +34,11 @@ export default class SkillClass {
 
         let outerDom = document.createElement( 'div' )
         outerDom.classList = 'progress-outter'
+        let contentwrapperDom = document.createElement( 'div' )
+        contentwrapperDom.classList = 'progress-content-wrapper'
+        contentwrapperDom.style.width = this.percentage + '%'
         let contentDom = document.createElement( 'div' )
         contentDom.classList = 'progress-content'
-        contentDom.style.width = this.percentage + '%'
 
         this.skillBarDom.appendChild( headerDom )
         headerDom.appendChild( titleDom )
@@ -42,7 +46,8 @@ export default class SkillClass {
         wrapperDom.appendChild( markDom )
         markDom.appendChild( valueDom )
         this.skillBarDom.appendChild( outerDom )
-        outerDom.appendChild( contentDom )
+        outerDom.appendChild( contentwrapperDom )
+        contentwrapperDom.appendChild( contentDom )
 
         this.htmlStr =
         `
@@ -60,8 +65,7 @@ export default class SkillClass {
                     </span>
                 </h4>
                 <div class="progress-outter">
-                    <div class="progress-content" style="width: ${ this.percentage }%;">
-                    </div>
+                    <div class="progress-content" style="width: ${ this.percentage }%;"></div>
                 </div>
             </div>
         `

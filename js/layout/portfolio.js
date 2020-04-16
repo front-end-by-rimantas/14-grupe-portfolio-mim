@@ -16,14 +16,14 @@ function renderPortfolio(worksList) {
             } 
         }
     }  
-
+    
     filterHTML = `<div class="item horizontal-line">All</div>`;
     for (let i = 0; i < uniqueTags.length; i++) {
         filterHTML += `<div class="item">${uniqueTags[i].toLowerCase()}</div>`;
     }
 
 
-
+                
     // sugeneruoti darbus
     for (let i=0; i<worksList.length; i++) {
         const work = worksList[i];
@@ -43,7 +43,7 @@ function renderPortfolio(worksList) {
     // headeris
 
     let headerHTML = `<div class="section-title text-center">
-                            <h2>About Me</h2>
+                            <h2>My portfolio</h2>
                             <div class="horizontal-line">
                                 <div class="top-line"></div>
                                 <div class="bottom-line"></div>
@@ -88,7 +88,7 @@ function filterGallery( event ) {
         }
         return;
     }
-
+   
     for (let i = 0; i < works.length; i++) {
         const work = works[i];
         const hasTags = works[i].dataset.tags.toLowerCase().split(',').indexOf(filterTag);
@@ -98,7 +98,9 @@ function filterGallery( event ) {
             work.classList.add('hide')
         }
     }
-
+    
 }
 
 renderPortfolio(works);
+
+export default filterGallery;
