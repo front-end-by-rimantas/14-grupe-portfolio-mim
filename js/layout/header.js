@@ -19,11 +19,8 @@ window.addEventListener('scroll', () => {
     headerScroll();  
     fixedHeader();
 });
-headerScroll();
-fixedHeader();
 
-
-function headerScroll(){
+export function headerScroll(){
     //einamoji scrolo vieta (aukstis)
     //susidarome sarasa
     let links = [];
@@ -76,10 +73,7 @@ function headerScroll(){
 
 }
 
-
-
-
-function fixedHeader() {
+export function fixedHeader() {
     let firstHeader = document.querySelector('.container.header')
     
   // let headerActive = document.querySelector(`#main_header nav > a.ref.active`)
@@ -97,4 +91,3 @@ function fixedHeader() {
     }
     return
 }
-
