@@ -24,16 +24,12 @@ fixedHeader();
 
 
 function headerScroll(){
-console.log(window.scrollY)
     //einamoji scrolo vieta (aukstis)
     //susidarome sarasa
     let links = [];
     let DOMlinks = document.querySelectorAll(".header > .row nav a");
     const headerHeight = document.querySelector("#main_header").offsetHeight;
     const height = window.scrollY + headerHeight;
-
-
-
 
     for(let i = 0; i<DOMlinks.length; i++){
         const link = DOMlinks[i];
@@ -44,7 +40,6 @@ console.log(window.scrollY)
        }
     }
    
-    console.log(links)
     //randame aukscio pozicija
     let sectionHeigths = [];
         for (let i = 0; i<links.length; i++){
@@ -58,12 +53,10 @@ console.log(window.scrollY)
             }
         }
 
-    console.log(height)       
     let wantedSection = 0;
     //nustatome kuri is dominanciu yra artimiausia mano esamai pozicijai
     for(let i=0; i<sectionHeigths.length; i++){
         const sectionH = sectionHeigths[i];
-        console.log(sectionH)
 
         if(sectionH <= height){
             wantedSection = i;
@@ -76,12 +69,9 @@ console.log(window.scrollY)
             //naujoji nuoroda
             
 
-
-    console.log(links[wantedSection])
-
+            document.querySelector(`#main_header nav > a.active`).classList.remove('active');
+            document.querySelector(`#main_header nav > a[href = "${links[wantedSection]}"]`).classList.add('active'); 
    
-    document.querySelector(`#main_header nav > a.active`).classList.remove('active');
-    document.querySelector(`#main_header nav > a[href = "${links[wantedSection]}"]`).classList.add('active');
     return;
 
 }
@@ -92,14 +82,18 @@ console.log(window.scrollY)
 function fixedHeader() {
     let firstHeader = document.querySelector('.container.header')
     
+  // let headerActive = document.querySelector(`#main_header nav > a.ref.active`)
+ 
 
     if (window.scrollY > 200) {
         firstHeader.classList.add('fixedHeader');
-        firstHeader.classList.add('logoMin');
+        
+        //firstHeader.classList.add('logoMin');
     }
-    else {
+    if (window.scrollY === 0){
         firstHeader.classList.remove('fixedHeader');
-        firstHeader.classList.remove('logoMin');
+       //headerActive.classList.remove('active');
+        //firstHeader.classList.remove('logoMin');
     }
     return
 }

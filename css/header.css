@@ -137,7 +137,7 @@
                     word-break: keep-all;
                 }
 
-                .text > a{
+                .text > .lg-btn{
                     color: white;
                     font-family: 'montserratsemibold';
                     text-decoration: none;
