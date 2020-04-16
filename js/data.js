@@ -32,6 +32,22 @@ const side = [
     }
 ];
 
+// About section
+const skills_data_Arr = [
+    {
+        percentage: 90,
+        title: 'DESIGN'
+    },
+    {
+        percentage: 85,
+        title: 'HTML & CSS'
+    },
+    {
+        percentage: 95,
+        title: 'WORDPRESS'
+    }
+];
+
 // Portfolio + gallery
 const works = [
     {
@@ -130,4 +146,4 @@ const works = [
         tags: ['web'],
         size: 1
     }
-];
+]; 
