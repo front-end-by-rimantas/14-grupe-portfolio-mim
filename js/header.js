@@ -1,11 +1,14 @@
 "use strict";
 
-const logo = document.querySelector("img");
+const logo = document.querySelector(".logo");
+console.log(logo)
+const overlay = document.querySelector(".overlay");
+console.log(overlay)
+
 logo.addEventListener('click', openOverlay);
-const body = document.querySelector("body");
 
 function openOverlay (){
-    body.insertAdjacentHTML("afterbegin", "<div class='overlay'></div>")
+    overlay.classList.add("overlayLogo")
     return
 }
 

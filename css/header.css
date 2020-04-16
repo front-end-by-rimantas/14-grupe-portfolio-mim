@@ -11,6 +11,20 @@
     animation-duration: 2s;
 }
 
+.overlay.overlayLogo{
+    background: #000 none repeat scroll 0 0;
+    opacity: 1;
+    height: 100%;
+    margin-top: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+
 @keyframes fade {
     0% {opacity: 0;}
     50% {opacity: 1;}
@@ -48,9 +62,14 @@
     margin: 0;
     padding: 0 calc((100% - 1200px) / 2);
 }
-.header  .logo {
+.header .logo{
     display: inline-block;
     float: left;
+    
+}
+
+.header .logo:hover{
+    cursor: pointer;
 }
 
 .logoMin {
