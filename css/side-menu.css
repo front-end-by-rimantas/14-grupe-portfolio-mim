@@ -6,6 +6,7 @@
     position: fixed;
     top: 0;
     right: -380px;
+    z-index: 999999;
     background-color: #2B2B2B;
     -webkit-transition: all .8s ease 0s;
     transition: all .8s ease 0s;
@@ -25,6 +26,9 @@
     .side-menu .element a {
         color: #ffffff;
         text-decoration: none;
+    }
+    .side-menu .element .side-menu-box {
+        padding: 10px 40% 10px 0;
     }
     .side-menu .hov-dark:hover {
         background-color: #000000;
@@ -100,5 +104,8 @@
     }
     #dark .span {
         width: 100%;
+    }
+    .side-menu .element .side-menu-box {
+        padding: 10px 30% 10px 0;
     }
 }
