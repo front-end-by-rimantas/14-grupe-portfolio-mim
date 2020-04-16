@@ -9,6 +9,8 @@ export default class SkillClass {
 
     initMeth() {
         this.renderMeth()
+        this.skillBarDom.addEventListener('show', () => {console.log(this.percentage);
+        })
     }
 
     renderMeth() {
