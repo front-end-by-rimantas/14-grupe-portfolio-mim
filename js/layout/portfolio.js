@@ -16,14 +16,14 @@ function renderPortfolio(worksList) {
             } 
         }
     }  
-
+    
     filterHTML = `<div class="item horizontal-line">All</div>`;
     for (let i = 0; i < uniqueTags.length; i++) {
         filterHTML += `<div class="item">${uniqueTags[i].toLowerCase()}</div>`;
     }
 
 
-
+                
     // sugeneruoti darbus
     for (let i=0; i<worksList.length; i++) {
         const work = worksList[i];
@@ -88,7 +88,7 @@ function filterGallery( event ) {
         }
         return;
     }
-
+   
     for (let i = 0; i < works.length; i++) {
         const work = works[i];
         const hasTags = works[i].dataset.tags.toLowerCase().split(',').indexOf(filterTag);
@@ -98,7 +98,7 @@ function filterGallery( event ) {
             work.classList.add('hide')
         }
     }
-
+    
 }
 
 renderPortfolio(works);
