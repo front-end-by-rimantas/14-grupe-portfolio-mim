@@ -1,3 +1,34 @@
+"use strict"
+function renderContentOfSideMenu() {
+    let contentHTML = '';
+        contentHTML += `<div class="element bot-border element-one">
+                                <div class="close fa fa-times-circle-o"></div>
+                                <img src="./img/light-logo.png" alt="Logo">
+                            </div>
+                            <nav>
+                                <div id="transferSideMenu">
+                                    Side menu content
+                                </div>
+                                <div class="element bot-border hov-dark">
+                                    <div class="menu-item">Update notice!</div>
+                                    <a href="#">Update &#38 notice</a>
+                                </div>
+                                <div class="element bot-border hov-dark">
+                                    <a href="#">Pricing &#38 timeline</a>
+                                </div>
+                                <div class="element bot-border hov-dark">
+                                    <div class="menu-item">New Updated!</div>
+                                    <a href="#">Portfolio details</a>
+                                </div>
+                                <div class="element bot-border hov-dark" id="dark">
+                                    <a href="#">Pricing &#38 timeline </a>
+                                    <div class="span">( Dark Version )</div>
+                                </div>
+                            </nav>`;
+    return document.querySelector('#transferSideMenuContent').innerHTML = contentHTML;
+}
+
+renderContentOfSideMenu();
 
 const bars = document.querySelector('#main_header .menuIcon');
 const sideMenu = document.querySelector('#main_header .side-menu');
@@ -12,6 +43,7 @@ times.addEventListener('click', function () {
 return sideMenu.classList.remove("show-side-menu");
 
 });
+
 
 function renderElement( sideList ) {
     let HTML = '';
