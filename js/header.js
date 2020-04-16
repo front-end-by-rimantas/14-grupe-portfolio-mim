@@ -31,9 +31,6 @@ function headerScroll(){
     const headerHeight = document.querySelector("#main_header").offsetHeight;
     const height = window.scrollY + headerHeight;
 
-
-
-
     for(let i = 0; i<DOMlinks.length; i++){
         const link = DOMlinks[i];
        const href = link.href;
@@ -72,8 +69,6 @@ function headerScroll(){
             //naujoji nuoroda
             
 
-
-
             document.querySelector(`#main_header nav > a.active`).classList.remove('active');
             document.querySelector(`#main_header nav > a[href = "${links[wantedSection]}"]`).classList.add('active'); 
    
@@ -87,13 +82,17 @@ function headerScroll(){
 function fixedHeader() {
     let firstHeader = document.querySelector('.container.header')
     
+  // let headerActive = document.querySelector(`#main_header nav > a.ref.active`)
+ 
 
     if (window.scrollY > 200) {
         firstHeader.classList.add('fixedHeader');
+        
         //firstHeader.classList.add('logoMin');
     }
     if (window.scrollY === 0){
         firstHeader.classList.remove('fixedHeader');
+       //headerActive.classList.remove('active');
         //firstHeader.classList.remove('logoMin');
     }
     return
