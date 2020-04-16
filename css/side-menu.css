@@ -88,3 +88,17 @@
         -webkit-transition: all .4s ease 0s;
         transition: all .4s ease 0s;
     }
+    #dark .span {
+        display: inline-block;
+        font-weight: bold;
+        cursor: pointer;
+        color: #ffffff;
+    }
+@media (max-width: 760px) {
+    .side-menu {
+        width: 250px;
+    }
+    #dark .span {
+        width: 100%;
+    }
+}
