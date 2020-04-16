@@ -8,9 +8,49 @@ export default class SkillClass {
     }
 
     initMeth() {
+
+        // const observer = new MutationObserver(function(){
+        //     console.log(this.skillBarDom.style.display)
+        //     if(this.skillBarDom.style.display != 'none'){
+        //         console.log(this.percentage)
+        //     }
+        // });
+        // observer.observe(this.skillBarDom, { attributes: true, childList: true });
+
         this.renderMeth()
-        this.skillBarDom.addEventListener('show', () => {console.log(this.percentage);
-        })
+
+        // this is the target which is observed
+        var target = this.contentDom;
+        var value = this.percentage
+
+        // configure the intersection observer instance
+        var intersectionObserverOptions = {
+        root: null,
+        rootMargin: '25px',
+        threshold: 1.0
+        }
+            
+        var observer = new IntersectionObserver(onIntersection, intersectionObserverOptions);
+
+        // provide the observer with a target
+        observer.observe(target);
+
+        function onIntersection(entries){
+        entries.forEach(entry => {
+            // console.clear();
+            // console.log(entry.intersectionRatio)
+            target.classList.toggle('visible', entry.intersectionRatio > 0);
+            
+            // Are we in viewport?
+            if (entry.intersectionRatio > 0) {
+                // Stop watching 
+                // observer.unobserve(entry.target);
+                console.log(value, 'visible')
+                target.style.animation = 'load-animation 2s ease 0s 1 normal forwards'
+            }
+            else target.style.animation = ''
+        });
+        }
     }
 
     renderMeth() {
@@ -37,8 +77,8 @@ export default class SkillClass {
         let contentwrapperDom = document.createElement( 'div' )
         contentwrapperDom.classList = 'progress-content-wrapper'
         contentwrapperDom.style.width = this.percentage + '%'
-        let contentDom = document.createElement( 'div' )
-        contentDom.classList = 'progress-content'
+        this.contentDom = document.createElement( 'div' )
+        this.contentDom.classList = 'progress-content'
 
         this.skillBarDom.appendChild( headerDom )
         headerDom.appendChild( titleDom )
@@ -47,7 +87,7 @@ export default class SkillClass {
         markDom.appendChild( valueDom )
         this.skillBarDom.appendChild( outerDom )
         outerDom.appendChild( contentwrapperDom )
-        contentwrapperDom.appendChild( contentDom )
+        contentwrapperDom.appendChild( this.contentDom )
 
         this.htmlStr =
         `
