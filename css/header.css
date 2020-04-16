@@ -117,13 +117,11 @@
                     color: #c7c5c5;
                 }
     
-                nav > a:hover::after,
+                .row nav > a:hover::after,
                 nav > a.active::after
                 {
-                    
                     width: 100%;
                 }    
-
 
             .row nav .menuIcon{
                 display: inline-block;
