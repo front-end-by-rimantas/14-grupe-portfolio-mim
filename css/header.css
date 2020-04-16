@@ -1,11 +1,28 @@
 .overlay{
     background: #000 none repeat scroll 0 0;
+    opacity: 0;
     height: 100%;
     margin-top: 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.logoWhite{
+    display: inline-block;
+    left: calc((100% - 120px)/2);
+    position: fixed;
+    top: 50%;
+    width: 120px;
 }
 
 #main_header {
@@ -13,14 +30,12 @@
 }
 .container.header{
     padding: 50px;
-    
 }
 
 .container.header,
 .container.introduction
 {
-   
-    background-color:var(--main-color);
+     background-color:var(--main-color);
 }
 
 .container.header.fixedHeader {
