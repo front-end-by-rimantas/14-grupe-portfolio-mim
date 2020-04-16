@@ -19,38 +19,47 @@ export default class SkillClass {
 
         this.renderMeth()
 
-        // this is the target which is observed
-        var target = this.contentDom;
-        var value = this.percentage
+        // // this is the target which is observed
+        // var parent = this.skillBarDom;
+        // var target = this.contentDom;
+        // var value = this.percentage
 
-        // configure the intersection observer instance
-        var intersectionObserverOptions = {
-        root: null,
-        rootMargin: '25px',
-        threshold: 1.0
-        }
+        // // configure the intersection observer instance
+        // var intersectionObserverOptions = {
+        // root: null,
+        // rootMargin: '275px',
+        // threshold: 1.0
+        // }
             
-        var observer = new IntersectionObserver(onIntersection, intersectionObserverOptions);
+        // var observer = new IntersectionObserver(onIntersection, intersectionObserverOptions);
 
-        // provide the observer with a target
-        observer.observe(target);
+        // // provide the observer with a target
+        // observer.observe(parent);
 
-        function onIntersection(entries){
-        entries.forEach(entry => {
-            // console.clear();
-            // console.log(entry.intersectionRatio)
-            target.classList.toggle('visible', entry.intersectionRatio > 0);
+        // function onIntersection(entries){
+        // entries.forEach(entry => {
+        //     // console.clear();
+        //     // console.log(entry.intersectionRatio)
+        //     parent.classList.toggle('visible', entry.intersectionRatio > 0);
             
-            // Are we in viewport?
-            if (entry.intersectionRatio > 0) {
-                // Stop watching 
-                // observer.unobserve(entry.target);
-                console.log(value, 'visible')
-                target.style.animation = 'load-animation 2s ease 0s 1 normal forwards'
-            }
-            else target.style.animation = ''
-        });
-        }
+        //     // Are we in viewport?
+        //     if (entry.intersectionRatio > 0) {
+        //         // Stop watching 
+        //         // observer.unobserve(entry.target);
+        //         console.log(value, 'visible')
+        //         target.style.animation = 'load-animation 2s ease 5s 1 normal forwards'
+        //     }
+        //     else target.style.animation = ''
+        // });
+        // }
+
+
+        // document.styleSheets[0].insertRule('\
+		// 	@keyframes load-animation {\
+		// 		from { width: 0%; }\
+		// 		to   { width: ${ this.percentage }%; }\
+		// 	}'
+		// )
     }
 
     renderMeth() {
@@ -79,6 +88,17 @@ export default class SkillClass {
         contentwrapperDom.style.width = this.percentage + '%'
         this.contentDom = document.createElement( 'div' )
         this.contentDom.classList = 'progress-content'
+        // this.contentDom.style.animation = 'load-animation 2s ease 1s 1 normal forwards'
+        this.contentDom.animate(
+            [
+                {width: '0%'},
+                {width: `${this.percentage}%`}
+            ], {
+                duration: 1000,
+                iterations: Infinity
+            }
+        // 2s ease 0s 1 normal forwards`
+        )
 
         this.skillBarDom.appendChild( headerDom )
         headerDom.appendChild( titleDom )
