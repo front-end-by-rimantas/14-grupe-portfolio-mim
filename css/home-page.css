@@ -1,6 +1,7 @@
 @import './reset.css';
 @import './font-awesome.css';
 @import './layout.css';
+@import './variables.css';
 @import './main.css';
 
 @import './header.css';
