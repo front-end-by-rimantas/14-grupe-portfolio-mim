@@ -3,7 +3,6 @@
 import sidemenu from './layout/sidemenu.js';
 import filterGallery from './layout/portfolio.js';
 import AboutSectionClass from'./layout/about.js';
-import renderPortfolio from'./layout/portfolio.js';
 import { headerScroll, fixedHeader } from'./layout/header.js';
 
 /*
@@ -26,5 +25,3 @@ headerScroll();
 fixedHeader();
 
 new AboutSectionClass('about');
-
-renderPortfolio(works);

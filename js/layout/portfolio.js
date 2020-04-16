@@ -1,6 +1,6 @@
 "use strict"
 
-export default function renderPortfolio(worksList) {
+function renderPortfolio(worksList) {
     let HTML ='';
     let filterHTML = '';
     let galleryHTML = '';
@@ -102,4 +102,5 @@ function filterGallery( event ) {
 }
 
 renderPortfolio(works);
-filterGallery();
+
+export default filterGallery;
