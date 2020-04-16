@@ -1,13 +1,29 @@
 .overlay{
-    background: #000 none repeat scroll 0 0;
+    background: #000;
+    opacity: 0;
     height: 100%;
     margin-top: 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
+    animation-name: fade;
+    animation-duration: 2s;
 }
 
+@keyframes fade {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.logoWhite{
+    display: inline-block;
+    left: calc((100% - 120px)/2);
+    position: fixed;
+    top: 50%;
+    width: 120px;
+}
 
 #main_header {
     position: relative;
@@ -33,7 +49,6 @@
     padding: 0 calc((100% - 1200px) / 2);
 }
 
-
         .header > .row nav{
             display: inline-block;
             float: right;
@@ -53,7 +68,7 @@
                 position: relative;
             }
 
-            nav > a::after,
+            nav .ref::after,
             nav > a.active::after
             {
                 content: "";
@@ -72,10 +87,9 @@
                     color: #c7c5c5;
                 }
     
-                nav > a:hover::after,
+                nav .ref:hover::after,
                 nav > a.active::after
                 {
-                    
                     width: 100%;
                 }    
 
@@ -136,7 +150,6 @@
                     padding-bottom: 45px;
                     word-break: keep-all;
                 }
-
 
 
         .introduction img{
