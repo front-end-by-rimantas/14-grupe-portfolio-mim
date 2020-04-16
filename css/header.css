@@ -137,22 +137,6 @@
                     word-break: keep-all;
                 }
 
-                .text > .lg-btn{
-                    color: white;
-                    font-family: 'montserratsemibold';
-                    text-decoration: none;
-                    background-color: #393939;
-                    padding: 15px 50px;
-                    border-radius: 5px;
-                    font-size: 14px;
-                    letter-spacing: 1px;
-                }
-
-                .text > a:hover{
-                    background-color: black;
-                    transition: 10ms;
-                }
-
 
 
         .introduction img{
