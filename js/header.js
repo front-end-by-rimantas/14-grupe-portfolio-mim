@@ -81,19 +81,19 @@ function headerScroll(){
 
 function fixedHeader() {
     let firstHeader = document.querySelector('.container.header')
-    
+    let minLogo = document.querySelector('.logo')
   // let headerActive = document.querySelector(`#main_header nav > a.ref.active`)
  
 
     if (window.scrollY > 200) {
         firstHeader.classList.add('fixedHeader');
         
-        //firstHeader.classList.add('logoMin');
+        minLogo.classList.add('logoMin');
     }
     if (window.scrollY === 0){
         firstHeader.classList.remove('fixedHeader');
-       //headerActive.classList.remove('active');
-        //firstHeader.classList.remove('logoMin');
+       
+        minLogo.classList.remove('logoMin');
     }
     return
 }

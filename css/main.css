@@ -15,16 +15,12 @@
     /* font-weight: normal; */
     text-align: center;
     /* vertical-align: middle; */
-    
     box-shadow: 2px 2px 8px #000;
-   
 }
 
 .lg-btn{
     width: 173px;
 }
-
-
 
 .btn:hover{
     background-color: black;
