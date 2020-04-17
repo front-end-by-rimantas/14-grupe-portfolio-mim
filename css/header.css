@@ -38,14 +38,31 @@
     background-color: #f5f5f5;
 }
 
-.fixedHeader {
+.container.header.fixedHeader {
     position: fixed;
+    height: 60px;
     width: 100%;
-    box-shadow: 0px 2px 6px gray;
-    z-index: 1;
-    background-color: #f5f5f5;
+    box-shadow: 0px 2px 2px rgb(223, 220, 220);
+    z-index: 99999999;
+    background-color: var(--main-color);
     margin: 0;
     padding: 0 calc((100% - 1200px) / 2);
+}
+
+.header .logo{
+    display: inline-block;
+    float: left;
+    
+}
+
+.header .logo:hover{
+    cursor: pointer;
+}
+
+.logoMin {
+    padding-top: 10px;
+    transition: 1s;
+    transform: scale(0.8);
 }
 
         .header > .row nav{

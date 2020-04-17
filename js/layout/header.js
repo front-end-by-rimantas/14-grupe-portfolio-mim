@@ -20,12 +20,12 @@
   
 
   function removeOverlay(){
-      let overlay = document.querySelector(".overlay")
-      setTimeout(function(){
-        overlay.remove();
-      }, 2000);
-      return
-  }
+    let overlay = document.querySelector(".overlay")
+    setTimeout(function(){
+      overlay.remove();
+    }, 2000);
+    return
+}
 
 removeOverlay()
     
@@ -99,17 +99,18 @@ export function headerScroll(){
 
 export function fixedHeader() {
     let firstHeader = document.querySelector('.container.header')
-    
+    let minLogo = document.querySelector('.logo')
   // let headerActive = document.querySelector(`#main_header nav > a.ref.active`)
  
 
     if (window.scrollY > 200) {
         firstHeader.classList.add('fixedHeader');
-        
+        minLogo.classList.add('logoMin');
         //firstHeader.classList.add('logoMin');
     }
     if (window.scrollY === 0){
         firstHeader.classList.remove('fixedHeader');
+        minLogo.classList.remove('logoMin');
        //headerActive.classList.remove('active');
         //firstHeader.classList.remove('logoMin');
     }
