@@ -4,6 +4,8 @@ import sidemenu from './layout/sidemenu.js';
 import filterGallery from './layout/portfolio.js';
 import AboutSectionClass from'./layout/about.js';
 import { headerScroll, fixedHeader } from'./layout/header.js';
+// experience import
+import renderExperience from './layout/experience.js';
 
 /*
 import from './reset.js';
@@ -25,3 +27,6 @@ headerScroll();
 fixedHeader();
 
 new AboutSectionClass('about');
+
+// // experience
+new renderExperience();
