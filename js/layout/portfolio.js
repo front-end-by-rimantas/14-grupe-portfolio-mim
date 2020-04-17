@@ -27,7 +27,7 @@ function renderPortfolio(worksList) {
     // sugeneruoti darbus
     for (let i=0; i<worksList.length; i++) {
         const work = worksList[i];
-        galleryHTML += `<div class="item ${work.size === 2 ? 'size-2' : ''}"
+        galleryHTML += `<div class="item ${work.size === 2 ? 'size-2' : ''} ${work.newClass}"
                             data-tags="${work.tags}">
                             <img src="./img/portfolio/${work.photo.src}" 
                                 alt="${work.photo.alt}" class="portfolio-img">
@@ -43,7 +43,7 @@ function renderPortfolio(worksList) {
     // headeris
 
     let headerHTML = `<div class="section-title text-center">
-                            <h2>My portfolio</h2>
+                            <h2 class="section-heading">My portfolio</h2>
                             <div class="horizontal-line">
                                 <div class="top-line"></div>
                                 <div class="bottom-line"></div>

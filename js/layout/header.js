@@ -19,7 +19,7 @@ function openOverlay (){
     <div class = "logoWhite">
         <img src="./img/light-logo.png" alt="Logo">
     </div>
-</div>`)
+</div>`);
 
 let overlayLogo = document.querySelector(".overlayLogo")
 setTimeout(function(){
