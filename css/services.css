@@ -1,0 +1,52 @@
+#services > .row {
+    display: inline-block;
+    float: left;
+    text-align: center;
+}
+        #services > .row > .service-box {
+            display: inline-block;
+            float: left;
+            height: 300px;
+            border: 1px solid var(--color-hover-primary-transparent);
+            box-shadow: 1px 1px 10px 1px var(--color-paragraph-light);
+        }
+        #services > .row > .service-box:hover {
+            box-shadow: 1px 1px 20px 1px var(--color-hover-paragraph-secondary-dark);
+            transition: all .5s ease 0s;
+        }
+        #services .service-box:hover .fa {
+            background: var(--color-hover-primary);
+            color: #ffffff;
+        }
+            #services .box-inside {
+                display: inline-block;
+                float: left;
+                padding: 50px 10px 60px 10px;
+            }
+                #services .fa {
+                    border: 1px solid var(--color-hover-primary);
+                    border-radius: 50%;
+                    color: var(--color-icon-primary);
+                    font-size: 19px;
+                    height: 36px;
+                    line-height: 36px;
+                    width: 36px;
+                    margin: 0 0 20px 0;
+                    transition: all .5s ease 0s;
+                }
+                #services h4 {
+                    font-size: 14px;
+                    margin: 0 0 15px;
+                    font-weight: 500;
+                    font-family: 'Montserrat', sans-serif;
+                    color: var(--color-hover-paragraph);
+                }
+                #services p {
+                    font-family: Poppins;
+                    font-size: 14px;
+                    line-height: 24px;
+                    font-weight: 400;
+                    margin: 0 0 15px;
+                    word-break: keep-all;
+                    color: var(--color-hover-paragraph-secondary);
+                }

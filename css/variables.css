@@ -1,6 +1,11 @@
 :root {
-    --color-hover-primary: #B6B6B6;
+    --color-hover-primary: #8a8a8a;
     --color-hover-primary-transparent: rgba(182, 182, 182, 0.616);
     --color-hover-secondary: rgb(93, 93, 95);
     --color-hover-paragraph: #7F7F7F;
+    --color-hover-paragraph-secondary: #979797;
+    --color-hover-paragraph-secondary-dark: #676767;
+    --color-paragraph-light: #aaaaaa;
+    --color-icon-primary: #8a8a8a;
+    --color-icon-secondary: #3d3d3d;
 }
