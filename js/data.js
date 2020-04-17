@@ -60,7 +60,8 @@ const works = [
         content: 'New Portfolio',
         description: 'Garden',
         tags: ['design', 'new'],
-        size: 2
+        size: 2,
+        newClass: 'slide-left'
     },
     {
         photo: {
@@ -72,7 +73,8 @@ const works = [
         content: 'Portfolio Three',
         description: 'Garden',
         tags: ['design', 'print'],
-        size: 1
+        size: 1,
+        newClass: 'slide-bottom'
     },    
     {
         photo: {
@@ -84,7 +86,8 @@ const works = [
         content: 'Portfolio One',
         description: 'Fliyer',
         tags: ['new', 'print'],
-        size: 2
+        size: 2,
+        newClass: 'slide-top'
     },    
     {
         photo: {
@@ -96,7 +99,8 @@ const works = [
         content: 'Mim Contrary To Three',
         description: 'Poster',
         tags: ['print', '3D work'],
-        size: 1
+        size: 1,
+        newClass: 'slide-top'
     },
     {
         photo: {
@@ -108,7 +112,8 @@ const works = [
         content: 'Contrary To Popular Belief',
         description: 'Book Cover',
         tags: ['print'],
-        size: 1
+        size: 1,
+        newClass: 'slide-left'
     },
     {
         photo: {
@@ -120,7 +125,8 @@ const works = [
         content: 'Contrary To Popular Belief',
         description: 'HTML',
         tags: ['web', 'new', '3D work'],
-        size: 2
+        size: 2,
+        newClass: 'slide-right'
     },
     {
         photo: {
@@ -132,7 +138,8 @@ const works = [
         content: 'Popular Belief Three',
         description: 'Graphics',
         tags: ['web', 'design'],
-        size: 2
+        size: 2,
+        newClass: 'slide-right'
     },
     {
         photo: {
@@ -144,7 +151,8 @@ const works = [
         content: 'Contrary To Popular Belief',
         description: 'WordPress',
         tags: ['web'],
-        size: 1
+        size: 1,
+        newClass: 'slide-bottom'
     }
 ]; 
 
