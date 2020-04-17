@@ -6,7 +6,7 @@
     position: fixed;
     top: 0;
     right: -380px;
-    z-index: 999999;
+    z-index: 2;
     background-color: #2B2B2B;
     -webkit-transition: all .8s ease 0s;
     transition: all .8s ease 0s;
