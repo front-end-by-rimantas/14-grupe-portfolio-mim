@@ -4,8 +4,12 @@ import sidemenu from './layout/sidemenu.js';
 import filterGallery from './layout/portfolio.js';
 import AboutSectionClass from'./layout/about.js';
 import { headerScroll, fixedHeader } from'./layout/header.js';
+<<<<<<< HEAD
 // experience import
 import renderExperience from './layout/experience.js';
+=======
+import renderServices from'./layout/services.js';
+>>>>>>> a003753045404b7b084d12136b3f74ccbc2f87e6
 
 /*
 import from './reset.js';

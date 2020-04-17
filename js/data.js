@@ -60,7 +60,8 @@ const works = [
         content: 'New Portfolio',
         description: 'Garden',
         tags: ['design', 'new'],
-        size: 2
+        size: 2,
+        newClass: 'slide-left'
     },
     {
         photo: {
@@ -72,7 +73,8 @@ const works = [
         content: 'Portfolio Three',
         description: 'Garden',
         tags: ['design', 'print'],
-        size: 1
+        size: 1,
+        newClass: 'slide-bottom'
     },    
     {
         photo: {
@@ -84,7 +86,8 @@ const works = [
         content: 'Portfolio One',
         description: 'Fliyer',
         tags: ['new', 'print'],
-        size: 2
+        size: 2,
+        newClass: 'slide-top'
     },    
     {
         photo: {
@@ -96,7 +99,8 @@ const works = [
         content: 'Mim Contrary To Three',
         description: 'Poster',
         tags: ['print', '3D work'],
-        size: 1
+        size: 1,
+        newClass: 'slide-top'
     },
     {
         photo: {
@@ -108,7 +112,8 @@ const works = [
         content: 'Contrary To Popular Belief',
         description: 'Book Cover',
         tags: ['print'],
-        size: 1
+        size: 1,
+        newClass: 'slide-left'
     },
     {
         photo: {
@@ -120,7 +125,8 @@ const works = [
         content: 'Contrary To Popular Belief',
         description: 'HTML',
         tags: ['web', 'new', '3D work'],
-        size: 2
+        size: 2,
+        newClass: 'slide-right'
     },
     {
         photo: {
@@ -132,7 +138,8 @@ const works = [
         content: 'Popular Belief Three',
         description: 'Graphics',
         tags: ['web', 'design'],
-        size: 2
+        size: 2,
+        newClass: 'slide-right'
     },
     {
         photo: {
@@ -144,7 +151,8 @@ const works = [
         content: 'Contrary To Popular Belief',
         description: 'WordPress',
         tags: ['web'],
-        size: 1
+        size: 1,
+        newClass: 'slide-bottom'
     }
 ]; 
 
@@ -185,4 +193,38 @@ const exp = [
         class:'expBox'
     }
     
+];
+const services = [
+    {
+        icon: 'fa-desktop',
+        title: 'UI/UX DESIGN',
+        margin: `<div class="break"></div>`,
+        description: `There are many variatio
+        ns of pssages of Lorm available, bu in some form`,
+        class: 'service-box'
+    },
+    {
+        icon: 'fa-heart-o',
+        title: 'WEB DESIGN',
+        margin: `<div class="break"></div>`,
+        description: `There are many variatio
+        ns of pssages of Lorm available, bu in some form`,
+        class: 'service-box'
+    },
+    {
+        icon: 'fa-crosshairs',
+        title: 'MINIMAL DESIGN',
+        margin: `<div class="break"></div>`,
+        description: `There are many variatio
+        ns of pssages of Lorm available, bu in some form`,
+        class: 'service-box'
+    },
+    {
+        icon: 'fa-wordpress',
+        title: 'DEVELOPMENT',
+        margin: `<div class="break"></div>`,
+        description: `There are many variatio
+        ns of pssages of Lorm available, bu in some form`,
+        class: 'service-box'
+    }
 ];
