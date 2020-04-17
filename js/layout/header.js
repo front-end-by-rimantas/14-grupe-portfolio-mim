@@ -28,10 +28,7 @@ setTimeout(function(){
 
     return
 }
-//nuimame papildomą overlayLogo klasę
-
-
-
+//nuimame papildomą overlayLogo klase
 
 /////
 window.addEventListener('scroll', funcScroll);
