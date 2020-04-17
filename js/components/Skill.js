@@ -8,58 +8,7 @@ export default class SkillClass {
     }
 
     initMeth() {
-
-        // const observer = new MutationObserver(function(){
-        //     console.log(this.skillBarDom.style.display)
-        //     if(this.skillBarDom.style.display != 'none'){
-        //         console.log(this.percentage)
-        //     }
-        // });
-        // observer.observe(this.skillBarDom, { attributes: true, childList: true });
-
         this.renderMeth()
-
-        // // this is the target which is observed
-        // var parent = this.skillBarDom;
-        // var target = this.contentDom;
-        // var value = this.percentage
-
-        // // configure the intersection observer instance
-        // var intersectionObserverOptions = {
-        // root: null,
-        // rootMargin: '275px',
-        // threshold: 1.0
-        // }
-            
-        // var observer = new IntersectionObserver(onIntersection, intersectionObserverOptions);
-
-        // // provide the observer with a target
-        // observer.observe(parent);
-
-        // function onIntersection(entries){
-        // entries.forEach(entry => {
-        //     // console.clear();
-        //     // console.log(entry.intersectionRatio)
-        //     parent.classList.toggle('visible', entry.intersectionRatio > 0);
-            
-        //     // Are we in viewport?
-        //     if (entry.intersectionRatio > 0) {
-        //         // Stop watching 
-        //         // observer.unobserve(entry.target);
-        //         console.log(value, 'visible')
-        //         target.style.animation = 'load-animation 2s ease 5s 1 normal forwards'
-        //     }
-        //     else target.style.animation = ''
-        // });
-        // }
-
-
-        // document.styleSheets[0].insertRule('\
-		// 	@keyframes load-animation {\
-		// 		from { width: 0%; }\
-		// 		to   { width: ${ this.percentage }%; }\
-		// 	}'
-		// )
     }
 
     renderMeth() {
@@ -76,28 +25,42 @@ export default class SkillClass {
         wrapperDom.classList = 'progress-wrapper'
         let markDom = document.createElement( 'span' )
         markDom.classList = 'progress-mark'
-        markDom.style.left = this.percentage + '%'
+        markDom.animate(
+            [
+                {left: '0%'},
+                {left: `${this.percentage}%`}
+            ], {
+                name: '',
+                direction: 'normal',
+                timing/*-function*/: 'ease',
+                fill/*-mode*/: 'forwards',
+                duration: 2000,
+                delay: 1000,
+                iterations: 1
+            }
+        )
+
         let valueDom = document.createElement( 'span' )
         valueDom.classList = 'percent'
         valueDom.innerText = this.percentage + '%'
 
         let outerDom = document.createElement( 'div' )
         outerDom.classList = 'progress-outter'
-        let contentwrapperDom = document.createElement( 'div' )
-        contentwrapperDom.classList = 'progress-content-wrapper'
-        contentwrapperDom.style.width = this.percentage + '%'
-        this.contentDom = document.createElement( 'div' )
-        this.contentDom.classList = 'progress-content'
-        // this.contentDom.style.animation = 'load-animation 2s ease 1s 1 normal forwards'
-        this.contentDom.animate(
+        let contentDom = document.createElement( 'div' )
+        contentDom.classList = 'progress-content'
+        contentDom.animate(
             [
                 {width: '0%'},
                 {width: `${this.percentage}%`}
             ], {
-                duration: 1000,
-                iterations: Infinity
+                name: '',
+                direction: 'normal',
+                timing/*-function*/: 'ease',
+                fill/*-mode*/: 'forwards',
+                duration: 2000,
+                delay: 1000,
+                iterations: 1
             }
-        // 2s ease 0s 1 normal forwards`
         )
 
         this.skillBarDom.appendChild( headerDom )
@@ -106,8 +69,7 @@ export default class SkillClass {
         wrapperDom.appendChild( markDom )
         markDom.appendChild( valueDom )
         this.skillBarDom.appendChild( outerDom )
-        outerDom.appendChild( contentwrapperDom )
-        contentwrapperDom.appendChild( this.contentDom )
+        outerDom.appendChild( contentDom )
 
         this.htmlStr =
         `

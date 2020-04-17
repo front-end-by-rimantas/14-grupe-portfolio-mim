@@ -1,6 +1,5 @@
 import HeadingClass from'../components/Heading.js';
 import SkillClass from'../components/Skill.js';
-// import { skills_data_Arr } from'../data.js';
 
 export default class AboutSectionClass {
     constructor ( parentIdStr ) {
@@ -40,9 +39,7 @@ export default class AboutSectionClass {
         buttonDom.innerText = 'DOWNLOAD MY CV'
 
         let rightDom = document.createElement( 'div' )
-        rightDom.classList = 'col-5 m-l-1'
-        console.log(skills_data_Arr);
-        
+        rightDom.classList = 'col-5 m-l-1'      
         skills_data_Arr.forEach( 
             ( skillPar ) => {
                 let skillObj = new SkillClass( skillPar.percentage, skillPar.title )

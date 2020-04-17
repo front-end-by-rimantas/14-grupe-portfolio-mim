@@ -60,21 +60,7 @@
     background-color: #c8c8c8;
 }
 
-.progress-content-wrapper {
-    
-}
-
 .progress-content {
     background-color: #484848;
-    /* animation: load-animation 2s ease 0s 1 normal forwards; */
-    width: 100%;
-}
-
-@keyframes load-animation {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 100%;
-    }
+    width: 0%;
 }
