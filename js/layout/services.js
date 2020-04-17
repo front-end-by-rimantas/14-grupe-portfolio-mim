@@ -26,8 +26,17 @@ function renderServices( serviceList ) {
 }
 function renderServicesRow() {
     let servicesHTML = '';
-    servicesHTML += `<div class="row" id="transferServices">
-    
+    servicesHTML += `<div class="row">
+                        <div class="section-title text-center">
+                            <h2>My services</h2>
+                                <div class="horizontal-line">
+                                    <div class="top-line"></div>
+                                    <div class="bottom-line"></div>
+                                </div>
+                            </div>
+                        </div>   
+                    <div class="row" id="transferServices">
+
                     </div>`;
     return document.querySelector('#services').innerHTML = servicesHTML;
 

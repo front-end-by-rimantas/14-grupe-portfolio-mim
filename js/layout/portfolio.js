@@ -43,7 +43,7 @@ function renderPortfolio(worksList) {
     // headeris
 
     let headerHTML = `<div class="section-title text-center">
-                            <h2>My portfolio</h2>
+                            <h2 class="section-heading">My portfolio</h2>
                             <div class="horizontal-line">
                                 <div class="top-line"></div>
                                 <div class="bottom-line"></div>
