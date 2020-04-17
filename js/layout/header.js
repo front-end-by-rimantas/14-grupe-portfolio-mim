@@ -21,25 +21,16 @@ function openOverlay (){
     </div>
 </div>`)
 
+let overlayLogo = document.querySelector(".overlayLogo")
+setTimeout(function(){
+    overlayLogo.remove();
+}, 2000);
+
     return
 }
 //nuimame papildomą overlayLogo klasę
 
-let overlayLogo = document.querySelector(".overlayLogo")
-let overlayLogoadded;
-function removeOverlayLogo(){
-   
-    if (overlayLogoadded === true){
-   
-    setTimeout(function(){
-        overlayLogo.remove();
-    }, 2000);
-    overlayLogoadded = false;
-}
-    return
-}
 
-removeOverlayLogo()
 
 
 /////
@@ -109,17 +100,18 @@ export function headerScroll(){
 
 export function fixedHeader() {
     let firstHeader = document.querySelector('.container.header')
-    
+    let minLogo = document.querySelector('.logo')
   // let headerActive = document.querySelector(`#main_header nav > a.ref.active`)
  
 
     if (window.scrollY > 200) {
         firstHeader.classList.add('fixedHeader');
         
-        //firstHeader.classList.add('logoMin');
+        minLogo.classList.add('logoMin');
     }
     if (window.scrollY === 0){
         firstHeader.classList.remove('fixedHeader');
+        minLogo.classList.remove('logoMin');
        //headerActive.classList.remove('active');
         //firstHeader.classList.remove('logoMin');
     }
