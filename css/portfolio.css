@@ -20,13 +20,7 @@
             text-transform: uppercase;
             color: var(--color-hover-paragraph);
             transition: all .3s ease 0s;
-        }
-    .gallery > .gallery-list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-        grid-auto-flow: dense;
-    }  
+        }  
         .row .filter > .item {
             position: relative;
         }
@@ -50,10 +44,29 @@
                 left: 10%;
                 right: 10%;
             }
+    .gallery > .gallery-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        grid-auto-flow: dense;
+        transition: transform 0.3s, opacity 0.2s;
+    }
         .gallery > .gallery-list > .item {
             grid-row: span 1 / auto;
             position: relative;
             overflow: hidden;
+        }
+        .gallery > .gallery-list > .slide-top {
+            animation: from-top 2s ease;
+        }
+        .gallery > .gallery-list > .slide-bottom {
+            animation: from-down 2s ease;
+        }
+        .gallery > .gallery-list > .slide-left {
+            animation: from-left 2s ease;
+        }
+        .gallery > .gallery-list > .slide-right {
+            animation: from-right 2s ease;
         }
             .gallery > .gallery-list > .item.hide {
                 display: none;
@@ -139,6 +152,66 @@
                 .item:hover .description {
                     color: var(--color-hover-secondary);
                 }
+@keyframes from-top{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+    0%{
+        bottom: 50%;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+@keyframes from-down{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+    0%{
+        top: 50%;
+    }
+    100%{
+        top: 0;
+    }
+}
+@keyframes from-left{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+    0%{
+        top: 50%;
+        left: 50%;
+    }
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
+@keyframes from-right{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+    0%{
+        top: 50%;
+        right: 50%;
+    }
+    100%{
+        top: 0;
+        right: 0;
+    }
+}
 @media (max-width: 1300px) {
     .item > .bot-text {
         margin: 0 0 -35px 15px;
