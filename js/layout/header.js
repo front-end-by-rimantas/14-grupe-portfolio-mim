@@ -1,9 +1,6 @@
 "use strict";
 
-
-
-
-  /*const logo = document.querySelector(".logo");
+const logo = document.querySelector(".logo");
   console.log(logo)
   const overlay = document.querySelector(".overlay");
   console.log(overlay)
@@ -13,11 +10,15 @@
   function openOverlay (){
       overlay.classList.add("overlayLogo")
       return
-  }*/
+  }
 
   const body = document.querySelector("body")
   console.log(body)
   
+
+
+
+//////
 
   function removeOverlay(){
     let overlay = document.querySelector(".overlay")
@@ -29,9 +30,6 @@
 
 removeOverlay()
     
-  
-
-  
 
 window.addEventListener('scroll', funcScroll);
 
@@ -92,9 +90,8 @@ export function headerScroll(){
 
             document.querySelector(`#main_header nav > a.active`).classList.remove('active');
             document.querySelector(`#main_header nav > a[href = "${links[wantedSection]}"]`).classList.add('active'); 
-   
-    return;
 
+    return;
 }
 
 export function fixedHeader() {
