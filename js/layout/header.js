@@ -1,13 +1,37 @@
 "use strict";
 
-const logo = document.querySelector("img");
-logo.addEventListener('click', openOverlay);
-const body = document.querySelector("body");
 
-function openOverlay (){
-    body.insertAdjacentHTML("afterbegin", "<div class='overlay'></div>")
-    return
-}
+
+
+  /*const logo = document.querySelector(".logo");
+  console.log(logo)
+  const overlay = document.querySelector(".overlay");
+  console.log(overlay)
+  
+  logo.addEventListener('click', openOverlay);
+  
+  function openOverlay (){
+      overlay.classList.add("overlayLogo")
+      return
+  }*/
+
+  const body = document.querySelector("body")
+  console.log(body)
+  
+
+  function removeOverlay(){
+      let overlay = document.querySelector(".overlay")
+      setTimeout(function(){
+        overlay.remove();
+      }, 2000);
+      return
+  }
+
+removeOverlay()
+    
+  
+
+  
 
 window.addEventListener('scroll', funcScroll);
 
