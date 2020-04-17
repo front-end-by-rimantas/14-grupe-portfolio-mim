@@ -1,36 +1,48 @@
 "use strict";
-
-const logo = document.querySelector(".logo");
-  console.log(logo)
-  const overlay = document.querySelector(".overlay");
-  console.log(overlay)
-  
-  logo.addEventListener('click', openOverlay);
-  
-  function openOverlay (){
-      overlay.classList.add("overlayLogo")
-      return
-  }
-
-  const body = document.querySelector("body")
-  console.log(body)
-  
-
-
-
-//////
-
-  function removeOverlay(){
+/// nuimame overlay klas4, kuri atsiranda tik užkrovus puslapį
+function removeOverlay(){
     let overlay = document.querySelector(".overlay")
     setTimeout(function(){
       overlay.remove();
     }, 2000);
     return
 }
-
 removeOverlay()
-    
 
+////// pridedame animaciją - papildomą klasę logo paspaudimui
+const logo = document.querySelector(".logo");
+logo.addEventListener('click', openOverlay);
+const body = document.querySelector("body");
+
+function openOverlay (){
+    body.insertAdjacentHTML("afterbegin", `<div class = "overlayLogo">
+    <div class = "logoWhite">
+        <img src="./img/light-logo.png" alt="Logo">
+    </div>
+</div>`)
+
+    return
+}
+//nuimame papildomą overlayLogo klasę
+
+let overlayLogo = document.querySelector(".overlayLogo")
+let overlayLogoadded;
+function removeOverlayLogo(){
+   
+    if (overlayLogoadded === true){
+   
+    setTimeout(function(){
+        overlayLogo.remove();
+    }, 2000);
+    overlayLogoadded = false;
+}
+    return
+}
+
+removeOverlayLogo()
+
+
+/////
 window.addEventListener('scroll', funcScroll);
 
 function funcScroll(){
@@ -90,24 +102,24 @@ export function headerScroll(){
 
             document.querySelector(`#main_header nav > a.active`).classList.remove('active');
             document.querySelector(`#main_header nav > a[href = "${links[wantedSection]}"]`).classList.add('active'); 
-
+   
     return;
+
 }
 
 export function fixedHeader() {
     let firstHeader = document.querySelector('.container.header')
-    let minLogo = document.querySelector('.logo')
+    
   // let headerActive = document.querySelector(`#main_header nav > a.ref.active`)
  
 
     if (window.scrollY > 200) {
         firstHeader.classList.add('fixedHeader');
-        minLogo.classList.add('logoMin');
+        
         //firstHeader.classList.add('logoMin');
     }
     if (window.scrollY === 0){
         firstHeader.classList.remove('fixedHeader');
-        minLogo.classList.remove('logoMin');
        //headerActive.classList.remove('active');
         //firstHeader.classList.remove('logoMin');
     }

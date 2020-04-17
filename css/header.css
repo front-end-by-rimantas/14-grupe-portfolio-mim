@@ -11,9 +11,9 @@
     animation-duration: 2s;
 }
 
-.overlay.overlayLogo{
+.overlayLogo{
     background: #000 none repeat scroll 0 0;
-    opacity: 1;
+    opacity: 0;
     height: 100%;
     margin-top: 0;
     position: fixed;
