@@ -155,3 +155,38 @@ const works = [
         newClass: 'slide-bottom'
     }
 ]; 
+
+const services = [
+    {
+        icon: 'fa-desktop',
+        title: 'UI/UX DESIGN',
+        margin: `<div class="break"></div>`,
+        description: `There are many variatio
+        ns of pssages of Lorm available, bu in some form`,
+        class: 'service-box'
+    },
+    {
+        icon: 'fa-heart-o',
+        title: 'WEB DESIGN',
+        margin: `<div class="break"></div>`,
+        description: `There are many variatio
+        ns of pssages of Lorm available, bu in some form`,
+        class: 'service-box'
+    },
+    {
+        icon: 'fa-crosshairs',
+        title: 'MINIMAL DESIGN',
+        margin: `<div class="break"></div>`,
+        description: `There are many variatio
+        ns of pssages of Lorm available, bu in some form`,
+        class: 'service-box'
+    },
+    {
+        icon: 'fa-wordpress',
+        title: 'DEVELOPMENT',
+        margin: `<div class="break"></div>`,
+        description: `There are many variatio
+        ns of pssages of Lorm available, bu in some form`,
+        class: 'service-box'
+    }
+];
