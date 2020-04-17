@@ -1,3 +1,6 @@
+#services {
+    background-color: var(--color-backgruond-darker);
+}
 #services > .row {
     display: inline-block;
     float: left;
@@ -15,7 +18,7 @@
             transition: all .5s ease 0s;
         }
         #services .service-box:hover .fa {
-            background: var(--color-hover-primary);
+            background: var(--color-icon-secondary);
             color: #ffffff;
         }
             #services .box-inside {
@@ -34,6 +37,14 @@
                     margin: 0 0 20px 0;
                     transition: all .5s ease 0s;
                 }
+                    .break {
+                        display: inline-block;
+                        float: left;
+                        width: 40px;
+                        height: 2px;
+                        margin-left: calc(50% - 124px);
+                        background-color: #333;
+                    }
                 #services h4 {
                     font-size: 14px;
                     margin: 0 0 15px;

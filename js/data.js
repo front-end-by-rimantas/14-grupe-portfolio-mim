@@ -152,7 +152,7 @@ const services = [
     {
         icon: 'fa-desktop',
         title: 'UI/UX DESIGN',
-        margin: `<div class"margin-element"></div>`,
+        margin: `<div class="break"></div>`,
         description: `There are many variatio
         ns of pssages of Lorm available, bu in some form`,
         class: 'service-box'
@@ -160,7 +160,7 @@ const services = [
     {
         icon: 'fa-heart-o',
         title: 'WEB DESIGN',
-        margin: `<div class"margin-element"></div>`,
+        margin: `<div class="break"></div>`,
         description: `There are many variatio
         ns of pssages of Lorm available, bu in some form`,
         class: 'service-box'
@@ -168,7 +168,7 @@ const services = [
     {
         icon: 'fa-crosshairs',
         title: 'MINIMAL DESIGN',
-        margin: `<div class"margin-element"></div>`,
+        margin: `<div class="break"></div>`,
         description: `There are many variatio
         ns of pssages of Lorm available, bu in some form`,
         class: 'service-box'
@@ -176,7 +176,7 @@ const services = [
     {
         icon: 'fa-wordpress',
         title: 'DEVELOPMENT',
-        margin: `<div class"margin-element"></div>`,
+        margin: `<div class="break"></div>`,
         description: `There are many variatio
         ns of pssages of Lorm available, bu in some form`,
         class: 'service-box'
