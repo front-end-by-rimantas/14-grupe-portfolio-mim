@@ -57,15 +57,19 @@
             overflow: hidden;
         }
         .gallery > .gallery-list > .slide-top {
+            animation-delay: 1s;
             animation: from-top 2s ease;
         }
         .gallery > .gallery-list > .slide-bottom {
+            animation-delay: 1s;
             animation: from-down 2s ease;
         }
         .gallery > .gallery-list > .slide-left {
+            animation-delay: 1s;
             animation: from-left 2s ease;
         }
         .gallery > .gallery-list > .slide-right {
+            animation-delay: 1s;
             animation: from-right 2s ease;
         }
             .gallery > .gallery-list > .item.hide {
