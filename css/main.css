@@ -1,0 +1,136 @@
+/* Tag defaults */
+
+.p {
+    font-family: 'Poppins',sans-serif;
+    color: #767676;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+    margin: 0 0 15px;
+    text-align: justify;
+}
+
+.a {
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'montserratsemibold';
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h3 {
+    font-size: 24px;
+    /* font-family: 'montserratsemibold'; */
+    font-weight: 400;
+    color: #4f4f4f;
+}
+
+h3.bold {
+    font-weight: 600;
+}
+
+/* Modificators */
+
+.text-center {
+    text-align: center;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.mr-40 {
+    margin-right: 40px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.line-height-28 {
+    line-height: 28px;
+}
+
+.font-16 {
+    font-size: 16px;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.light-bg {
+    background-color: #FFF;
+}
+
+/* Layout */
+
+.section {
+    /* padding: 100px 0px; */
+}
+
+/* Headings (section titles) */
+
+.section-title {
+    margin: 0 0 50px;
+}
+
+    .section-title h2 {
+        color: #494949;
+        text-transform: uppercase;
+        margin: 0 0 15px;
+    }
+
+/* Buttons */
+
+.btn {
+    background-color: #393939;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 30px;
+    /* -webkit-transition: all .3s ease 0s; */
+    /* transition: all .3s ease 0s; */
+    display: inline-block;
+    /* margin-bottom: 0; */
+    /* font-weight: normal; */
+    text-align: center;
+    /* vertical-align: middle; */
+    box-shadow: 2px 2px 8px #000;
+}
+
+.lg-btn{
+    width: 173px;
+}
+
+.btn:hover{
+    background-color: black;
+    transition: 10ms;
+   
+}
+
+/* Horizontal lines (dual) */
+
+.horizontal-line > div {
+    background-color: #bcbcbc;
+    height: 2px;
+    margin: 0 auto;
+}
+
+    .horizontal-line > div.top-line {
+        width: 45px;
+        margin-bottom: 5px;
+    }
+
+    .horizontal-line > div.bottom-line {
+        width: 80px;
+    }

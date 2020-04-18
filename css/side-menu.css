@@ -1,0 +1,111 @@
+.side-menu {
+    display: inline-block;
+    float: left;
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -380px;
+    z-index: 2;
+    background-color: #2B2B2B;
+    -webkit-transition: all .8s ease 0s;
+    transition: all .8s ease 0s;
+}
+    .side-menu .element {
+        display: inline-block;
+        float: left;
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+        line-height: 16px;
+        border-bottom: 1px solid #555555;
+        text-transform: uppercase;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .side-menu .element a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    .side-menu .element .side-menu-box {
+        padding: 10px 40% 10px 0;
+    }
+    .side-menu .hov-dark:hover {
+        background-color: #000000;
+        transition: all 0.2s;
+    }
+    .side-menu  #dark {
+        border: none;
+    }
+    .side-menu .element-one {
+        position: relative;
+        transition: all 1s;
+    }
+        .side-menu .element-one > img {
+            display: inline-block;
+            padding: 77px 0 50px 0;
+            margin-left: calc(50% - 64px);
+            opacity: 100%;
+            transition: all 1s;
+        }
+    .element-one > img:hover {
+        opacity: 30%;
+        transition: all 1s;
+    }
+        .side-menu .element-one > .close {
+            display: inline-block;
+            float: left;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 8px;
+            font-size: 30px;
+            line-height: 30px;
+            margin-top: -2px;
+            opacity: 30%;
+            color: #ffffff;
+            transition: all 0.5s;
+        }
+    .element-one > .close:hover{
+        opacity: 100%;
+        transition: all 0.5s;
+    }
+    .element .menu-item {
+        display: inline-block;
+        float: left;
+        position: absolute;
+        padding: 5px;
+        font-size: 12px;
+        line-height: 12px;
+        border-radius: 5px;
+        margin:-3px 0 0 -66px;
+        cursor: default;
+        text-transform: capitalize;
+        background-color: yellow;
+        color: rgb(247, 33, 33);
+    }
+    .side-menu #dark {
+        text-transform: capitalize;
+    }
+    .show-side-menu {
+        right: 0;
+        -webkit-transition: all .4s ease 0s;
+        transition: all .4s ease 0s;
+    }
+    #dark .span {
+        display: inline-block;
+        font-weight: bold;
+        cursor: pointer;
+        color: #ffffff;
+    }
+@media (max-width: 760px) {
+    .side-menu {
+        width: 250px;
+    }
+    #dark .span {
+        width: 100%;
+    }
+    .side-menu .element .side-menu-box {
+        padding: 10px 30% 10px 0;
+    }
+}

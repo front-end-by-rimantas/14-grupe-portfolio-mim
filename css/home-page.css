@@ -1,13 +1,18 @@
 @import './reset.css';
-@import './common.css';
+@import './font-awesome.css';
+@import './layout.css';
+@import './variables.css';
+@import './main.css';
+
 @import './header.css';
-@import './hero.css';
-@import './clients.css';
-@import './about-me.css';
-@import './cards.css';
-@import './progress-bar.css';
-@import './works-gallery.css';
-@import './job-history.css';
+@import './side-menu.css';
+@import './site-navigation.css';
+@import './introduction.css';
+@import './about.css';
+@import './experience.css';
+@import './portfolio.css';
+@import './services.css';
 @import './testimonials.css';
-@import './contact-me.css';
+@import './blog.css';
+@import './contacts.css';
 @import './footer.css';
