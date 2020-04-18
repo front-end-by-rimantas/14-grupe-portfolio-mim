@@ -116,3 +116,6 @@ export function fixedHeader() {
     }
     return
 }
+
+
+let sideMenuAdded = false;
