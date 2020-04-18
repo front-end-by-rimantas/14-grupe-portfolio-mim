@@ -25,13 +25,29 @@ let overlayLogo = document.querySelector(".overlayLogo")
 setTimeout(function(){
     overlayLogo.remove();
 }, 2000);
-
     return
 }
-//nuimame papildomą overlayLogo klasę
+
+const logoS = document.querySelector(".logoS");
+logoS.addEventListener('click', openOverlayS);
 
 
+function openOverlayS (){
+    body.insertAdjacentHTML("afterbegin", `<div class = "overlayLogoS">
+    <div class = "logoWhite">
+        <img src="./img/light-logo.png" alt="Logo">
+    </div>
+</div>`);
 
+let overlayLogoS = document.querySelector(".overlayLogoS")
+setTimeout(function(){
+    overlayLogoS.remove();
+}, 2000);
+    return
+}
+
+
+//nuimame papildomą overlayLogo klase
 
 /////
 window.addEventListener('scroll', funcScroll);
@@ -117,3 +133,5 @@ export function fixedHeader() {
     }
     return
 }
+
+
