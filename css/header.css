@@ -93,7 +93,7 @@
 
         .header > .row nav{
             display: inline-block;
-            float: right;
+            float: left;
             padding-top: 10px;
         }
 
@@ -136,13 +136,14 @@
                 }    
 
 
-            .row nav .menuIcon{
+            .row  .menuIcon{
                 display: inline-block;
-                padding-top: 12px;
+                float: right;
+                padding-top: 20px;
                 padding-left: 10px;
             }
 
-                .row nav .mIcon{
+                .row .mIcon{
                     width: 15px;
                     height: 2px;
                     background-color: #a1a1a1;
@@ -197,31 +198,136 @@
         .introduction img{
             display: inline-block;
             float: right;
-            
         }
 
         @media (max-width: 1300px){
+            .header > .row nav a{
+                padding:7px
+            }
 
         }
 
         @media (max-width: 1100px){
-            h1{
-                
-                font-size: 40px;
-                line-height: 40px;
-                margin: 0 0 15px;
-                font-family: 'Montserrat',sans-serif;
-                font-weight: 700;
-                text-transform: uppercase;
-                word-break: keep-all;
-                }
+            h1{      
+                font-size: 38px;     
+            }
+            .introduction img{
+                height: 617px;
+                width: 345px;
+                float: right;
+            }
+
+            .header .row nav{
+                display: none;
+            }
+
+            #intro{
+                padding: 0;
+            }
         }
 
+
         @media (max-width: 900px){
+            .introduction img{
+                height: 750px;
+                width: 419px;
+                text-align: center;
+                margin-right: 50px;
+                padding-top: 50px;
+                float: left;
+            }
+
+            #intro{
+                padding: 0;
+            }
+
+            .introduction > .row .text {
+                display: inline-block;
+                margin-top: 50px;
+                text-align: center;
+            }
+
+            h1{      
+                font-size: 44px; 
+                line-height: 50px;    
+            }
+
+            .introduction > .row p{
+                line-height: 30px;
+                width: 400px;
+                font-size: 16px;
+            }
 
         }
 
         @media (max-width: 700px) {
+
+            .introduction img{
+                display: inline-block;
+                height: 750px;
+                width: 419px;
+                float: left;
+                text-align: center;
+                padding-top: 50px;
+            }
+
+            #intro{
+                padding: 0;
+            }
+
+            .introduction > .row .text {
+                display: inline-block;
+                margin-top: 50px;
+                text-align: center;
+            }
+
+            h1{      
+                font-size: 44px; 
+                line-height: 50px;    
+            }
+
+            .introduction > .row p{
+                display:inline-block;
+                line-height: 30px;
+                width: 400px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 560px){
+
+            .introduction img{
+                display: inline-block;
+                height: 483px;
+                width: 270px;
+                padding-top: 50px;
+                margin-left: calc((100% - 270px) / 2);
+            }
+
+            h1{     
+                word-break: keep-all;
+                text-align: center; 
+            }
+
+            .introduction > .row .text {
+                display: inline-block;
+                margin-top: 50px;
+                text-align: center;
+                
+            }
+
+            .introduction > .row p{
+                display:inline-block;
+                line-height: 30px;
+                text-align: center;
+                width: 270px;
+               
+            }
+
+            .introduction > .row .image{
+                width: 100%;
+            }
+
 
         }
 
