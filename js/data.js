@@ -8,7 +8,7 @@ const side = [
     {
         description: 'About',
         class: 'element bot-border hov-dark',
-        id: '#about_me'
+        id: '#about'
     },
     {
         description: 'Portfolio',
