@@ -28,6 +28,8 @@ setTimeout(function(){
 
     return
 }
+
+
 //nuimame papildomą overlayLogo klase
 
 /////
