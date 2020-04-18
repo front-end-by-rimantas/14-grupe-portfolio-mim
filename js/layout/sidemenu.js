@@ -43,6 +43,15 @@ times.addEventListener('click', function () {
 return sideMenu.classList.remove("show-side-menu");
 
 });
+const timesClose = document.querySelectorAll('.close-side-menu');
+for (let z = 0; z < timesClose.length; z++) {
+    const element = timesClose[z];
+    element.addEventListener('click', function () {
+
+    return sideMenu.classList.remove("show-side-menu");
+        
+    });
+}
 
 
 
