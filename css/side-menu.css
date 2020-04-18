@@ -41,7 +41,7 @@
         position: relative;
         transition: all 1s;
     }
-        .side-menu .element-one > img {
+        .side-menu .element-one > a >img {
             display: inline-block;
             padding: 77px 0 50px 0;
             margin-left: calc(50% - 64px);

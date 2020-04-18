@@ -3,7 +3,7 @@ function renderContentOfSideMenu() {
     let contentHTML = '';
         contentHTML += `<div class="element bot-border element-one">
                                 <div class="close fa fa-times-circle-o"></div>
-                                <img class="logoS logoMin" src="./img/light-logo.png" alt="Logo">
+                                <a href="http://127.0.0.1:5500/index.html"><img class="logoS logoMin" src="./img/light-logo.png" alt="Logo"></a>
                             </div>
                             <nav>
                                 <div id="transferSideMenu">
