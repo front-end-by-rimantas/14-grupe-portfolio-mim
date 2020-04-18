@@ -28,10 +28,9 @@ setTimeout(function(){
 
     return
 }
-//nuimame papildomą overlayLogo klasę
 
 
-
+//nuimame papildomą overlayLogo klase
 
 /////
 window.addEventListener('scroll', funcScroll);
@@ -117,3 +116,6 @@ export function fixedHeader() {
     }
     return
 }
+
+
+let sideMenuAdded = false;
