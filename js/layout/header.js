@@ -66,8 +66,12 @@ export function headerScroll(){
     //susidarome sarasa
     let links = [];
     let DOMlinks = document.querySelectorAll(".header > .row nav a");
-    const headerHeight = document.querySelector("#main_header").offsetHeight;
+    const headerHeight = document.querySelector(".container.header").offsetHeight;
+   
+
     const height = window.scrollY + headerHeight;
+
+    console.log(window.scrollY)
 
     for(let i = 0; i<DOMlinks.length; i++){
         const link = DOMlinks[i];
@@ -82,20 +86,25 @@ export function headerScroll(){
     let sectionHeigths = [];
         for (let i = 0; i<links.length; i++){
             const link = links[i];
+            console.log()
             if (link === "#"){
                 sectionHeigths.push(0);
                 
             }else{
-                const section = document.querySelector(link);
+                const section = document.querySelector(link)
+                
                 sectionHeigths.push(section.offsetTop)
+                
             }
         }
+
+       
 
     let wantedSection = 0;
     //nustatome kuri is dominanciu yra artimiausia mano esamai pozicijai
     for(let i=0; i<sectionHeigths.length; i++){
         const sectionH = sectionHeigths[i];
-
+        console.log(sectionHeigths[1]);
         if(sectionH <= height){
             wantedSection = i;
         }else{
@@ -122,10 +131,10 @@ export function fixedHeader() {
 
     if (window.scrollY > 200) {
         firstHeader.classList.add('fixedHeader');
-        
         minLogo.classList.add('logoMin');
     }
-    if (window.scrollY === 0){
+
+    if (window.scrollY <= 200){
         firstHeader.classList.remove('fixedHeader');
         minLogo.classList.remove('logoMin');
        //headerActive.classList.remove('active');
