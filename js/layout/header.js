@@ -53,8 +53,8 @@ function renderIntroduction(){
 
 return document.querySelector('#intro').innerHTML = introHTML;
 }
-
 renderIntroduction()
+
 
 function renderHeaderMenu(dataHMenu){
     if (!Array.isArray(dataHMenu)){
@@ -69,12 +69,13 @@ function renderHeaderMenu(dataHMenu){
     let headerMenu = document.querySelector('nav');
     return headerMenu.innerHTML = HTML;
 }
-
-
 renderHeaderMenu(navigation)
 
+
+
+
 /// nuimame overlay klas4, kuri atsiranda tik užkrovus puslapį
-function removeOverlay(){
+export function removeOverlay(){
     let overlay = document.querySelector(".overlay")
     setTimeout(function(){
       overlay.remove();
@@ -211,5 +212,7 @@ export function fixedHeader() {
     }
     return
 }
+
+
 
 
