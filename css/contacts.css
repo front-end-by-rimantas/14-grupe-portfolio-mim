@@ -1,41 +1,61 @@
 #contact .left{
-
-
+    display: inline-block;
+    width: 100%;
 }
 
     .left > .top{
+        display: inline-block;
+        width: 100%;
 
     }
+        .left > .top > .horizontal-line{
+            display: inline-block;
+            float: left;
+        }
 
-    .left > .top > p{
+            .top > .horizontal-line > .top-line{
+              display: inline-block;
+            }
 
-    }
+            .top > .horizontal-line > .bottom-line{
+               
+            }
 
-        .left > .bottom{
+
+        .left > .top > p{
+            display: inline-block;
+            width: 100%;
+            font-family: Poppins;
+            font-size: 14px;
+            line-height: 24px;
 
         }
 
-            .left > .bottom > .contact{
-                
+            .left > .bottom{
+
             }
 
-                .bottom > .contact > i {
+                .left > .bottom > .contact{
                     
                 }
 
-                .bottom > .contact > .credentials {
-                    
-                }
-
-                    .contact > h4{
+                    .bottom > .contact > i {
                         
                     }
 
-                    .contact > a,
-                    .contact > span
-                    {
+                    .bottom > .contact > .credentials {
                         
                     }
+
+                        .contact > h4{
+                            
+                        }
+
+                        .contact > a,
+                        .contact > span
+                        {
+                            
+                        }
 
 #contact .right{
 

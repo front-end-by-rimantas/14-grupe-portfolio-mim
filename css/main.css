@@ -24,6 +24,7 @@ h2 {
     font-family: 'Montserrat', sans-serif;
     color: var(--color-h2);
     text-transform: capitalize;
+    margin: 0 0 15px;
 }
 
 h3 {
