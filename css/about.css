@@ -7,8 +7,8 @@
 }
 
 .progress-mark span, .progress-title-holder {
-    color: #5e5e5e;
-    font-family: Montserrat,sans-serif;
+    color: var(--color-class-grey-12);
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     margin: 0 0 15px;
 }
@@ -40,9 +40,9 @@
 }
 
 .progress-mark:after {
-    background: #484848 none repeat scroll 0 0;
+    background: var(--color-class-grey-14) none repeat scroll 0 0;
     border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(72,72,72,.5);
+    box-shadow: 0 0 0 4px var(--color-class-transparent-grey-14);
     content: "";
     height: 14px;
     position: absolute;
@@ -57,7 +57,7 @@
     border-radius: 3px;
 }
 .progress-outter {
-    background-color: #c8c8c8;
+    background-color: var(--color-class-grey-2);
 }
 
 .progress-content-wrapper {
@@ -65,7 +65,7 @@
 }
 
 .progress-content {
-    background-color: #484848;
+    background-color: var(--color-class-grey-14);
     animation: load-animation 2s ease 0s 1 normal forwards;
     width: 100%;
 }
