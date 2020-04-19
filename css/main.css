@@ -22,6 +22,8 @@ h2 {
     font-size: 32px;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
+    color: var(--color-h2);
+    text-transform: capitalize;
 }
 
 h3 {
@@ -35,6 +37,13 @@ h3.bold {
     font-weight: 600;
 }
 
+h4 {
+    color: var(--color-h4);
+    font-family: 'Montserrat',sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+
+}
 /* Modificators */
 
 .text-center {
@@ -91,6 +100,8 @@ h3.bold {
 
 .btn {
     background-color: #393939;
+    text-transform: uppercase;
+    font-family: 'montserratsemibold';
     text-decoration: none;
     color: white;
     border-radius: 5px;

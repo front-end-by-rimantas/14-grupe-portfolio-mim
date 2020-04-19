@@ -28,7 +28,7 @@ setTimeout(function(){
     return
 }
 
-const logoS = document.querySelector(".logoS");
+let logoS = document.querySelector(".logoS");
 logoS.addEventListener('click', openOverlayS);
 
 
@@ -66,13 +66,13 @@ export function headerScroll(){
     //susidarome sarasa
     let links = [];
     let DOMlinks = document.querySelectorAll(".header > .row nav a");
-    const headerHeight = document.querySelector(".container.header").offsetHeight;
+    let headerHeight = document.querySelector(".container.header").offsetHeight;
 
     let height = window.scrollY + headerHeight;
     for(let i = 0; i<DOMlinks.length; i++){
-        const link = DOMlinks[i];
-       const href = link.href;
-       const split = href.split("#");
+        let link = DOMlinks[i];
+       let href = link.href;
+       let split = href.split("#");
        if(split.length > 1){
         links.push("#" + split[1]);
        }
@@ -81,13 +81,13 @@ export function headerScroll(){
     //randame aukscio pozicija
     let sectionHeigths = [];
         for (let i = 0; i<links.length; i++){
-            const link = links[i];
+            let link = links[i];
             console.log()
             if (link === "#"){
                 sectionHeigths.push(0);
                 
             }else{
-                const section = document.querySelector(link)
+                let section = document.querySelector(link)
                 sectionHeigths.push(section.offsetTop)
                 
             }
@@ -96,7 +96,7 @@ export function headerScroll(){
     let wantedSection = 0;
     //nustatome kuri is dominanciu yra artimiausia mano esamai pozicijai
     for(let i=0; i<sectionHeigths.length; i++){
-        const sectionH = sectionHeigths[i];
+        let sectionH = sectionHeigths[i];
         
         if(sectionH <= height){
             wantedSection = i;
