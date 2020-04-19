@@ -67,12 +67,8 @@ export function headerScroll(){
     let links = [];
     let DOMlinks = document.querySelectorAll(".header > .row nav a");
     const headerHeight = document.querySelector(".container.header").offsetHeight;
-   
 
-    const height = window.scrollY + headerHeight;
-
-    console.log(window.scrollY)
-
+    let height = window.scrollY + headerHeight;
     for(let i = 0; i<DOMlinks.length; i++){
         const link = DOMlinks[i];
        const href = link.href;
@@ -92,22 +88,20 @@ export function headerScroll(){
                 
             }else{
                 const section = document.querySelector(link)
-                
                 sectionHeigths.push(section.offsetTop)
                 
             }
         }
 
-       
-
     let wantedSection = 0;
     //nustatome kuri is dominanciu yra artimiausia mano esamai pozicijai
     for(let i=0; i<sectionHeigths.length; i++){
         const sectionH = sectionHeigths[i];
-        console.log(sectionHeigths[1]);
+        
         if(sectionH <= height){
             wantedSection = i;
         }else{
+           
             break;
         }
     }
