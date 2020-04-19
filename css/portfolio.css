@@ -18,7 +18,7 @@
             line-height: 28px;
             cursor: pointer;
             text-transform: uppercase;
-            color: var(--color-hover-paragraph);
+            color: var(--color-class-grey-10);
             transition: all .3s ease 0s;
         }  
         .row .filter > .item {
@@ -32,7 +32,7 @@
             left: 50%;
             right: 51%;
             bottom: 19px;
-            background-color: var(--color-hover-paragraph);
+            background-color: var(--color-class-grey-10);
             transition: all 0.3s;
         }
             .row .filter > .horizontal-line::after {
@@ -86,7 +86,7 @@
                 right: 50%;
                 left: 50%;
                 overflow: hidden;
-                background-color: rgba(255, 255, 255, 0.589);
+                background-color: var(--color-class-transparent-grey-1);
             }
             .gallery .item:hover > .hover{
                 top: 0;
@@ -105,8 +105,8 @@
                 border-radius: 50%;
                 font-size: 30px;
                 line-height: 30px;
-                background-color: var(--color-hover-primary-transparent);
-                color: #ffffff;
+                background-color: var(--color-class-transparent-grey-3);
+                color: var(--color-class-white);
                 cursor: pointer;
             }
                 .item > .bot-text {
@@ -148,13 +148,13 @@
                     transform: scale(1.2,1.2);
                     }
                 .item:hover .portfolio-link {
-                    color: var(--color-hover-paragraph);
+                    color: var(--color-class-grey-10);
                 }
                 .item .portfolio-link:hover {
                     color: rgb(0, 0, 0);
                 }
                 .item:hover .description {
-                    color: var(--color-hover-secondary);
+                    color: var(--color-class-grey-3);
                 }
 @keyframes from-top{
     from{
