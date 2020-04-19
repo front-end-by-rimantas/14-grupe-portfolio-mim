@@ -118,6 +118,70 @@ h3.bold {
    
 }
 
+/* Back to top button */
+
+#back-to-top-btn {
+    display: none;
+    position: fixed;
+    z-index: 4;
+    bottom: 60px;
+    right: 20px;
+    font-size: 26px;
+    width: 30px;
+    height: 35px;
+    background-color:var(--color-icon-secondary);
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+  }
+    #back-to-top-btn:hover {
+        background-color: var(--color-icon-third);
+    }
+    .fa.fa-angle-up {
+        margin-top: calc(50% - 11px);
+    }
+   
+  /* Animations */
+  .btnEntrance {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: btnEntrance;
+  }
+
+  /* fadeInUp */
+  @keyframes btnEntrance {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .btnExit {
+    animation-duration: 0.25s;
+    animation-fill-mode: both;  
+    animation-name: btnExit;
+  }
+
+  /* fadeOutDown */
+  @keyframes btnExit {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+
 /* Horizontal lines (dual) */
 
 .horizontal-line > div {

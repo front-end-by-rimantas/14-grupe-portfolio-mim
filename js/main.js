@@ -5,6 +5,7 @@ import filterGallery from './layout/portfolio.js';
 import AboutSectionClass from'./layout/about.js';
 import { headerScroll, fixedHeader } from'./layout/header.js';
 import renderServices from'./layout/services.js';
+import scrollFunction from'./layout/backtotopbtn.js';
 
 /*
 import from './reset.js';
