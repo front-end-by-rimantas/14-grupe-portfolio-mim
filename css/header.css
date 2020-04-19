@@ -12,7 +12,7 @@
 }
 
 .overlayLogo{
-    background: #000 none repeat scroll 0 0;
+    background: var(--color-class-black) none repeat scroll 0 0;
     opacity: 0;
     height: 100%;
     margin-top: 0;
@@ -25,7 +25,7 @@
 }
 
 .overlayLogoS{
-    background: #000 none repeat scroll 0 0;
+    background: var(--color-class-black) none repeat scroll 0 0;
     opacity: 0;
     height: 100%;
     margin-top: 0;
@@ -85,16 +85,16 @@
 .container.header,
 .container.introduction
 {
-    background-color: #f5f5f5;
+    background-color: var(--color-class-grey-1);
 }
 
 .container.header.fixedHeader {
     position: fixed;
     height: 60px;
     width: 100%;
-    box-shadow: 0px 2px 2px rgb(223, 220, 220);
+    box-shadow: 0px 2px 2px var( --color-class-grey-2);
     z-index: 1;
-    background-color: var(--main-color);
+    background-color: var(--color-class-grey-1);
     margin: 0;
     padding: 0 calc((100% - 1200px) / 2);
 }
@@ -123,9 +123,9 @@
 
             .header > .row nav a{
                 text-decoration: none;
-                color: #a1a1a1;
+                color: var(--color-class-grey-5);
                 text-transform: uppercase;
-                font-family: Montserrat;
+                font-family: 'Montserrat';
                 font-size: 14px;
                 line-height: 40px;
                 font-weight: 400;
@@ -141,7 +141,7 @@
                 transition: all 500ms ease;
                 width: 0;
                 left: 0;
-                background: #afafaf;
+                background: var(--color-class-grey-4);
                 height: 2px;
                 right: 0;
                 margin-top: -1px;
@@ -150,7 +150,7 @@
                 }
     
                 .header > .row nav a:hover{
-                    color: #c7c5c5;
+                    color: var(--color-class-grey-2);
                 }
     
                 nav .ref:hover::after,
@@ -170,7 +170,7 @@
                 .row .mIcon{
                     width: 15px;
                     height: 2px;
-                    background-color: #a1a1a1;
+                    background-color: var(--color-class-grey-5);
                     margin: 3px 0;  
                 }
         
@@ -189,7 +189,7 @@
             }
 
                 h5{
-                color: #919191;
+                color: var(--color-class-grey-7);
                 text-transform: uppercase;
                 font-family: 'montserratsemibold';
                 font-size: 16px;
@@ -200,7 +200,7 @@
                 }
 
                 h1{
-                color: #414141;
+                color: var(--color-class-grey-14);
                 font-size: 44px;
                 line-height: 28px;
                 margin: 0 0 15px;
@@ -210,7 +210,7 @@
                 }
 
                 .text > p{
-                    color: #6a6a6a;
+                    color: var(--color-class-grey-11);
                     font-family: 'Poppins';
                     font-size: 15px;
                     line-height: 28px;
@@ -247,6 +247,9 @@
 
             #intro{
                 padding: 0;
+            }
+            #main_header {
+                height: 140px;
             }
         }
 
