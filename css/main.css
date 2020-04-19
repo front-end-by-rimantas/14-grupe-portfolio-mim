@@ -2,7 +2,7 @@
 
 .p {
     font-family: 'Poppins',sans-serif;
-    color: #767676;
+    color: var(--color-class-grey-10);
     font-size: 14px;
     line-height: 30px;
     font-weight: 400;
@@ -14,7 +14,7 @@
     outline: none;
     cursor: pointer;
     text-decoration: none;
-    color: #fff;
+    color: var(--color-class-white);
     font-family: 'montserratsemibold';
 }
 
@@ -28,7 +28,7 @@ h3 {
     font-size: 24px;
     /* font-family: 'montserratsemibold'; */
     font-weight: 400;
-    color: #4f4f4f;
+    color: var(--color-class-grey-14);
 }
 
 h3.bold {
@@ -66,7 +66,7 @@ h3.bold {
 }
 
 .light-bg {
-    background-color: #FFF;
+    background-color: var(--color-class-white);
 }
 
 /* Layout */
@@ -82,7 +82,7 @@ h3.bold {
 }
 
     .section-title h2 {
-        color: #494949;
+        color: var(--color-class-grey-13);
         text-transform: uppercase;
         margin: 0 0 15px;
     }
@@ -90,9 +90,9 @@ h3.bold {
 /* Buttons */
 
 .btn {
-    background-color: #393939;
+    background-color: var(--color-class-grey-15);
     text-decoration: none;
-    color: white;
+    color: var(--color-class-white);
     border-radius: 5px;
     font-size: 15px;
     height: 50px;
@@ -105,7 +105,7 @@ h3.bold {
     /* font-weight: normal; */
     text-align: center;
     /* vertical-align: middle; */
-    box-shadow: 2px 2px 8px #000;
+    box-shadow: 2px 2px 8px var(--color-class-black);
 }
 
 .lg-btn{
@@ -113,7 +113,7 @@ h3.bold {
 }
 
 .btn:hover{
-    background-color: black;
+    background-color: var(--color-class-black);
     transition: 10ms;
    
 }
@@ -129,8 +129,8 @@ h3.bold {
     font-size: 26px;
     width: 30px;
     height: 35px;
-    background-color:var(--color-icon-secondary);
-    color: #ffffff;
+    background-color: var(--color-class-grey-15);
+    color: var(--color-class-white);
     cursor: pointer;
     outline: none;
     font-size: 22px;
@@ -140,7 +140,7 @@ h3.bold {
     transition-timing-function: ease-in-out;
   }
     #back-to-top-btn:hover {
-        background-color: var(--color-icon-third);
+        background-color: var(--color-class-black);
     }
     .fa.fa-angle-up {
         margin-top: calc(50% - 11px);
@@ -185,7 +185,7 @@ h3.bold {
 /* Horizontal lines (dual) */
 
 .horizontal-line > div {
-    background-color: #bcbcbc;
+    background-color: var(--color-class-grey-3);
     height: 2px;
     margin: 0 auto;
 }
