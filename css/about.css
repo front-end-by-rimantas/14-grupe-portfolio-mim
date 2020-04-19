@@ -60,23 +60,9 @@
     background-color: var(--color-class-grey-2);
 }
 
-.progress-content-wrapper {
-    
-}
-
 .progress-content {
     background-color: var(--color-class-grey-14);
-    animation: load-animation 2s ease 0s 1 normal forwards;
     width: 100%;
-}
-
-@keyframes load-animation {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 100%;
-    }
 }
 
 .right .skill-progress {
