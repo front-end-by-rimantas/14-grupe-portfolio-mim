@@ -162,6 +162,7 @@
 
             .row  .menuIcon{
                 display: inline-block;
+                cursor: pointer;
                 float: right;
                 padding-top: 20px;
                 padding-left: 10px;
