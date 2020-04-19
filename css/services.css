@@ -53,8 +53,8 @@
                     font-family: 'Montserrat', sans-serif;
                     color: var(--color-hover-paragraph);
                 }
-                h4::after {
-                    content: '';
+                #services h4::after {
+                    /* content: ''; */
                     display: inline-block;
                     width: 55px;
                     height: 2px;

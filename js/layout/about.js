@@ -23,7 +23,8 @@ export default class AboutSectionClass {
         let rowDom = document.createElement( 'div' )
         rowDom.classList = 'row' 
         let leftDom = document.createElement( 'div' )
-        leftDom.classList = 'col-xs-12 col-sm-6'
+        leftDom.classList = 'col-6 col-sm-6 col-xs-12'
+        // leftDom.classList = 'col-xs-12 col-sm-6'
         let headerDom = document.createElement( 'h3' )
         headerDom.classList = 'bold capitalize'
         headerDom.innerText = 'Howdy!'
@@ -39,9 +40,10 @@ export default class AboutSectionClass {
         buttonDom.innerText = 'DOWNLOAD MY CV'
 
         let rightDom = document.createElement( 'div' )
-        rightDom.classList = 'col-xs-12 col-sm-6 m-l-sm-1 m-l-md-1 col-md-5'
+        rightDom.classList = 'right col-6 col-md-5 col-sm-6 col-xs-12'
+        // rightDom.classList = 'col-xs-12 col-sm-6 m-l-sm-1 m-l-md-1 col-md-5'
         let rightHolderDom = document.createElement( 'div' )
-        rightHolderDom.classList = 'right skill-progress'    
+        rightHolderDom.classList = 'skill-progress'    
         skills_data_Arr.forEach( 
             ( skillPar ) => {
                 let skillObj = new SkillClass( skillPar.percentage, skillPar.title )
