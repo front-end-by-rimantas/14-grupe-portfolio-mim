@@ -14,9 +14,9 @@ export default class HeadingClass {
         this.rowDom = document.createElement( 'div' )
         this.rowDom.classList = 'row' 
         let sectionTitleDom = document.createElement( 'div' )
-        sectionTitleDom.classList = 'section-title text-center'
+        sectionTitleDom.classList = 'col-xs-12'
         let widthDom = document.createElement( 'div' )
-        widthDom.classList = 'col-12'
+        widthDom.classList = 'section-title text-center'
         let headerDom = document.createElement( 'h2' )
         headerDom.innerText = this.textStr
         let horizontalLineDom = document.createElement( 'div' )
