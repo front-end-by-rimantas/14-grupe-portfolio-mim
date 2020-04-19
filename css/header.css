@@ -1,5 +1,5 @@
 .overlay{
-    background: #000;
+    background: var(--color-class-black);
     opacity: 0;
     height: 100%;
     margin-top: 0;
