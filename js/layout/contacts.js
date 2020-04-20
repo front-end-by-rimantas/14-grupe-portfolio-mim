@@ -8,11 +8,12 @@ function renderContacts(contactData){
     for (let i = 0; i < contactData.length; i++){
         HTML += `<div class="contact">
                 ${contactData[i].i}
-                </div>
                 <div class="credentials">
                 <h4>${contactData[i].h4}</h4>
                 <a href="#" class = ${contactData[i].class}>${contactData[i].atext}</a>
                 </div>
+                </div>
+               
                 `
     }
     let contactmenu = document.querySelector('.bottom');

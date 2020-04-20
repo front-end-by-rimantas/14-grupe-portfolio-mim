@@ -38,6 +38,13 @@ h3.bold {
     font-weight: 600;
 }
 
+h4 {
+    color: var(--color-class-grey-10);
+    font-family: 'Montserrat',sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
 /* Modificators */
 
 .text-center {
