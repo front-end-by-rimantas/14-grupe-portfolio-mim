@@ -1,6 +1,81 @@
 "use strict";
+
+/*let mainHeader = (document.querySelector('#main_header'));
+console.log(mainHeader);
+
+function renderMainHeader(){
+    let mainHeaderHTML = "";
+    mainHeaderHTML +=`<div class="container header">
+    <div class="row">
+        <div class = "col-6 col-lg-5">
+            <a href="/"><img class="logo" src="./img/dark-logo.png" alt="Logo"></a>
+        </div>
+        <div class = "col-6 col-lg-7">
+            <nav>
+            
+            </nav>
+            <div class="menuIcon">
+                <div class="mIcon"></div>
+                <div class="mIcon"></div>
+                <div class="mIcon"></div>
+            </div>
+         </div>
+    </div> 
+</div>
+
+  `;
+  
+
+return document.querySelector('#main_header').innerHTML = mainHeaderHTML;
+   
+}
+
+renderMainHeader();*/
+
+function renderIntroduction(){
+    let introHTML = "";
+    introHTML += `<div class="row">
+    <div class = "col-6 col-md-7 m-l-md-0 col-sm-11 m-l-sm-1 col-xs-11 m-l-xs-1">
+        <div class = "text">
+            <h5>Hello, my name is</h5>
+            <h1>Andrew Jordan</h1>
+            <p>On the other hand, we denounce with righteous indignation and dislike
+                men who are so beguiled demord by</p>
+            <a class="btn lg-btn" href="#portfolio">MY WORK</a>
+        </div>
+    </div>
+    <div class = "col-6 col-md-5 m-l-md-0 col-sm-11 m-l-sm-1 col-xs-11 m-l-xs-1">
+        <div class = "image">
+        <img src="./img/author.png" alt="author">
+        </div>
+    </div> 
+</div>`
+
+return document.querySelector('#intro').innerHTML = introHTML;
+}
+renderIntroduction()
+
+
+function renderHeaderMenu(dataHMenu){
+    if (!Array.isArray(dataHMenu)){
+        return console.error("Reikia Array");
+    }
+    let HTML = "";
+    for (let i = 0; i < dataHMenu.length; i++){
+        HTML += `<a href=${dataHMenu[i].ref} class = ${dataHMenu[i].class}>
+           ${dataHMenu[i].text}</a>`
+    }
+
+    let headerMenu = document.querySelector('nav');
+    return headerMenu.innerHTML = HTML;
+}
+renderHeaderMenu(navigation)
+
+
+
+
 /// nuimame overlay klas4, kuri atsiranda tik užkrovus puslapį
-function removeOverlay(){
+export function removeOverlay(){
     let overlay = document.querySelector(".overlay")
     setTimeout(function(){
       overlay.remove();
@@ -28,7 +103,7 @@ setTimeout(function(){
     return
 }
 
-const logoS = document.querySelector(".logoS");
+let logoS = document.querySelector(".logoS");
 logoS.addEventListener('click', openOverlayS);
 
 
@@ -61,18 +136,20 @@ window.addEventListener('scroll', () => {
     fixedHeader();
 });
 
-export function headerScroll(){
+
+
+ export function headerScroll(){
     //einamoji scrolo vieta (aukstis)
     //susidarome sarasa
     let links = [];
     let DOMlinks = document.querySelectorAll(".header > .row nav a");
-    const headerHeight = document.querySelector(".container.header").offsetHeight;
+    let headerHeight = document.querySelector(".container.header").offsetHeight;
 
     let height = window.scrollY + headerHeight;
     for(let i = 0; i<DOMlinks.length; i++){
-        const link = DOMlinks[i];
-       const href = link.href;
-       const split = href.split("#");
+        let link = DOMlinks[i];
+       let href = link.href;
+       let split = href.split("#");
        if(split.length > 1){
         links.push("#" + split[1]);
        }
@@ -81,13 +158,13 @@ export function headerScroll(){
     //randame aukscio pozicija
     let sectionHeigths = [];
         for (let i = 0; i<links.length; i++){
-            const link = links[i];
+            let link = links[i];
             console.log()
             if (link === "#"){
                 sectionHeigths.push(0);
                 
             }else{
-                const section = document.querySelector(link)
+                let section = document.querySelector(link)
                 sectionHeigths.push(section.offsetTop)
                 
             }
@@ -96,7 +173,7 @@ export function headerScroll(){
     let wantedSection = 0;
     //nustatome kuri is dominanciu yra artimiausia mano esamai pozicijai
     for(let i=0; i<sectionHeigths.length; i++){
-        const sectionH = sectionHeigths[i];
+        let sectionH = sectionHeigths[i];
         
         if(sectionH <= height){
             wantedSection = i;
@@ -116,7 +193,6 @@ export function headerScroll(){
     return;
 
 }
-
 export function fixedHeader() {
     let firstHeader = document.querySelector('.container.header')
     let minLogo = document.querySelector('.logo')
@@ -136,5 +212,7 @@ export function fixedHeader() {
     }
     return
 }
+
+
 
 

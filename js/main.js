@@ -26,4 +26,6 @@ import from'./footer.js';*/
 headerScroll();
 fixedHeader();
 
+
+
 new AboutSectionClass('about');
