@@ -97,7 +97,6 @@
     background-color: var(--color-class-grey-1);
     margin: 0;
     padding: 0 calc((100% - 1200px) / 2);
-
 }
 
 .header .logo{
@@ -163,6 +162,7 @@
 
             .row  .menuIcon{
                 display: inline-block;
+                cursor: pointer;
                 float: right;
                 padding-top: 20px;
                 padding-left: 10px;
