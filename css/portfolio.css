@@ -12,7 +12,7 @@
             display: inline-block;
             float: left;
             padding: 5px 10px;
-            font-family: "Montserrat",sans-serif;
+            font-family: 'Montserrat',sans-serif;
             font-size: 12px;
             letter-spacing: .22px;
             line-height: 28px;
@@ -139,7 +139,7 @@
                     }
                 .item > .portfolio-img {
                     object-fit: cover;
-                    height: auto;
+                    height: 100%;
                     width: 100%;
                     transition: all .5s;
                     transform: scale(1,1);

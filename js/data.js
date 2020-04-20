@@ -89,7 +89,7 @@ const side = [
     {
         description: 'Contact',
         class: 'element bot-border hov-dark',
-        id: '#contacts'
+        id: '#contact'
     }
 ];
 
