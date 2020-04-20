@@ -11,7 +11,7 @@
         .left > .top > .horizontal-line{
             display: flex;
             flex-direction: column;
-            float: left;
+           
         }
 
             .top > .horizontal-line > .top-line{
@@ -22,6 +22,7 @@
 
             .top > .horizontal-line > .bottom-line{
               margin-bottom: 20px;
+              margin-left: 0;
             }
 
 
@@ -187,6 +188,61 @@
         form > textarea {
             margin-top: 30px;
         }
+
+     }
+
+
+     @media (max-width: 560px){
+        form > .input > .input-left{
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        form > .input > .input-right{
+            width: 100%;
+        }
+
+        .input input{
+            margin: 15px 0;
+        }
+
+        form > textarea {
+            margin-top: 30px;
+        }
+
+        .top{
+            text-align: center;
+        }
+
+        .left > .top > .horizontal-line{
+          
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            float: none;
+        }
+
+            .top > .horizontal-line > .top-line{
+                display: inline-block;
+                margin: 5px auto;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .top > .horizontal-line > .bottom-line{
+                display: inline-block;
+                margin: 0 auto;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .left > .top > p{
+                margin-top: 30px;
+            }
+
+            .btn.cont-btn{
+                margin-left: calc((100% - 185px) / 2);
+            }
 
 
      }
