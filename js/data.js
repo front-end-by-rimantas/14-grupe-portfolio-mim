@@ -166,7 +166,7 @@ const exp = [
         icon:'fa-check-circle',
         position:'Graphic Designer',
         text:'There are many variations of passages of Lorem Ipsum available, but the majority',
-        class:'expBox'
+        
     },
     {
         company:'RegalTheme',
@@ -174,7 +174,7 @@ const exp = [
         icon:'fa-check-circle',
         position:'Web Designer & Developer',
         text:'There are many variations of passages of Lorem Ipsum available, but the majority',
-        class:'expBox'
+        
     },
     {
         company:'Wipux',
@@ -182,18 +182,22 @@ const exp = [
         icon:'fa-check-circle',
         position:'Graphic Designer',
         text:'There are many variations of passages of Lorem Ipsum available, but the majority',
-        class:'expBox'
+        
     },
     {
         company:'ThemeForest',
         year:'2014-2017',
-        icon:'fa-check-circle',
+        // icon:'fa-check-circle',
         position:'Programmer & Developer',
         text:'There are many variations of passages of Lorem Ipsum available, but the majority',
-        class:'expBox'
+        
     }
     
 ];
+
+
+
+
 const services = [
     {
         icon: 'fa-desktop',
@@ -228,3 +232,4 @@ const services = [
         class: 'service-box'
     }
 ];
+

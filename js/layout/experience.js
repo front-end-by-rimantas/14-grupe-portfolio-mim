@@ -1,52 +1,50 @@
-"use strict";
+"use strict"
 
-// import HeadingClass from'../components/Heading.js';
 
-function renderExperience(expList) {
+function renderExperience( expList ) {
     let HTML = '';
 
     if ( !Array.isArray(expList) ) {
-        return console.log('ERROR: need correct array..');
+        return console.log('ERROR: data is not arrey..');  
     }
-    if ( expList.lenght === 0 ) {
-        return console.log('ERROR: empty')
+    if ( expList.length === 0 ) {
+        return console.log('ERROR: arrey cannot be empty');  
     }
-
-    for (let i = 0; i < experienceList.lenght; i++) {
-        const expSection = expList[i];
-        HTML += '<div class="expierence-box " ${expSection.class}">
-                    <div class="exp-time">
-                        <h4>${expSection.company}</h4>
-                        <p>${expSection.year}</p>
-                    </div>
-                    <i class="fa ${expSection.icon}"></i>
-                    <div class="experience">
-                        <h3>${expSection.position}</h3>
-                        <p>${expSection.text}</p>
-                    </div>
-                </div>'
+    
+    for (let i = 0; i < expList.length; i++) {
+        const experienceSection = expList[i];
+            HTML += `<div class="expierence-box">
+                        <div class="exp-time">
+                            <div class="dashed-line"></div>
+                            <h4>${experienceSection.company}</h4>
+                            <p>${experienceSection.year}</p>
+                        </div>
+                        <i class="fa ${experienceSection.icon}"></i>
+                        <div class="experience">
+                            <h3>${experienceSection.position}</h3>
+                            <p>${experienceSection.text}</p>
+                        </div>
+                    </div>`;
     }
-    return document.querySelector('#transferExp').innerHTML = HTML;
+    return document.querySelector('#expContent').innerHTML = HTML;
 }
-function renderExpHead() {
+function renderExperienceRow() {
     let experienceHTML = '';
     experienceHTML += `<div class="row">
-                            <div class="section-title text-center">
-                                <h2>My Experience</h2>
-                                    <div class="horizontal-line">
-                                        <div class="top-line"></div>
-                                        <div class="bottom-line"></div>
-                                    </div>
+                        <div class="section-title text-center">
+                            <h2>My experience</h2>
+                                <div class="horizontal-line">
+                                    <div class="top-line"></div>
+                                    <div class="bottom-line"></div>
                                 </div>
-                            </div>   
-                        <div class="row" id="transferExp">
-                        </div>`;
-                    return document.querySelector('#expBox').innerHTML = experienceHTML;
-
+                            </div>
+                        </div>   
+                    <div class="row" id="expContent">
+                    </div>`;
+    return document.querySelector('#experience').innerHTML = experienceHTML;
 
 }
-
-renderExpHead();
-renderExperience(expBox);
+renderExperienceRow();
+renderExperience(experience);
 
 export default renderExperience;
