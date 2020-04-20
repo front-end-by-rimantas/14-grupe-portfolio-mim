@@ -22,6 +22,9 @@ h2 {
     font-size: 32px;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
+    color: var(--color-class-grey-13);
+    text-transform: uppercase;
+    margin: 0 0 15px;
 }
 
 h3 {
@@ -33,6 +36,13 @@ h3 {
 
 h3.bold {
     font-weight: 600;
+}
+
+h4 {
+    color: var(--color-class-grey-10);
+    font-family: 'Montserrat',sans-serif;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 /* Modificators */
