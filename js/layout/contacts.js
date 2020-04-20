@@ -22,3 +22,15 @@ function renderContacts(contactData){
 }
 
 renderContacts(contacts)
+
+
+    console.log(document.querySelector('.cont-btn'))
+
+    document.querySelector('.cont-btn').addEventListener('click', renderAlert);
+
+    function renderAlert(){
+        
+    }
+
+   
+
