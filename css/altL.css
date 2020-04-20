@@ -100,13 +100,8 @@
 
 @media (max-width: 1300px) {
     .container > .row {
-        width: 1100px;
-        margin: 0 calc(50% - 550px);
-    }
-    .row > .col-lg-1, .row > .col-lg-2, .row > .col-lg-3, .row > .col-lg-4,
-    .row > .col-lg-5, .row > .col-lg-6, .row > .col-lg-7, .row > .col-lg-8,
-    .row > .col-lg-9, .row > .col-lg-10, .row > .col-lg-11, .row > .col-lg-12 {
-        float: left;
+        width: 1000px;
+        margin: 0 calc(50% - 500px);
     }
     .row > .col-lg-1 { width: var(--col-1); }
     .row > .col-lg-2 { width: var(--col-2); }
@@ -152,13 +147,8 @@
 }
 @media (max-width: 1100px) {
     .container > .row {
-        width: 900px;
-        margin: 0 calc(50% - 450px);
-    }
-    .row > .col-md-1, .row > .col-md-2, .row > .col-md-3, .row > .col-md-4,
-    .row > .col-md-5, .row > .col-md-6, .row > .col-md-7, .row > .col-md-8,
-    .row > .col-md-9, .row > .col-md-10, .row > .col-md-11, .row > .col-md-12 {
-        float: left;
+        width: 800px;
+        margin: 0 calc(50% - 400px);
     }
     .row > .col-md-1 { width: var(--col-1); }
     .row > .col-md-2 { width: var(--col-2); }
@@ -204,13 +194,8 @@
 }
 @media (max-width: 900px) {
     .container > .row {
-        width: 700px;
-        margin: 0 calc(50% - 350px);
-    }
-    .row > .col-sm-1, .row > .col-sm-2, .row > .col-sm-3, .row > .col-sm-4,
-    .row > .col-sm-5, .row > .col-sm-6, .row > .col-sm-7, .row > .col-sm-8,
-    .row > .col-sm-9, .row > .col-sm-10, .row > .col-sm-11, .row > .col-sm-12 {
-        float: left;
+        width: 600px;
+        margin: 0 calc(50% - 300px);
     }
     .row > .col-sm-1 { width: var(--col-1); }
     .row > .col-sm-2 { width: var(--col-2); }
@@ -300,54 +285,5 @@
     .row > .m-r-xs-10 { margin-right: var(--margin-10); }
     .row > .m-r-xs-11 { margin-right: var(--margin-11); }
     .row > .m-r-xs-12 { margin-right: var(--margin-12); }
-
-}
-
-@media (max-width: 560px) {
-    .container > .row {
-        width: 100%;
-        margin: 0;
-        padding: 0 10px;
-    }
-    .row > .col-xxs-1 { width: var(--col-1); }
-    .row > .col-xxs-2 { width: var(--col-2); }
-    .row > .col-xxs-3 { width: var(--col-3); }
-    .row > .col-xxs-4 { width: var(--col-4); }
-    .row > .col-xxs-5 { width: var(--col-5); }
-    .row > .col-xxs-6 { width: var(--col-6); }
-    .row > .col-xxs-7 { width: var(--col-7); }
-    .row > .col-xxs-8 { width: var(--col-8); }
-    .row > .col-xxs-9 { width: var(--col-9); }
-    .row > .col-xxs-10 { width: var(--col-10); }
-    .row > .col-xxs-11 { width: var(--col-11); }
-    .row > .col-xxs-12 { width: var(--col-12); }
-    
-    .row > .m-l-xxs-0 { margin-left: var(--margin-0); }
-    .row > .m-l-xxs-1 { margin-left: var(--margin-1); }
-    .row > .m-l-xxs-2 { margin-left: var(--margin-2); }
-    .row > .m-l-xxs-3 { margin-left: var(--margin-3); }
-    .row > .m-l-xxs-4 { margin-left: var(--margin-4); }
-    .row > .m-l-xxs-5 { margin-left: var(--margin-5); }
-    .row > .m-l-xxs-6 { margin-left: var(--margin-6); }
-    .row > .m-l-xxs-7 { margin-left: var(--margin-7); }
-    .row > .m-l-xxs-8 { margin-left: var(--margin-8); }
-    .row > .m-l-xxs-9 { margin-left: var(--margin-9); }
-    .row > .m-l-xxs-10 { margin-left: var(--margin-10); }
-    .row > .m-l-xxs-11 { margin-left: var(--margin-11); }
-    .row > .m-l-xxs-12 { margin-left: var(--margin-12); }
-
-    .row > .m-r-xxs-0 { margin-right: var(--margin-0); }
-    .row > .m-r-xxs-1 { margin-right: var(--margin-1); }
-    .row > .m-r-xxs-2 { margin-right: var(--margin-2); }
-    .row > .m-r-xxs-3 { margin-right: var(--margin-3); }
-    .row > .m-r-xxs-4 { margin-right: var(--margin-4); }
-    .row > .m-r-xxs-5 { margin-right: var(--margin-5); }
-    .row > .m-r-xxs-6 { margin-right: var(--margin-6); }
-    .row > .m-r-xxs-7 { margin-right: var(--margin-7); }
-    .row > .m-r-xxs-8 { margin-right: var(--margin-8); }
-    .row > .m-r-xxs-9 { margin-right: var(--margin-9); }
-    .row > .m-r-xxs-10 { margin-right: var(--margin-10); }
-    .row > .m-r-xxs-11 { margin-right: var(--margin-11); }
-    .row > .m-r-xxs-12 { margin-right: var(--margin-12); }
 
 }

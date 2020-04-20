@@ -7,7 +7,7 @@
     top: 0;
     right: -380px;
     z-index: 2;
-    background-color: #2B2B2B;
+    background-color: var(--color-class-grey-16);
     -webkit-transition: all .8s ease 0s;
     transition: all .8s ease 0s;
 }
@@ -18,20 +18,20 @@
         padding: 12px;
         font-size: 14px;
         line-height: 16px;
-        border-bottom: 1px solid #555555;
+        border-bottom: 1px solid var(--color-class-grey-12);
         text-transform: uppercase;
         font-weight: bold;
         cursor: pointer;
     }
     .side-menu .element a {
-        color: #ffffff;
+        color: var(--color-class-white);
         text-decoration: none;
     }
     .side-menu .element .side-menu-box {
         padding: 10px 40% 10px 0;
     }
     .side-menu .hov-dark:hover {
-        background-color: #000000;
+        background-color: var(--color-class-black);
         transition: all 0.2s;
     }
     .side-menu  #dark {
@@ -41,14 +41,14 @@
         position: relative;
         transition: all 1s;
     }
-        .side-menu .element-one > img {
+        .side-menu .element-one > a > img {
             display: inline-block;
             padding: 77px 0 50px 0;
             margin-left: calc(50% - 64px);
             opacity: 100%;
             transition: all 1s;
         }
-    .element-one > img:hover {
+    .element-one > a > img:hover {
         opacity: 30%;
         transition: all 1s;
     }
@@ -63,7 +63,7 @@
             line-height: 30px;
             margin-top: -2px;
             opacity: 30%;
-            color: #ffffff;
+            color: var(--color-class-white);
             transition: all 0.5s;
         }
     .element-one > .close:hover{
@@ -81,8 +81,8 @@
         margin:-3px 0 0 -66px;
         cursor: default;
         text-transform: capitalize;
-        background-color: yellow;
-        color: rgb(247, 33, 33);
+        background-color: var(--color-class-yellow);
+        color: var(--color-class-red);
     }
     .side-menu #dark {
         text-transform: capitalize;
@@ -96,7 +96,7 @@
         display: inline-block;
         font-weight: bold;
         cursor: pointer;
-        color: #ffffff;
+        color: var(--color-class-white);
     }
 @media (max-width: 760px) {
     .side-menu {

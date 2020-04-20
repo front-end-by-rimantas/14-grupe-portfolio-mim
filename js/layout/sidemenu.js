@@ -3,7 +3,7 @@ function renderContentOfSideMenu() {
     let contentHTML = '';
         contentHTML += `<div class="element bot-border element-one">
                                 <div class="close fa fa-times-circle-o"></div>
-                                <img class="logo logoMin" src="./img/light-logo.png" alt="Logo">
+                                <a href="/"><img class="logoS logoMin" src="./img/light-logo.png" alt="Logo"></a>
                             </div>
                             <nav>
                                 <div id="transferSideMenu">
@@ -43,6 +43,16 @@ times.addEventListener('click', function () {
 return sideMenu.classList.remove("show-side-menu");
 
 });
+const timesClose = document.querySelectorAll('.close-side-menu');
+for (let z = 0; z < timesClose.length; z++) {
+    const element = timesClose[z];
+    element.addEventListener('click', function () {
+
+    return sideMenu.classList.remove("show-side-menu");
+        
+    });
+}
+
 
 
 function renderElement( sideList ) {

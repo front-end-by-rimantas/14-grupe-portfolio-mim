@@ -9,8 +9,6 @@ export default class SkillClass {
 
     initMeth() {
         this.renderMeth()
-        this.skillBarDom.addEventListener('show', () => {console.log(this.percentage);
-        })
     }
 
     renderMeth() {
@@ -27,18 +25,43 @@ export default class SkillClass {
         wrapperDom.classList = 'progress-wrapper'
         let markDom = document.createElement( 'span' )
         markDom.classList = 'progress-mark'
-        markDom.style.left = this.percentage + '%'
+        markDom.animate(
+            [
+                {left: '0%'},
+                {left: `${this.percentage}%`}
+            ], {
+                name: '',
+                direction: 'normal',
+                timing/*-function*/: 'ease',
+                fill/*-mode*/: 'forwards',
+                duration: 2000,
+                delay: 1000,
+                iterations: 1
+            }
+        )
+
         let valueDom = document.createElement( 'span' )
         valueDom.classList = 'percent'
         valueDom.innerText = this.percentage + '%'
 
         let outerDom = document.createElement( 'div' )
         outerDom.classList = 'progress-outter'
-        let contentwrapperDom = document.createElement( 'div' )
-        contentwrapperDom.classList = 'progress-content-wrapper'
-        contentwrapperDom.style.width = this.percentage + '%'
         let contentDom = document.createElement( 'div' )
         contentDom.classList = 'progress-content'
+        contentDom.animate(
+            [
+                {width: '0%'},
+                {width: `${this.percentage}%`}
+            ], {
+                name: '',
+                direction: 'normal',
+                timing/*-function*/: 'ease',
+                fill/*-mode*/: 'forwards',
+                duration: 2000,
+                delay: 1000,
+                iterations: 1
+            }
+        )
 
         this.skillBarDom.appendChild( headerDom )
         headerDom.appendChild( titleDom )
@@ -46,8 +69,7 @@ export default class SkillClass {
         wrapperDom.appendChild( markDom )
         markDom.appendChild( valueDom )
         this.skillBarDom.appendChild( outerDom )
-        outerDom.appendChild( contentwrapperDom )
-        contentwrapperDom.appendChild( contentDom )
+        outerDom.appendChild( contentDom )
 
         this.htmlStr =
         `

@@ -1,0 +1,255 @@
+#contact .left{
+    display: inline-block;
+    width: 100%;
+}
+
+    .left > .top{
+        display: inline-block;
+        width: 100%;
+
+    }
+        .left > .top > .horizontal-line{
+            display: flex;
+            flex-direction: column;
+           
+        }
+
+            .top > .horizontal-line > .top-line{
+            display: flex;
+            justify-self: left;
+            margin-left: 0;
+            }
+
+            .top > .horizontal-line > .bottom-line{
+              margin-bottom: 20px;
+              margin-left: 0;
+            }
+
+
+        .left > .top > p{
+            display: inline-block;
+            width: 100%;
+            font-family: Poppins;
+            font-size: 14px;
+            line-height: 24px;
+            color: var(--color-class-grey-4);
+            margin-bottom: 25px;
+            word-break: keep-all;
+        }
+
+            h4::after{
+                display: none;
+            }
+
+            .left > .bottom{
+                display: inline-block;
+                width: 100%;
+
+            }
+
+                .left > .bottom > .contact{
+                    display: inline-block;
+                    float: left;
+                    padding: 10px 0;;
+                }
+
+                    .bottom > .contact > i {
+                        float: left;
+                        font-size: 24px;
+                        height: 47px;
+                        line-height: 47px;
+                        margin-right: 12px;
+                        text-align: center;
+                        width: 47px;
+                        display: inline-block;
+                        border: solid 1px var(--color-class-grey-4);
+                        color: var(--color-class-grey-8);
+                        border-radius: 50%;
+                        font-weight: lighter;
+                    }
+
+                    .bottom > .contact > .credentials {
+                        display: inline-block;
+                       
+                        color: var(--color-class-grey-4)
+                    }
+
+                        .contact > h4{
+                            display: inline-block;
+                        }
+
+                        .credentials a{
+                            display: inline-block;
+                            font-weight: lighter;
+                            font-size: 17px;
+                            text-decoration: none;
+                            color: var(--color-class-grey-4)
+                        }
+
+#contact .right{
+    display: inline-block;
+    width: 100%;
+
+}
+
+    .right > .fill{
+        display: inline-block;
+        width: 100%;
+    }
+
+        .right > .fill > form{
+            display: inline-block;
+            width: 100%;
+            
+        }
+
+            .fill > form > .input{
+                display: inline-block;
+                width: 100%;
+                
+            }
+
+                form > .input > .input-right{
+                    display: inline-block;
+                    width: 47%;
+                    float: right;
+                    border: none;
+                    
+                }
+
+                form > .input > .input-left{
+                    display: inline-block;
+                    float: left;
+                    border-width:0px;
+                    
+                    appearance: none;
+                   
+                   
+                    width: 47%;
+                    
+                }
+
+                    .input input{
+                    display: inline-block;
+                    width: 100%;
+                    border:none;
+                    border-bottom: 1px solid var(--color-class-grey-2);
+                    font-family: Poppins;
+                    font-size: 14px;
+                    line-height: 24px;
+                    margin: 50px 0;
+                    }
+
+                form > textarea {
+                    display: inline-block;
+                    width: 100%;
+                    min-height: 150px;
+                    max-height: 320px;
+                    resize: none;
+                    resize: vertical;
+                    border: 1px solid var(--color-class-grey-2);
+                    border-radius: 2px;
+                    font-family: Poppins;
+                    font-size: 14px;
+                    line-height: 24px;
+                    padding-top: 10px;
+                    padding-left: 10px;
+                    margin-bottom: 35px;
+                }
+
+            
+
+                .btn.cont-btn {
+                    box-shadow: none;
+                    border-radius: 0;
+                    text-transform: uppercase;
+                    font-family: 'Montserrat',sans-serif;
+                    cursor: pointer;
+                    font-size: 14px;
+                    height: 40px;
+                    padding: 0 40px;
+                    line-height: 40px;
+                }
+
+     @media (max-width: 1100px){
+        form > .input > .input-left{
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        form > .input > .input-right{
+            width: 100%;
+        }
+
+        .input input{
+            margin: 15px 0;
+        }
+
+        form > textarea {
+            margin-top: 30px;
+        }
+
+     }
+
+
+     @media (max-width: 560px){
+        form > .input > .input-left{
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        form > .input > .input-right{
+            width: 100%;
+        }
+
+        .input input{
+            margin: 15px 0;
+        }
+
+        form > textarea {
+            margin-top: 30px;
+        }
+
+        .top{
+            text-align: center;
+        }
+
+        .left > .top > .horizontal-line{
+          
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            float: none;
+        }
+
+            .top > .horizontal-line > .top-line{
+                display: inline-block;
+                margin: 5px auto;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .top > .horizontal-line > .bottom-line{
+                display: inline-block;
+                margin: 0 auto;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .left > .top > p{
+                margin-top: 30px;
+            }
+
+            .btn.cont-btn{
+                margin-left: calc((100% - 185px) / 2);
+            }
+
+
+     }
+
+
+
+
+
+
+

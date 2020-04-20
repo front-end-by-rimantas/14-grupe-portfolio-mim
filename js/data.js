@@ -1,4 +1,65 @@
 // Side menu
+const contacts = [
+    
+        {
+            i: '<i class="fa fa-phone"></i>',
+            h4: "Phone",
+            class: "phone",
+            atext: "+88 669 658 6586"
+        },
+    {
+        
+            i: '<i class="fa fa-envelope-o"></i>',
+            h4: "Email",
+            class: "email",
+            atext: "email@domain.com"
+        
+    },
+    {
+    
+            i: '<i class="fa fa-university"></i>',
+            h4: "Location",
+            class: "location",
+            atext: "Location Name,Here.US"
+    }
+]
+
+
+const navigation = [
+    {
+        ref: "#",
+        text: "Home",
+        class: "active"
+    },
+    {
+        ref: "#about",
+        text: "About",
+        class: "ref"
+    },
+    {
+        ref: "#portfolio",
+        text: "Portfolio",
+        class: "ref"
+    },
+    {
+        ref: "#services",
+        text: "Services",
+        class: "ref"
+    },
+    {
+        ref: "#blog",
+        text: "Blog",
+        class: "ref"
+    },
+    {
+        ref: "#contact",
+        text: "Contact",
+        class: "ref"
+    },
+
+]
+
+
 const side = [
     {
         description: 'Home',
