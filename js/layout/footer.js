@@ -2,6 +2,14 @@
 
 function renderFooter(footerList) {
     let footerHTML = '';
+
+    if ( !Array.isArray(footerList) ) {
+        return console.log('ERROR: data is not arrey..');  
+    }
+    if ( footerList.length === 0 ) {
+        return console.log('ERROR: arrey cannot be empty');  
+    }
+
     for (let f = 0; f < footerList.length; f++) {
         const footer = footerList[f];
         footerHTML += `<a href="${footer.link}" 

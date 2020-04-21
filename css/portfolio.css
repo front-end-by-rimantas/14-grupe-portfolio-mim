@@ -95,7 +95,7 @@
                 left: 0;
                 display: inline-block;
             }
-            .item .hover > .fa-link {
+            .item .hover > a > .fa-link {
                 display: inline-block;
                 position: absolute;
                 top: 50%;
@@ -233,7 +233,7 @@
         font-size: 15px;
        line-height: 15px;
     }
-    .item .hover > .fa-link  {
+    .item .hover > a > .fa-link  {
         font-size: 25px;
         line-height: 25px;
         padding: 12px;
@@ -249,7 +249,7 @@
        line-height: 10px;
        margin: 12px 0 0 0;
     }
-    .item .hover > .fa-link  {
+    .item .hover > a > .fa-link  {
         font-size: 20px;
         line-height: 20px;
         padding: 10px;
@@ -277,7 +277,7 @@
         line-height: 15px;
         margin: 20px 0 0 0;
      }
-     .item .hover > .fa-link  {
+     .item .hover > a > .fa-link  {
          font-size: 25px;
          line-height: 25px;
          padding: 12px;
