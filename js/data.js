@@ -314,3 +314,26 @@ const testimonials = [
         id: 'firstClone'
     }
 ];
+
+const footer = [
+    {
+        link: 'http://www.facebook.com',
+        target: '_blank',
+        description: 'Facebook'
+    },
+    {
+        link: 'http://www.twitter.com',
+        target: '_blank',
+        description: 'Twitter'
+    },
+    {
+        link: 'http://www.linkedin.com',
+        target: '_blank',
+        description: 'LinkedIn'
+    },
+    {
+        link: 'mailto:ivtt@ivtt.com?Subject=Hello%20again',
+        target: '_top',
+        description: 'Email'
+    }
+];

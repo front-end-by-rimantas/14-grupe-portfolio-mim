@@ -38,7 +38,7 @@ function renderPortfolio(worksList) {
                             <img src="./img/portfolio/${work.photo.src}" 
                                 alt="${work.photo.alt}" class="portfolio-img">
                             <div class="hover">
-                            <div class="fa fa-link"></div>
+                            <a href="#"><div class="fa fa-link"></div></a>
                             </div>
                             <div class="bot-text">
                                     <a href="${work.link ? work.link : '#'}" class="portfolio-link">${work.content}</a>

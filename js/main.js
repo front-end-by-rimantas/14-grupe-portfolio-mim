@@ -7,6 +7,7 @@ import { headerScroll, fixedHeader } from'./layout/header.js';
 import renderServices from'./layout/services.js';
 import scrollFunction from'./layout/backtotopbtn.js';
 import carouselSlide from'./layout/testimonials.js';
+import renderFooter from'./layout/footer.js';
 
 /*
 import from './reset.js';
