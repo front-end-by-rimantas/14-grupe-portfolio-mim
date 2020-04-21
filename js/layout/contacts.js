@@ -29,7 +29,46 @@ renderContacts(contacts)
     document.querySelector('.cont-btn').addEventListener('click', renderAlert);
 
     function renderAlert(){
-        
+    
+        const textAlert = document.forms["form"]['text'].value;
+        const emailAlert = document.forms["form"]['email'].value;
+        const textareaAlert = document.querySelector('textarea').value;
+
+        console.log(document.querySelector(".alert-text"))
+
+        if ( textAlert === '' ) {
+            document.querySelector(".alert-text").innerHTML = 'The field is required.';
+        }
+
+        let email = 0;
+        for ( let i=0; i<emailAlert.length; i++ ) {
+            if ( emailAlert[i] === '@' ) {
+                email++;
+            }
+        }
+
+        if ( textareaAlert === '' ) {
+            document.querySelector(".alert-textarea").innerHTML = 'The field is required.';
+        }
+
+        if ( 
+            emailAlert[0] === '@' ||
+            emailAlert.length-1 === '@' ||
+            (emailAlert.length < 5) ) {
+                document.querySelector(".alert-email").innerHTML = 'The e-mail address entered is invalid.';
+            }
+
+        if ( emailAlert === '' ) {
+            document.querySelector(".alert-email").innerHTML = 'The field is required.';
+        }
+        if ( textareaAlert === '' || emailAlert === '' || textareaAlert === '' || emailAlert.length < 5 ||
+            emailAlert[0] === '@' ||
+            emailAlert.length-1 === '@'){
+            return document.querySelector(".alert-btn").innerHTML = 'One or more fields have an error. Please check and try again.';
+        }
+      
+        return
+    
     }
 
    
