@@ -4,7 +4,7 @@
 
 function renderBlog(blogContent){
     const row = document.querySelector(".row.blog")
-    console.log(row)
+    
     if (!Array.isArray(blogContent)){
         return console.error("Reikia Array");
     }
@@ -25,25 +25,19 @@ function renderBlog(blogContent){
             </div>
         </div>
         <div class = "third-row">
-            <h4>Typograff</h4>
+            <h4>${blogContent[i].h4}</h4>
           <!-- nuoroda į vidinį -->    
             <a href="#"> <i class="fas fa-plus"></i></a>
         </div>
      </div>`
-     let numbercom = blogContent[i].number;
-     console.log(numbercom);
+  
     }
-    
     return row.innerHTML = HTML;
 }
-
     function renderComments(comment){
-        console.log(comment)
-        for(let j = 0; j<comment.length; j++){
+       
         let text = comment.commentText;
-        console.log(text);
         let number = comment.commentNumber;
-        console.log(number);
         let HTML = "";
         
         for (let i = 0; i<text.length; i++){
@@ -57,19 +51,11 @@ function renderBlog(blogContent){
             if (number > 1){
                 newtext = text[2];
             }
-        
-        }
 
         HTML += `${number}${newtext}`
 
         return HTML
     }
 }
-
-
-    
-
-
-
 
 renderBlog(blog)
