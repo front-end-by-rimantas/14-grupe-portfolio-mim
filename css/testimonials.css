@@ -60,7 +60,7 @@
         #nextBtn {
             position: relative;
             margin-top: -50px;
-            left: calc(50% - 40px);
+            left: calc(50% - 30px);
             padding: 5px 10px;
             font-size: 20px;
             line-height: 20px;
