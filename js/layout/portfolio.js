@@ -5,6 +5,12 @@ function renderPortfolio(worksList) {
     let filterHTML = '';
     let galleryHTML = '';
 
+    if ( !Array.isArray(worksList) ) {
+        return console.log('ERROR: data is not arrey..');  
+    }
+    if ( worksList.length === 0 ) {
+        return console.log('ERROR: arrey cannot be empty');  
+    }
 
     // sugeneruoti filtravima
     let uniqueTags = [];
