@@ -11,7 +11,7 @@ function renderBlog(blogContent){
 
     let HTML = ""
     for(let i=0; i<blogContent.length; i++){
-        HTML+=` <div class = "blog-column col-4">
+        HTML+=` <div class = "blog-column col-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
         <img src=${blogContent[i].image} alt="blog-item">
         <div class = "second-row">
             <div class = "date-column">
@@ -52,7 +52,7 @@ function renderBlog(blogContent){
                 newtext = text[2];
             }
 
-        HTML += `${number}${newtext}`
+        HTML += `${number} ${newtext}`
 
         return HTML
     }
