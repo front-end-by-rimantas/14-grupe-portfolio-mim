@@ -21,55 +21,54 @@ function renderContacts(contactData){
     return contactmenu.innerHTML = HTML; 
 }
 
-renderContacts(contacts)
-
-
+export default function setUpContacts() {
+    renderContacts(contacts)
     console.log(document.querySelector('.cont-btn'))
-
     document.querySelector('.cont-btn').addEventListener('click', renderAlert);
+}
 
-    function renderAlert(){
-    
-        const textAlert = document.forms["form"]['text'].value;
-        const emailAlert = document.forms["form"]['email'].value;
-        const textareaAlert = document.querySelector('textarea').value;
+function renderAlert() {
 
-        console.log(document.querySelector(".alert-text"))
+    const textAlert = document.forms["form"]['text'].value;
+    const emailAlert = document.forms["form"]['email'].value;
+    const textareaAlert = document.querySelector('textarea').value;
 
-        if ( textAlert === '' ) {
-            document.querySelector(".alert-text").innerHTML = 'The field is required.';
-        }
+    console.log(document.querySelector(".alert-text"))
 
-        let email = 0;
-        for ( let i=0; i<emailAlert.length; i++ ) {
-            if ( emailAlert[i] === '@' ) {
-                email++;
-            }
-        }
-
-        if ( textareaAlert === '' ) {
-            document.querySelector(".alert-textarea").innerHTML = 'The field is required.';
-        }
-
-        if ( 
-            emailAlert[0] === '@' ||
-            emailAlert.length-1 === '@' ||
-            (emailAlert.length < 5) ) {
-                document.querySelector(".alert-email").innerHTML = 'The e-mail address entered is invalid.';
-            }
-
-        if ( emailAlert === '' ) {
-            document.querySelector(".alert-email").innerHTML = 'The field is required.';
-        }
-        if ( textareaAlert === '' || emailAlert === '' || textareaAlert === '' || emailAlert.length < 5 ||
-            emailAlert[0] === '@' ||
-            emailAlert.length-1 === '@'){
-            return document.querySelector(".alert-btn").innerHTML = 'One or more fields have an error. Please check and try again.';
-        }
-      
-        return
-    
+    if ( textAlert === '' ) {
+        document.querySelector(".alert-text").innerHTML = 'The field is required.';
     }
+
+    let email = 0;
+    for ( let i=0; i<emailAlert.length; i++ ) {
+        if ( emailAlert[i] === '@' ) {
+            email++;
+        }
+    }
+
+    if ( textareaAlert === '' ) {
+        document.querySelector(".alert-textarea").innerHTML = 'The field is required.';
+    }
+
+    if ( 
+        emailAlert[0] === '@' ||
+        emailAlert.length-1 === '@' ||
+        (emailAlert.length < 5) ) {
+            document.querySelector(".alert-email").innerHTML = 'The e-mail address entered is invalid.';
+        }
+
+    if ( emailAlert === '' ) {
+        document.querySelector(".alert-email").innerHTML = 'The field is required.';
+    }
+    if ( textareaAlert === '' || emailAlert === '' || textareaAlert === '' || emailAlert.length < 5 ||
+        emailAlert[0] === '@' ||
+        emailAlert.length-1 === '@'){
+        return document.querySelector(".alert-btn").innerHTML = 'One or more fields have an error. Please check and try again.';
+    }
+    
+    return
+
+}
 
    
 

@@ -67,3 +67,11 @@ export default class AboutSectionClass {
         // use html version in non OOP html generation like above, first create or pass an object
     }
 }
+
+
+
+
+
+
+// height = .offsetTop - window.innerHeight
+// if height < window.scrollY

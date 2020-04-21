@@ -193,6 +193,7 @@ window.addEventListener('scroll', () => {
     return;
 
 }
+headerScroll();
 export function fixedHeader() {
     let firstHeader = document.querySelector('.container.header')
     let minLogo = document.querySelector('.logo')
@@ -212,7 +213,37 @@ export function fixedHeader() {
     }
     return
 }
+fixedHeader();
 
+
+/**/
+export default function setUpHeader() {
+    renderIntroduction()
+    renderHeaderMenu(navigation)
+    removeOverlay()
+
+    ////// pridedame animaciją - papildomą klasę logo paspaudimui
+    const logo = document.querySelector(".logo");
+    logo.addEventListener('click', openOverlay);
+    const body = document.querySelector("body");
+
+    let logoS = document.querySelector(".logoS");
+    logoS.addEventListener('click', openOverlayS);
+    //nuimame papildomą overlayLogo klase
+    /////
+    window.addEventListener('scroll', funcScroll);
+
+    function funcScroll(){
+        return
+    }
+
+    window.addEventListener('scroll', () => {
+        headerScroll();  
+        fixedHeader();
+    });
+    headerScroll();
+    fixedHeader();
+}
 
 
 
