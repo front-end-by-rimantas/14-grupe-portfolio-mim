@@ -217,18 +217,14 @@ h4 {
         padding: 20px 40px;
         background-color: var(--color-class-grey-1);
     }
-    /* #main_footer {
-        padding: 20px 40px;
-    }*/
             #main_footer .row .f-left {
                 display: inline-block;
                 float: left;
-                padding: 0 10px ;
                 font-size: 13px;
                 line-height: 19px;
                 font-family: 'montserratlight';
                 text-align: center;
-
+                word-break: keep-all;
                 color: var(--color-class-grey-7);
             }
             #main_footer .f-right {
@@ -248,22 +244,3 @@ h4 {
                     word-break: keep-all;
                     color: var(--color-class-grey-10);
                 }
-/*@media (max-width: 700px) {
-    #main_footer .footer .f-left,
-    #main_footer .footer .f-right {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-    #main_footer .f-right > a {
-        width: 25%;
-        padding: 0;
-        font-size: 12px;
-        line-height: 15px;
-    }
-}
-@media (max-width: 380px) {
-    #main_footer .f-right > a {
-        width: 50%;
-    } */
-}
