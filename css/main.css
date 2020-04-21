@@ -214,12 +214,13 @@ h4 {
         display: inline-block;
         width: 100%;
         float: left;
-        padding: 20px 40px;
+        padding: 20px 30px;
         background-color: var(--color-class-grey-1);
     }
             #main_footer .row .f-left {
                 display: inline-block;
                 float: left;
+                padding-top: 10px;
                 font-size: 13px;
                 line-height: 19px;
                 font-family: 'montserratlight';
@@ -230,7 +231,7 @@ h4 {
             #main_footer .f-right {
                 display: inline-block;
                 float: right;
-                padding: 0 10px 0;
+                padding: 10px 10px 0;
                 text-align: center;
             }
                 #main_footer .f-right > a {
