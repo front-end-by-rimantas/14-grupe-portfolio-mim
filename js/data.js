@@ -1,4 +1,58 @@
 // Side menu
+const blog = [
+    {
+            image:"./img/blog/post-5-360x218.jpg",
+            calendarIcon:'<i class="far fa-calendar"></i>',
+            date: "July 12, 2015",
+            commentIcon: '<i class="far fa-comments"></i>',
+            number: 5,
+            comment:{
+                commentText:[
+                    "",
+                     "Comment",
+                     "Comments"
+                ],
+                commentNumber: 0
+            },
+            h4:"Typograph Ink & Water Don’t",
+            plusIcon:'<i class="fas fa-plus">',
+    },
+    {
+            image:"./img/blog/post-8-360x218.jpg",
+            calendarIcon:'<i class="far fa-calendar"></i>',
+            date: "June 25, 2015",
+            commentIcon: '<i class="far fa-comments"></i>',
+            number: 0,
+            comment:{
+                commentText:[
+                    "",
+                     "Comment",
+                     "Comments"
+                ],
+                commentNumber: 0
+            },
+            h4:"Defender From Spider’s Unique",
+            plusIcon:'<i class="fas fa-plus">',
+    },
+    {
+            image:"./img/blog/post-10-360x218.jpg",
+            calendarIcon:'<i class="far fa-calendar"></i>',
+            date: "April 23, 2015",
+            commentIcon: '<i class="far fa-comments"></i>',
+            number: 4,
+            comment:{
+                commentText:[
+                    "",
+                     "Comment",
+                     "Comments"
+                ],
+                commentNumber: 0
+            },
+            h4:"How To Deal With Speed Up",
+            plusIcon:'<i class="fas fa-plus">',
+    }
+]
+
 const contacts = [
     
         {
