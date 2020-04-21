@@ -22,7 +22,7 @@ const contacts = [
             class: "location",
             atext: "Location Name,Here.US"
     }
-]
+];
 
 
 const navigation = [
@@ -57,7 +57,7 @@ const navigation = [
         class: "ref"
     },
 
-]
+];
 
 
 const side = [
@@ -249,5 +249,68 @@ const services = [
         description: `There are many variatio
         ns of pssages of Lorm available, bu in some form`,
         class: 'service-box'
+    }
+];
+
+const testimonials = [
+    {
+        photo: 'testimonial4.png',
+        name: 'Chuck Norris',
+        dutie: 'None',
+        description: `Lorem ipsum, dolor sit amet consectetur 
+        adipisicing elit. Fugiat neque quis deleniti delectus 
+        veritatis iusto, Lorem ipsum, dolor sit amet consectetur 
+        adipisicing elit.`,
+        id: 'lastClone'
+    },
+    {
+        photo: 'testimonial1.png',
+        name: 'Janet Wilson',
+        dutie: 'CEO',
+        description: `Lorem ipsum, dolor sit amet consectetur 
+        adipisicing elit. Fugiat neque quis deleniti delectus 
+        veritatis iusto, modi iste vel ad pariatur. 
+        Iusto molestiae tempore quasi fugiat.`,
+        id: ''
+    },
+    {
+        photo: 'testimonial2.png',
+        name: 'Will Smith',
+        dutie: 'Actor',
+        description: `Lorem ipsum, dolor sit amet consectetur 
+        adipisicing elit. Fugiat neque tempore quasi fugiat 
+        veritatis iusto, tempore quasi fugiat ad pariatur. 
+        Iusto molestiae tempore quasi fugiat.`,
+        id: ''
+    },
+    {
+        photo: 'testimonial3.png',
+        name: 'Steven Seagal',
+        dutie: 'Producer',
+        description: `Lorem ipsum, dolor sit amet consectetur 
+        adipisicing elit. Lorem ipsum, dolor sit amet consectetur 
+        adipisicing elit., modi iste vel ad pariatur. 
+        Iusto molestiae tempore quasi fugiat.`,
+        id: ''
+    },
+    {
+        photo: 'testimonial4.png',
+        name: 'Chuck Norris',
+        dutie: 'None',
+        description: `Lorem ipsum, dolor sit amet consectetur 
+        adipisicing elit. Fugiat neque quis deleniti delectus 
+        veritatis iusto, Lorem ipsum, dolor sit amet consectetur 
+        adipisicing elit.`,
+        id: ''
+    },
+    {
+        photo: 'testimonial1.png',
+        name: 'Janet Wilson',
+        dutie: 'CEO',
+        description: `Lorem ipsum, dolor sit amet consectetur 
+        adipisicing elit. Fugiat neque quis deleniti delectus 
+        veritatis iusto, modi iste vel ad pariatur. 
+        Iusto molestiae tempore quasi fugiat.`,
+        id: 'firstClone'
     }
 ];
