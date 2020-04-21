@@ -208,3 +208,62 @@ h4 {
     .horizontal-line > div.bottom-line {
         width: 80px;
     }
+
+    /* Footer */
+    footer > .container {
+        display: inline-block;
+        width: 100%;
+        float: left;
+        padding: 20px 40px;
+        background-color: var(--color-class-grey-1);
+    }
+    /* #main_footer {
+        padding: 20px 40px;
+    }*/
+            #main_footer .row .f-left {
+                display: inline-block;
+                float: left;
+                padding: 0 10px ;
+                font-size: 13px;
+                line-height: 19px;
+                font-family: 'montserratlight';
+                text-align: center;
+
+                color: var(--color-class-grey-7);
+            }
+            #main_footer .f-right {
+                display: inline-block;
+                float: right;
+                padding: 0 10px 0;
+                text-align: center;
+            }
+                #main_footer .f-right > a {
+                    display: inline-block;
+                    padding: 0 10px 0;
+                    font-size: 13px;
+                    line-height: 19px;
+                    font-family: 'montserratlight';
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    word-break: keep-all;
+                    color: var(--color-class-grey-10);
+                }
+/*@media (max-width: 700px) {
+    #main_footer .footer .f-left,
+    #main_footer .footer .f-right {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    #main_footer .f-right > a {
+        width: 25%;
+        padding: 0;
+        font-size: 12px;
+        line-height: 15px;
+    }
+}
+@media (max-width: 380px) {
+    #main_footer .f-right > a {
+        width: 50%;
+    } */
+}
