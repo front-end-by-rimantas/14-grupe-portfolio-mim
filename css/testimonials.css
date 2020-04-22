@@ -61,11 +61,12 @@
         #nextBtn {
             position: relative;
             margin-top: -50px;
-            left: calc(50% - 40px);
+            left: calc(50% - 30px);
             padding: 5px 10px;
-            font-size: 14px;
+            font-size: 20px;
             line-height: 20px;
             font-weight: 100;
+            cursor: pointer;
             background-color: var(--color-class-grey-15);
             color: var(--color-class-white);
         }

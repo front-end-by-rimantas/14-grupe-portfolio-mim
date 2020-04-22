@@ -5,6 +5,12 @@ function renderPortfolio(worksList) {
     let filterHTML = '';
     let galleryHTML = '';
 
+    if ( !Array.isArray(worksList) ) {
+        return console.log('ERROR: data is not arrey..');  
+    }
+    if ( worksList.length === 0 ) {
+        return console.log('ERROR: arrey cannot be empty');  
+    }
 
     // sugeneruoti filtravima
     let uniqueTags = [];
@@ -32,7 +38,7 @@ function renderPortfolio(worksList) {
                             <img src="./img/portfolio/${work.photo.src}" 
                                 alt="${work.photo.alt}" class="portfolio-img">
                             <div class="hover">
-                            <div class="fa fa-link"></div>
+                            <a href="#"><div class="fa fa-link"></div></a>
                             </div>
                             <div class="bot-text">
                                     <a href="${work.link ? work.link : '#'}" class="portfolio-link">${work.content}</a>
