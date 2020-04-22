@@ -75,4 +75,11 @@ function renderElement( sideList ) {
 }
 renderElement(side);
 
-export default sideMenu;
+
+
+function setUpSideMenu() {
+    renderElement(side);
+}
+
+export default setUpSideMenu;
+
