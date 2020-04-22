@@ -1,75 +1,67 @@
 #services {
     background-color: var(--color-class-grey-1);
 }
-#services > .row {
-    display: inline-block;
-    float: left;
-    text-align: center;
-}
-        #services > .row > .service-box {
-            display: inline-block;
-            float: left;
-            height: 300px;
-            margin-top: 50px;
-            border: 1px solid var(--color-class-transparent-grey-3);
-            box-shadow: 1px 1px 10px 1px var(--color-class-grey-5);
-        }
-        #services > .row > .service-box:hover {
-            box-shadow: 1px 1px 20px 1px var(--color-class-grey-11);
-            transition: all .5s ease 0s;
-        }
-        #services .service-box:hover .fa {
-            background: var(--color-class-grey-15);
-            color: var(--color-class-white);
-        }
-            #services .box-inside {
+    #services > .row {
+        display: inline-block;
+        float: left;
+        text-align: center;
+    }
+            #services > .row > .service-box {
                 display: inline-block;
                 float: left;
-                padding: 50px 10px 60px 10px;
+                height: 300px;
+                margin-top: 50px;
+                border: 1px solid var(--color-class-transparent-grey-3);
+                box-shadow: 1px 1px 10px 1px var(--color-class-grey-5);
             }
-                #services .fa {
-                    border: 1px solid var(--color-class-grey-8);
-                    border-radius: 50%;
-                    color: var(--color-class-grey-8);
-                    font-size: 19px;
-                    height: 36px;
-                    line-height: 36px;
-                    width: 36px;
-                    margin: 0 0 20px 0;
-                    transition: all .5s ease 0s;
-                }
-                    .break {
-                        display: inline-block;
-                        float: left;
-                        width: 40px;
-                        height: 2px;
-                        margin-left: calc(50% - 124px);
-                        background-color: var(--color-class-grey-15);
-                    }
-                #services h4 {
-                    font-size: 14px;
-                    margin: 0 0 15px;
-                    font-weight: 500;
-                    font-family: 'Montserrat', sans-serif;
-                    color: var(--color-class-grey-10);
-                }
-                #services h4::after {
-                    /* content: ''; */
+            #services > .row > .service-box:hover {
+                box-shadow: 1px 1px 20px 1px var(--color-class-grey-11);
+                transition: all .5s ease 0s;
+            }
+            #services .service-box:hover .fa {
+                background: var(--color-class-grey-15);
+                color: var(--color-class-white);
+            }
+                #services .box-inside {
                     display: inline-block;
-                    width: 55px;
-                    height: 2px;
-                    margin: 15px calc(50% - 40px);
-                    background-color: var(--color-class-grey-2);    
-                    }
-                #services p {
-                    font-family: 'Poppins';
-                    font-size: 14px;
-                    line-height: 24px;
-                    font-weight: 400;
-                    margin: 0 0 15px;
-                    word-break: keep-all;
-                    color: var(--color-class-grey-6);
+                    float: left;
+                    padding: 50px 10px 60px 10px;
                 }
+                    #services .fa {
+                        border: 1px solid var(--color-class-grey-8);
+                        border-radius: 50%;
+                        color: var(--color-class-grey-8);
+                        font-size: 19px;
+                        height: 36px;
+                        line-height: 36px;
+                        width: 36px;
+                        margin: 0 0 20px 0;
+                        transition: all .5s ease 0s;
+                    }
+                    #services h4 {
+                        font-size: 14px;
+                        margin: 0 0 15px;
+                        font-weight: 500;
+                        font-family: 'Montserrat', sans-serif;
+                        color: var(--color-class-grey-10);
+                    }
+                    #services h4::after {
+                        content: '';
+                        display: inline-block;
+                        width: 55px;
+                        height: 2px;
+                        margin: 15px calc(50% - 40px);
+                        background-color: var(--color-class-grey-2);    
+                        }
+                    #services p {
+                        font-family: 'Poppins';
+                        font-size: 14px;
+                        line-height: 24px;
+                        font-weight: 400;
+                        margin: 0 0 15px;
+                        word-break: keep-all;
+                        color: var(--color-class-grey-6);
+                    }
 @media (max-width: 600px) {
     .container > .row {
         width: 100%;

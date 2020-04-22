@@ -39,7 +39,11 @@ function renderServicesRow() {
     return document.querySelector('#services').innerHTML = servicesHTML;
 
 }
-renderServicesRow();
-renderServices(services);
 
-export default renderServices;
+renderServicesRow();
+
+function setUpServices() {
+    renderServices(services);
+}
+
+export default setUpServices;

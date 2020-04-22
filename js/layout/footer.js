@@ -26,6 +26,9 @@ function renderFooter(footerList) {
 
     document.querySelector('#main_footer').innerHTML = HTML;
 }
-renderFooter(footer);
 
-export default renderFooter;
+function setUpFooter() {
+    renderFooter(footer);
+}
+
+export default setUpFooter;

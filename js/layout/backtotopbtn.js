@@ -34,4 +34,8 @@ function scrollBackToTop() {
   }
 }
 
-export default scrollFunction;
+function setUpBackToTopButton() {
+  scrollFunction();
+}
+
+export default setUpBackToTopButton;

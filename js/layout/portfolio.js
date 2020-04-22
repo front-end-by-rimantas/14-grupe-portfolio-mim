@@ -101,6 +101,8 @@ function filterGallery( event ) {
     
 }
 
-renderPortfolio(works);
+function setUpPortfolio() {
+    renderPortfolio(works);
+}
 
-export default filterGallery;
+export default setUpPortfolio;
