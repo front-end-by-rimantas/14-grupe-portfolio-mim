@@ -77,4 +77,3 @@ function setUpSideMenu(params) {
 }
 
 export default setUpSideMenu;
-
