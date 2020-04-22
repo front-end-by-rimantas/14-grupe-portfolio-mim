@@ -1,37 +1,5 @@
 "use strict";
 
-/*let mainHeader = (document.querySelector('#main_header'));
-console.log(mainHeader);
-
-function renderMainHeader(){
-    let mainHeaderHTML = "";
-    mainHeaderHTML +=`<div class="container header">
-    <div class="row">
-        <div class = "col-6 col-lg-5">
-            <a href="/"><img class="logo" src="./img/dark-logo.png" alt="Logo"></a>
-        </div>
-        <div class = "col-6 col-lg-7">
-            <nav>
-            
-            </nav>
-            <div class="menuIcon">
-                <div class="mIcon"></div>
-                <div class="mIcon"></div>
-                <div class="mIcon"></div>
-            </div>
-         </div>
-    </div> 
-</div>
-
-  `;
-  
-
-return document.querySelector('#main_header').innerHTML = mainHeaderHTML;
-   
-}
-
-renderMainHeader();*/
-
 function renderIntroduction(){
     let introHTML = "";
     introHTML += `<div class="row">
@@ -53,7 +21,7 @@ function renderIntroduction(){
 
 return document.querySelector('#intro').innerHTML = introHTML;
 }
-renderIntroduction()
+
 
 
 function renderHeaderMenu(dataHMenu){
@@ -69,20 +37,18 @@ function renderHeaderMenu(dataHMenu){
     let headerMenu = document.querySelector('nav');
     return headerMenu.innerHTML = HTML;
 }
-renderHeaderMenu(navigation)
-
 
 
 
 /// nuimame overlay klas4, kuri atsiranda tik užkrovus puslapį
-export function removeOverlay(){
+function removeOverlay(){
     let overlay = document.querySelector(".overlay")
     setTimeout(function(){
       overlay.remove();
     }, 2000);
     return
 }
-removeOverlay()
+
 
 ////// pridedame animaciją - papildomą klasę logo paspaudimui
 const logo = document.querySelector(".logo");
@@ -106,7 +72,6 @@ setTimeout(function(){
 let logoS = document.querySelector(".logoS");
 logoS.addEventListener('click', openOverlayS);
 
-
 function openOverlayS (){
     body.insertAdjacentHTML("afterbegin", `<div class = "overlayLogoS">
     <div class = "logoWhite">
@@ -121,10 +86,8 @@ setTimeout(function(){
     return
 }
 
-
 //nuimame papildomą overlayLogo klase
 
-/////
 window.addEventListener('scroll', funcScroll);
 
 function funcScroll(){
@@ -137,8 +100,7 @@ window.addEventListener('scroll', () => {
 });
 
 
-
- export function headerScroll(){
+function headerScroll(){
     //einamoji scrolo vieta (aukstis)
     //susidarome sarasa
     let links = [];
@@ -185,20 +147,17 @@ window.addEventListener('scroll', () => {
         //jeigu randame artimiausia dominancia
             //pries tia buvusi nuoroda header > nav netenka active klases
             //naujoji nuoroda
-            
-
             document.querySelector(`#main_header nav > a.active`).classList.remove('active');
             document.querySelector(`#main_header nav > a[href = "${links[wantedSection]}"]`).classList.add('active'); 
    
     return;
 
 }
-export function fixedHeader() {
+function fixedHeader() {
     let firstHeader = document.querySelector('.container.header')
     let minLogo = document.querySelector('.logo')
   // let headerActive = document.querySelector(`#main_header nav > a.ref.active`)
  
-
     if (window.scrollY > 200) {
         firstHeader.classList.add('fixedHeader');
         minLogo.classList.add('logoMin');
@@ -214,5 +173,13 @@ export function fixedHeader() {
 }
 
 
+function setUpHeader(){
+    renderIntroduction();
+    renderHeaderMenu(navigation)
+    removeOverlay();
+    fixedHeader()
+    headerScroll()
+    removeOverlay()
+}
 
-
+export default setUpHeader;

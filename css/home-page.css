@@ -3,11 +3,10 @@
 @import './layout.css';
 @import './variables.css';
 @import './main.css';
-
 @import './header.css';
 @import './side-menu.css';
-@import './site-navigation.css';
-@import './introduction.css';
+
+
 @import './about.css';
 @import './experience.css';
 @import './portfolio.css';

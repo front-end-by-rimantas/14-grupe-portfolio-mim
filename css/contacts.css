@@ -6,25 +6,23 @@
     .left > .top{
         display: inline-block;
         width: 100%;
-
     }
+
         .left > .top > .horizontal-line{
             display: flex;
             flex-direction: column;
-           
         }
 
             .top > .horizontal-line > .top-line{
-            display: flex;
-            justify-self: left;
-            margin-left: 0;
+                display: flex;
+                justify-self: left;
+                margin-left: 0;
             }
 
             .top > .horizontal-line > .bottom-line{
               margin-bottom: 20px;
               margin-left: 0;
             }
-
 
         .left > .top > p{
             display: inline-block;
@@ -44,7 +42,6 @@
             .left > .bottom{
                 display: inline-block;
                 width: 100%;
-
             }
 
                 .left > .bottom > .contact{
@@ -68,9 +65,8 @@
                         font-weight: lighter;
                     }
 
-                    .bottom > .contact > .credentials {
+                    .bottom > .contact > .credentials{
                         display: inline-block;
-                       
                         color: var(--color-class-grey-4)
                     }
 
@@ -89,7 +85,6 @@
 #contact .right{
     display: inline-block;
     width: 100%;
-
 }
 
     .right > .fill{
@@ -100,45 +95,38 @@
         .right > .fill > form{
             display: inline-block;
             width: 100%;
-            
         }
 
             .fill > form > .input{
                 display: inline-block;
                 width: 100%;
-                
             }
 
                 form > .input > .input-right{
                     display: inline-block;
                     width: 47%;
                     float: right;
-                    border: none;
-                    
+                    border: none;   
                 }
 
                 form > .input > .input-left{
                     display: inline-block;
                     float: left;
                     border-width:0px;
-                    
                     appearance: none;
-                   
-                   
                     width: 47%;
-                    
                 }
 
                     .input input{
-                    display: inline-block;
-                    width: 100%;
-                    border:none;
-                    border-bottom: 1px solid var(--color-class-grey-2);
-                    font-family: Poppins;
-                    font-size: 14px;
-                    line-height: 24px;
-                    margin: 50px 0 10px;
-                    outline: none;
+                        display: inline-block;
+                        width: 100%;
+                        border:none;
+                        border-bottom: 1px solid var(--color-class-grey-2);
+                        font-family: Poppins;
+                        font-size: 14px;
+                        line-height: 24px;
+                        margin: 50px 0 10px;
+                        outline: none;
                     }
 
                 form > textarea {
@@ -173,7 +161,6 @@
                     padding: 0 40px;
                     line-height: 40px;
                     margin-top: 50px;
-                    
                 }
 
 
@@ -187,7 +174,6 @@
                     font-size: 14px;
                     line-height: 24px;
                     font-weight: 400;
-                   
                 }
 
                 form span {
@@ -210,6 +196,7 @@
             padding: 0;
             margin: 0;
         }
+
         form > .input > .input-right{
             width: 100%;
         }
@@ -236,6 +223,7 @@
             padding: 0;
             margin: 0;
         }
+        
         form > .input > .input-right{
             width: 100%;
         }
@@ -253,34 +241,33 @@
         }
 
         .left > .top > .horizontal-line{
-          
             display: flex;
             justify-content: center;
             text-align: center;
             float: none;
         }
 
-            .top > .horizontal-line > .top-line{
-                display: inline-block;
-                margin: 5px auto;
-                justify-content: center;
-                text-align: center;
-            }
+        .top > .horizontal-line > .top-line{
+            display: inline-block;
+            margin: 5px auto;
+            justify-content: center;
+            text-align: center;
+        }
 
-            .top > .horizontal-line > .bottom-line{
-                display: inline-block;
-                margin: 0 auto;
-                justify-content: center;
-                text-align: center;
-            }
+        .top > .horizontal-line > .bottom-line{
+            display: inline-block;
+            margin: 0 auto;
+            justify-content: center;
+            text-align: center;
+        }
 
-            .left > .top > p{
-                margin-top: 30px;
-            }
+        .left > .top > p{
+            margin-top: 30px;
+        }
 
-            .btn.cont-btn{
-                margin-left: calc((100% - 185px) / 2);
-            }
+        .btn.cont-btn{
+            margin-left: calc((100% - 185px) / 2);
+        }
 
      }
 
