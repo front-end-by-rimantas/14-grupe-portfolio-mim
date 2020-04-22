@@ -72,6 +72,8 @@ function renderElement( sideList ) {
     return document.querySelector('#transferSideMenu').innerHTML = HTML;
 }
 
-renderElement(side);
+function setUpSideMenu(params) {
+    renderElement(side);
+}
 
-export default sideMenu;
+export default setUpSideMenu;

@@ -46,8 +46,8 @@ function renderTestimonials(testimonialsList) {
 document.querySelector('#testimonials').innerHTML = HTML;
 }
 
-renderTestimonials(testimonials);
-
+function testimonialSlide() {
+    
 const carouselSlide = document.querySelector('.carousel-slide');
 const carouselTestimonial = document.querySelectorAll('.carousel-slide .testimonial-slide');
 
@@ -88,5 +88,11 @@ carouselSlide.addEventListener('transitionend', () => {
         carouselSlide.style.transform = 'translateX(' + (- size * counter) + 'px)';
     }
 });
+}
 
-export default carouselSlide;
+function setUpTestimonials() {
+    renderTestimonials(testimonials);
+    testimonialSlide();
+}
+
+export default setUpTestimonials;
