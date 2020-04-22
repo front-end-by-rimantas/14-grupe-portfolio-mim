@@ -18,6 +18,7 @@ function renderContacts(contactData){
     return contactmenu.innerHTML = HTML; 
 }
 
+renderContacts(contacts)
 
     document.querySelector('.cont-btn').addEventListener('click', renderAlert);
 
@@ -61,10 +62,5 @@ function renderContacts(contactData){
     
     }
 
-    function setUpContacts() {
-        renderContacts(contacts)
-
-    }
-    
-    export default setUpContacts;
    
+
