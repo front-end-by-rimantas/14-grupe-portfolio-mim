@@ -58,43 +58,53 @@ function renderBlog(blogContent){
 
 renderBlog(blog)
 
+//animacijos nuo paspaudimo ant blogo paveiksliukų
 
-let blogCol = document.querySelector(".blog-column");
-let blogIm = blogCol.querySelector("img")
-blogIm.addEventListener('click', openOverlayS);
-
+let blogRow = document.querySelector(".row.blog");
+let blogImArr = blogRow.querySelectorAll("img")
 let body = document.querySelector("body");
 
-function openOverlayS (){
-    body.insertAdjacentHTML("afterbegin", `<div class = "overlayLogoS">
-    <div class = "logoWhite">
-        <img src="./img/light-logo.png" alt="Logo">
-    </div>
-</div>`);
+console.log(blogImArr)
 
-let overlayLogoS = document.querySelector(".overlayLogoS")
-setTimeout(function(){
-    overlayLogoS.remove();
-}, 2000);
-    return
+for (let i = 0; i<blogImArr.length; i++){
+    let activeElement = blogImArr[i];
+ 
+    activeElement.addEventListener('click', openOverlayS);
+    function openOverlayS (){
+        body.insertAdjacentHTML("afterbegin", `<div class = "overlayLogoS">
+        <div class = "logoWhite">
+            <img src="./img/light-logo.png" alt="Logo">
+        </div>
+    </div>`);
+    
+    let overlayLogoS = document.querySelector(".overlayLogoS")
+    setTimeout(function(){
+        overlayLogoS.remove();
+    }, 2000);
+        return
+    }
 }
 
-let thirdRow = blogCol.querySelector(".third-row")
-console.log(thirdRow)
-thirdRow.addEventListener('click', openOverlayS)
 
-thirdRow.addEventListener('click', openOverlayB);
+let blogThirdArr = blogRow.querySelectorAll(".third-row")
+for (let i = 0; i<blogThirdArr.length; i++){
+    let activeElement = blogThirdArr[i];
+    activeElement.addEventListener('click', openOverlayS);
+    function openOverlayS (){
+        body.insertAdjacentHTML("afterbegin", `<div class = "overlayLogoS">
+        <div class = "logoWhite">
+            <img src="./img/light-logo.png" alt="Logo">
+        </div>
+    </div>`);
+    
+    let overlayLogoS = document.querySelector(".overlayLogoS")
+    setTimeout(function(){
+        overlayLogoS.remove();
+    }, 2000);
+        return
+    }
 
-function openOverlayB (){
-    body.insertAdjacentHTML("afterbegin", `<div class = "overlayLogoS">
-    <div class = "logoWhite">
-        <img src="./img/light-logo.png" alt="Logo">
-    </div>
-</div>`);
-
-let overlayLogoS = document.querySelector(".overlayLogoS")
-setTimeout(function(){
-    overlayLogoS.remove();
-}, 2000);
-    return
 }
+
+
+
