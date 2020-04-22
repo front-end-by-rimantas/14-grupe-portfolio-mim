@@ -23,10 +23,10 @@
         font-weight: bold;
         cursor: pointer;
     }
-    .side-menu .element a {
-        color: var(--color-class-white);
-        text-decoration: none;
-    }
+        .side-menu .element a {
+            color: var(--color-class-white);
+            text-decoration: none;
+        }
     .side-menu .element .side-menu-box {
         padding: 10px 40% 10px 0;
     }
@@ -36,6 +36,7 @@
     }
     .side-menu  #dark {
         border: none;
+        text-transform: capitalize;
     }
     .side-menu .element-one {
         position: relative;
@@ -48,10 +49,10 @@
             opacity: 100%;
             transition: all 1s;
         }
-    .element-one > a > img:hover {
-        opacity: 30%;
-        transition: all 1s;
-    }
+        .element-one > a > img:hover {
+            opacity: 30%;
+            transition: all 1s;
+        }
         .side-menu .element-one > .close {
             display: inline-block;
             float: left;
@@ -66,38 +67,35 @@
             color: var(--color-class-white);
             transition: all 0.5s;
         }
-    .element-one > .close:hover{
-        opacity: 100%;
-        transition: all 0.5s;
-    }
-    .element .menu-item {
-        display: inline-block;
-        float: left;
-        position: absolute;
-        padding: 5px;
-        font-size: 12px;
-        line-height: 12px;
-        border-radius: 5px;
-        margin:-3px 0 0 -66px;
-        cursor: default;
-        text-transform: capitalize;
-        background-color: var(--color-class-yellow);
-        color: var(--color-class-red);
-    }
-    .side-menu #dark {
-        text-transform: capitalize;
-    }
+        .element-one > .close:hover{
+            opacity: 100%;
+            transition: all 0.5s;
+        }
+            .element .menu-item {
+                display: inline-block;
+                float: left;
+                position: absolute;
+                padding: 5px;
+                font-size: 12px;
+                line-height: 12px;
+                border-radius: 5px;
+                margin:-3px 0 0 -66px;
+                cursor: default;
+                text-transform: capitalize;
+                background-color: var(--color-class-yellow);
+                color: var(--color-class-red);
+            }
     .show-side-menu {
         right: 0;
         -webkit-transition: all .4s ease 0s;
         transition: all .4s ease 0s;
     }
-    #dark .span {
-        display: inline-block;
-        font-weight: bold;
-        cursor: pointer;
-        color: var(--color-class-white);
-    }
+        #dark .span {
+            display: inline-block;
+            font-weight: bold;
+            cursor: pointer;
+            color: var(--color-class-white);
+        }
 @media (max-width: 760px) {
     .side-menu {
         width: 250px;
