@@ -1,7 +1,6 @@
 export default class SkillClass {
     constructor ( percentage, title ) {
         this.skillBarDom = null
-        // this.htmlStr = null
         this.percentage = percentage
         this.title = title
         this.interval = 2000
@@ -54,20 +53,16 @@ export default class SkillClass {
             this.count = 0
             this.max = 101
             this.increment = ( this.percentage / this.max ).toFixed( 2 )
-            // console.log( this.increment )
             
             this.waitTime = this.interval / this.max
             this.timer = setInterval( () => {
-                if ( this.count === this.max ) {
+                if ( this.count === this.max ) 
                     clearInterval( this.timer )
-                }
-                else {
+                else 
                     this.valueDom.innerText = ( this.count * this.increment ).toFixed( 0 ) + '%'
-                }
                 this.count++
             }, this.waitTime )
         }
-        // else console.log( this.percentage, 'in-visible' )
     }
 
     renderMeth() {
@@ -98,26 +93,5 @@ export default class SkillClass {
         this.markDom.appendChild( this.valueDom )
         this.skillBarDom.appendChild( outerDom )
         outerDom.appendChild( this.contentDom )
-
-        // this.htmlStr =
-        // `
-        //     <div class="skill-bar" data-percentage="${ this.percentage }%">
-        //         <h4 class="progress-title-holder">
-        //             <span class="progress-title">
-        //                 ${ this.title }
-        //             </span>
-        //             <span class="progress-wrapper">
-        //                 <span class="progress-mark" style="left: ${ this.percentage }%;">
-        //                     <span class="percent">
-        //                     { this.percentage }%
-        //                     </span>
-        //                 </span>
-        //             </span>
-        //         </h4>
-        //         <div class="progress-outter">
-        //             <div class="progress-content" style="width: ${ this.percentage }%;"></div>
-        //         </div>
-        //     </div>
-        // `
     }
 }

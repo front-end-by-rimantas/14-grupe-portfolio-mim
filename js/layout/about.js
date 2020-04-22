@@ -1,5 +1,5 @@
-import HeadingClass from'../components/Heading.js';
-import SkillClass from'../components/Skill.js';
+import HeadingClass from'../components/Heading.js'
+import SkillClass from'../components/Skill.js'
 
 export default class AboutSectionClass {
     constructor ( parentIdStr ) {
@@ -14,7 +14,7 @@ export default class AboutSectionClass {
 
     drawSectionMeth() {
         let sectionDom = document.createElement( 'div' )
-        sectionDom.classList = 'section about-area light-bg'
+        sectionDom.classList = 'section about-area'
         let containerDom = document.createElement( 'div' )
         containerDom.classList = 'container'
 
@@ -24,7 +24,6 @@ export default class AboutSectionClass {
         rowDom.classList = 'row' 
         let leftDom = document.createElement( 'div' )
         leftDom.classList = 'col-6 col-sm-6 col-xs-12'
-        // leftDom.classList = 'col-xs-12 col-sm-6'
         let headerDom = document.createElement( 'h3' )
         headerDom.classList = 'bold capitalize'
         headerDom.innerText = 'Howdy!'
@@ -41,7 +40,6 @@ export default class AboutSectionClass {
 
         let rightDom = document.createElement( 'div' )
         rightDom.classList = 'right col-6 col-md-5 col-sm-6 col-xs-12'
-        // rightDom.classList = 'col-xs-12 col-sm-6 m-l-sm-1 m-l-md-1 col-md-5'
         let rightHolderDom = document.createElement( 'div' )
         rightHolderDom.classList = 'skill-progress'    
         skills_data_Arr.forEach( 
@@ -67,11 +65,3 @@ export default class AboutSectionClass {
         // use html version in non OOP html generation like above, first create or pass an object
     }
 }
-
-
-
-
-
-
-// height = .offsetTop - window.innerHeight
-// if height < window.scrollY
