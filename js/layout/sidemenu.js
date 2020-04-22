@@ -2,29 +2,29 @@
 function renderContentOfSideMenu() {
     let contentHTML = '';
         contentHTML += `<div class="element bot-border element-one">
-                                <div class="close fa fa-times-circle-o"></div>
-                                <a href="#"><img class="logoS logoMin" src="./img/light-logo.png" alt="Logo"></a>
+                            <div class="close fa fa-times-circle-o"></div>
+                            <a href="#"><img class="logoS logoMin" src="./img/light-logo.png" alt="Logo"></a>
+                        </div>
+                        <nav>
+                            <div id="transferSideMenu">
+                                Side menu content
                             </div>
-                            <nav>
-                                <div id="transferSideMenu">
-                                    Side menu content
-                                </div>
-                                <div class="element bot-border hov-dark">
-                                    <div class="menu-item">Update notice!</div>
-                                    <a href="#" class="side-menu-box">Update &#38 notice</a>
-                                </div>
-                                <div class="element bot-border hov-dark">
-                                    <a href="#" class="side-menu-box">Pricing &#38 timeline</a>
-                                </div>
-                                <div class="element bot-border hov-dark">
-                                    <div class="menu-item">New Updated!</div>
-                                    <a href="#" class="side-menu-box">Portfolio details</a>
-                                </div>
-                                <div class="element bot-border hov-dark" id="dark">
-                                    <a href="#" class="side-menu-box">Pricing &#38 timeline </a>
-                                    <div class="span">( Dark Version )</div>
-                                </div>
-                            </nav>`;
+                            <div class="element bot-border hov-dark">
+                                <div class="menu-item">Update notice!</div>
+                                <a href="#" class="side-menu-box">Update &#38 notice</a>
+                            </div>
+                            <div class="element bot-border hov-dark">
+                                <a href="#" class="side-menu-box">Pricing &#38 timeline</a>
+                            </div>
+                            <div class="element bot-border hov-dark">
+                                <div class="menu-item">New Updated!</div>
+                                <a href="#" class="side-menu-box">Portfolio details</a>
+                            </div>
+                            <div class="element bot-border hov-dark" id="dark">
+                                <a href="#" class="side-menu-box">Pricing &#38 timeline </a>
+                                <div class="span">( Dark Version )</div>
+                            </div>
+                        </nav>`;
     return document.querySelector('#transferSideMenuContent').innerHTML = contentHTML;
 }
 
@@ -53,8 +53,6 @@ for (let z = 0; z < timesClose.length; z++) {
     });
 }
 
-
-
 function renderElement( sideList ) {
     let HTML = '';
 
@@ -73,6 +71,7 @@ function renderElement( sideList ) {
     }
     return document.querySelector('#transferSideMenu').innerHTML = HTML;
 }
+
 renderElement(side);
 
 export default sideMenu;
