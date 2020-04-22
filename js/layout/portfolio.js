@@ -12,7 +12,6 @@ function renderPortfolio(worksList) {
         return console.log('ERROR: arrey cannot be empty');  
     }
 
-    // sugeneruoti filtravima
     let uniqueTags = [];
     for (let i = 0; i < worksList.length; i++) {
         const tags = worksList[i].tags;
@@ -24,38 +23,34 @@ function renderPortfolio(worksList) {
     }  
     
     filterHTML = `<div class="item horizontal-line">All</div>`;
+
     for (let i = 0; i < uniqueTags.length; i++) {
         filterHTML += `<div class="item">${uniqueTags[i].toLowerCase()}</div>`;
     }
 
-
-                
-    // sugeneruoti darbus
     for (let i=0; i<worksList.length; i++) {
         const work = worksList[i];
-        galleryHTML += `<div class="item ${work.size === 2 ? 'size-2' : ''} ${work.newClass}"
-                            data-tags="${work.tags}">
+        galleryHTML += `<div class="item ${work.size === 2 ? 'size-2' : ''} ${work.newClass}"data-tags="${work.tags}">
                             <img src="./img/portfolio/${work.photo.src}" 
                                 alt="${work.photo.alt}" class="portfolio-img">
                             <div class="hover">
-                            <a href="#"><div class="fa fa-link"></div></a>
+                                <a href="#"><div class="fa fa-link"></div></a>
                             </div>
                             <div class="bot-text">
-                                    <a href="${work.link ? work.link : '#'}" class="portfolio-link">${work.content}</a>
-                                    <p class="description">${work.description}</p>
-                                </div>
-                        </div>`;
-    }
-    // headeris
-
-    let headerHTML = `<div class="section-title text-center">
-                            <h2 class="section-heading">My portfolio</h2>
-                            <div class="horizontal-line">
-                                <div class="top-line"></div>
-                                <div class="bottom-line"></div>
+                                <a href="${work.link ? work.link : '#'}" class="portfolio-link">${work.content}</a>
+                                <p class="description">${work.description}</p>
                             </div>
                         </div>`;
-    // apjungti viska i vientisa HTML
+    }
+
+    let headerHTML = `<div class="section-title text-center">
+                        <h2 class="section-heading">My portfolio</h2>
+                        <div class="horizontal-line">
+                            <div class="top-line"></div>
+                            <div class="bottom-line"></div>
+                        </div>
+                    </div>`;
+
     HTML += `<div class="row">
                 ${headerHTML}
                 <div class="col-12">
@@ -70,11 +65,9 @@ function renderPortfolio(worksList) {
                 </div>
             </div>`;
 
-    // pilna HTML iterpiame i DOM
     const DOMgallery = document.querySelector('#portfolio');
     DOMgallery.innerHTML = HTML;
 
-    // prikabinti evet listener, kad galeti filtruoti darbus
     const filters = DOMgallery.querySelectorAll('.filter > .item');
     for (let i = 0; i < filters.length; i++) {
         const element = filters[i];
@@ -82,6 +75,7 @@ function renderPortfolio(worksList) {
     };
     return;
 }
+
 function filterGallery( event ) {
     document.querySelector('.filter > .item.horizontal-line').classList.remove('horizontal-line');
     event.target.classList.add('horizontal-line');
@@ -99,9 +93,9 @@ function filterGallery( event ) {
         const work = works[i];
         const hasTags = works[i].dataset.tags.toLowerCase().split(',').indexOf(filterTag);
         if (hasTags >= 0) {
-            work.classList.remove('hide')
+            work.classList.remove('hide');
         } else {
-            work.classList.add('hide')
+            work.classList.add('hide');
         }
     }
     

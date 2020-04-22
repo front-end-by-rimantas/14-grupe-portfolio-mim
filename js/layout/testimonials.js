@@ -10,28 +10,27 @@ function renderTestimonials(testimonialsList) {
         return console.log('ERROR: arrey cannot be empty');  
     }
 
-
     for (let i = 0; i < testimonialsList.length; i++) {
         const testimonial = testimonialsList[i];
         carouselHTML += `<div class="testimonial-slide" id="${testimonial.id}">
-                        <img src="./img/testimonial/${testimonial.photo}" alt="User photo">
-                        <div class="testimonial-content">
-                            <h4 class="testimonial-h4">${testimonial.name}</h4>
-                            <h6 class="testimonial-duties">${testimonial.dutie}</h6>
-                            <p>${testimonial.description}</p>
-                        </div>
-                    </div>`;
+                            <img src="./img/testimonial/${testimonial.photo}" alt="User photo">
+                            <div class="testimonial-content">
+                                <h4 class="testimonial-h4">${testimonial.name}</h4>
+                                <h6 class="testimonial-duties">${testimonial.dutie}</h6>
+                                <p>${testimonial.description}</p>
+                            </div>
+                        </div>`;
     }
 
     testHTML = `<div class="row">
-                        <div class="carousel-container">
-                            <div class="carousel-slide" id="carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-slide" id="carousel">
                             ${carouselHTML}
-                            </div>
-                            <i class="fa fa-angle-left" aria-hidden="true" id="prevBtn"></i>
-                            <i class="fa fa-angle-right" aria-hidden="true" id="nextBtn"></i>    
                         </div>
-                    </div>`;
+                        <i class="fa fa-angle-left" aria-hidden="true" id="prevBtn"></i>
+                        <i class="fa fa-angle-right" aria-hidden="true" id="nextBtn"></i>    
+                    </div>
+                </div>`;
                     
      // headeris
     let HTML = `<div class="row">
@@ -46,6 +45,7 @@ function renderTestimonials(testimonialsList) {
                 ${testHTML}`;
 document.querySelector('#testimonials').innerHTML = HTML;
 }
+
 renderTestimonials(testimonials);
 
 const carouselSlide = document.querySelector('.carousel-slide');
@@ -62,7 +62,6 @@ const size = carouselTestimonial[0].clientWidth;
 carouselSlide.style.transform = 'translateX(' + (- size * counter) + 'px)';
 
 // Button Listeners
-
 nextBtn.addEventListener('click', () => {
     if(counter >= carouselTestimonial.length - 1) return;
     carouselSlide.style.transition = 'transform 0.4s ease-in-out';
