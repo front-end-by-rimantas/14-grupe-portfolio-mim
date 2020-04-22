@@ -23,10 +23,6 @@ function scrollFunction() {
 
 backToTopButton.addEventListener("click", scrollBackToTop);
 
-// function backToTop() {
-//   window.scrollTo(0, 0);
-// }
-
 function scrollBackToTop() {
   let start = null;
   
@@ -38,4 +34,8 @@ function scrollBackToTop() {
   }
 }
 
-export default scrollFunction;
+function setUpBackToTopButton() {
+  scrollFunction();
+}
+
+export default setUpBackToTopButton;

@@ -1,30 +1,4 @@
-// Side menu
-const contacts = [
-    
-        {
-            i: '<i class="fa fa-phone"></i>',
-            h4: "Phone",
-            class: "phone",
-            atext: "+88 669 658 6586"
-        },
-    {
-        
-            i: '<i class="fa fa-envelope-o"></i>',
-            h4: "Email",
-            class: "email",
-            atext: "email@domain.com"
-        
-    },
-    {
-    
-            i: '<i class="fa fa-university"></i>',
-            h4: "Location",
-            class: "location",
-            atext: "Location Name,Here.US"
-    }
-];
-
-
+// Navigation section
 const navigation = [
     {
         ref: "#",
@@ -59,7 +33,7 @@ const navigation = [
 
 ];
 
-
+// Side-menu section
 const side = [
     {
         description: 'Home',
@@ -109,7 +83,7 @@ const skills_data_Arr = [
     }
 ];
 
-// Portfolio + gallery
+// Portfolio + gallery section
 const works = [
     {
         photo: {
@@ -217,6 +191,7 @@ const works = [
     }
 ]; 
 
+// Services section
 const services = [
     {
         icon: 'fa-desktop',
@@ -252,6 +227,7 @@ const services = [
     }
 ];
 
+// Testimonial section
 const testimonials = [
     {
         photo: 'testimonial4.png',
@@ -315,6 +291,88 @@ const testimonials = [
     }
 ];
 
+// Blog section
+const blog = [
+    {
+            image:"./img/blog/post-5-360x218.jpg",
+            calendarIcon:'<i class="far fa-calendar"></i>',
+            date: "July 12, 2015",
+            commentIcon: '<i class="far fa-comments"></i>',
+            
+            comment:{
+                commentText:[
+                    "",
+                     "Comment",
+                     "Comments"
+                ],
+                commentNumber: 5
+            },
+            h4:"Typograph Ink & Water Don’t",
+            plusIcon:'<i class="fas fa-plus">',
+    },
+    {
+            image:"./img/blog/post-8-360x218.jpg",
+            calendarIcon:'<i class="far fa-calendar"></i>',
+            date: "June 25, 2015",
+            commentIcon: '<i class="far fa-comments"></i>',
+           
+            comment:{
+                commentText:[
+                    "",
+                     "Comment",
+                     "Comments"
+                ],
+                commentNumber: 0
+            },
+            h4:"Defender From Spider’s Unique",
+            plusIcon:'<i class="fas fa-plus">',
+    },
+    {
+            image:"./img/blog/post-10-360x218.jpg",
+            calendarIcon:'<i class="far fa-calendar"></i>',
+            date: "April 23, 2015",
+            commentIcon: '<i class="far fa-comments"></i>',
+           
+            comment:{
+                commentText:[
+                    "",
+                     "Comment",
+                     "Comments"
+                ],
+                commentNumber: 4
+            },
+            h4:"How To Deal With Speed Up",
+            plusIcon:'<i class="fas fa-plus">',
+    }
+];
+
+// Contacts section
+const contacts = [
+    
+        {
+            i: '<i class="fa fa-phone"></i>',
+            h4: "Phone",
+            class: "phone",
+            atext: "+88 669 658 6586"
+        },
+    {
+        
+            i: '<i class="fa fa-envelope-o"></i>',
+            h4: "Email",
+            class: "email",
+            atext: "email@domain.com"
+        
+    },
+    {
+    
+            i: '<i class="fa fa-university"></i>',
+            h4: "Location",
+            class: "location",
+            atext: "Location Name,Here.US"
+    }
+];
+
+// Footer section
 const footer = [
     {
         link: 'http://www.facebook.com',

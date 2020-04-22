@@ -11,6 +11,7 @@
         .gallery > .filter > .item {
             display: inline-block;
             float: left;
+            position: relative;
             padding: 5px 10px;
             font-family: 'Montserrat',sans-serif;
             font-size: 12px;
@@ -21,9 +22,6 @@
             color: var(--color-class-grey-10);
             transition: all .3s ease 0s;
         }  
-        .row .filter > .item {
-            position: relative;
-        }
         .row .filter > .item::after {
             display: inline-block;
             content: '';
