@@ -12,29 +12,20 @@ function renderContacts(contactData){
                 <h4>${contactData[i].h4}</h4>
                 <a href="#" class = ${contactData[i].class}>${contactData[i].atext}</a>
                 </div>
-                </div>
-               
-                `
+                </div>`
     }
     let contactmenu = document.querySelector('.bottom');
-    console.log(contactmenu)
     return contactmenu.innerHTML = HTML; 
 }
 
 renderContacts(contacts)
 
-
-    console.log(document.querySelector('.cont-btn'))
-
     document.querySelector('.cont-btn').addEventListener('click', renderAlert);
 
     function renderAlert(){
-    
         const textAlert = document.forms["form"]['text'].value;
         const emailAlert = document.forms["form"]['email'].value;
         const textareaAlert = document.querySelector('textarea').value;
-
-        console.log(document.querySelector(".alert-text"))
 
         if ( textAlert === '' ) {
             document.querySelector(".alert-text").innerHTML = 'The field is required.';

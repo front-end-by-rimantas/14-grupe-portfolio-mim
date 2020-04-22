@@ -87,7 +87,7 @@ removeOverlay()
 ////// pridedame animaciją - papildomą klasę logo paspaudimui
 const logo = document.querySelector(".logo");
 logo.addEventListener('click', openOverlay);
-const body = document.querySelector("body");
+let body = document.querySelector("body");
 
 function openOverlay (){
     body.insertAdjacentHTML("afterbegin", `<div class = "overlayLogo">

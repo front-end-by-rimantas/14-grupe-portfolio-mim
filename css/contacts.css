@@ -223,7 +223,12 @@
         }
 
      }
+     @media (max-width: 900px){
+        .contact{
+            width: 80%;
+        }
 
+     }
 
      @media (max-width: 560px){
         form > .input > .input-left{
