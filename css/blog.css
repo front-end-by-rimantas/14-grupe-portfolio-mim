@@ -24,7 +24,6 @@
                 width: 100%;
             }
 
-
                 .blog-column > .second-row {
                     display: inline-block;
                     width: 100%;
@@ -54,7 +53,6 @@
                             float: left;
                         }
 
-
                     .blog-column > .second-row > .comment-column{
                         display: inline-block;
                         float: right;
@@ -66,20 +64,17 @@
                     display: inline-block;
                     float: left;
                     padding: 30px 20px 40px;
-
                 }
 
                     .blog-column > .third-row > h4{
                         display: inline-block;
                         float: left;
                         width: 80%;
-                    
                     }
 
                     .blog-column > .third-row >a{
                         display: inline-block;
                         float: right;
-                        
                     }
 
                          .third-row > a > i{
@@ -100,7 +95,6 @@
                         }
 
 @media (max-width: 900px){
-
    .blog-column{
        margin-top: 30px;
    }
@@ -108,7 +102,5 @@
    .blog-column > img{
     display: inline-block;
     width: 100%;
-   
-}
-
+    }
 }
