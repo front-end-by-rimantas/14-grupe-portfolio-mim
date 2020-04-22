@@ -22,7 +22,7 @@ function renderIntroduction(){
 return document.querySelector('#intro').innerHTML = introHTML;
 }
 
-renderIntroduction()
+
 
 function renderHeaderMenu(dataHMenu){
     if (!Array.isArray(dataHMenu)){
@@ -37,18 +37,18 @@ function renderHeaderMenu(dataHMenu){
     let headerMenu = document.querySelector('nav');
     return headerMenu.innerHTML = HTML;
 }
-renderHeaderMenu(navigation)
+
 
 
 /// nuimame overlay klas4, kuri atsiranda tik užkrovus puslapį
-export function removeOverlay(){
+function removeOverlay(){
     let overlay = document.querySelector(".overlay")
     setTimeout(function(){
       overlay.remove();
     }, 2000);
     return
 }
-removeOverlay()
+
 
 ////// pridedame animaciją - papildomą klasę logo paspaudimui
 const logo = document.querySelector(".logo");
@@ -86,7 +86,6 @@ setTimeout(function(){
     return
 }
 
-
 //nuimame papildomą overlayLogo klase
 
 window.addEventListener('scroll', funcScroll);
@@ -101,7 +100,7 @@ window.addEventListener('scroll', () => {
 });
 
 
- export function headerScroll(){
+function headerScroll(){
     //einamoji scrolo vieta (aukstis)
     //susidarome sarasa
     let links = [];
@@ -154,7 +153,7 @@ window.addEventListener('scroll', () => {
     return;
 
 }
-export function fixedHeader() {
+function fixedHeader() {
     let firstHeader = document.querySelector('.container.header')
     let minLogo = document.querySelector('.logo')
   // let headerActive = document.querySelector(`#main_header nav > a.ref.active`)
@@ -174,5 +173,12 @@ export function fixedHeader() {
 }
 
 
+function setUpHeader(){
+    fixedHeader()
+    headerScroll()
+    renderIntroduction()
+    renderHeaderMenu(navigation)
+    removeOverlay()
+}
 
-
+export default setUpHeader;
