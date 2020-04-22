@@ -28,6 +28,7 @@ import from'./site-navigation.js';
 import from'./footer.js';*/
 
 
+setUpHeader();
 setUpSideMenu();
 setUpPortfolio();
 setUpServices();
@@ -35,7 +36,7 @@ setUpTestimonials();
 setUpBackToTopButton();
 setUpFooter();
 setUpContacts();
-setUpHeader();
+
 
 
 new AboutSectionClass('about');

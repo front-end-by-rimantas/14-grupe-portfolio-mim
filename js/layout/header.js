@@ -174,10 +174,11 @@ function fixedHeader() {
 
 
 function setUpHeader(){
+    renderIntroduction();
+    renderHeaderMenu(navigation)
+    removeOverlay();
     fixedHeader()
     headerScroll()
-    renderIntroduction()
-    renderHeaderMenu(navigation)
     removeOverlay()
 }
 
