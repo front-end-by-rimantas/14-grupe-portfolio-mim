@@ -23,24 +23,27 @@ function renderServices( serviceList ) {
     }
     return document.querySelector('#transferServices').innerHTML = HTML;
 }
+
 function renderServicesRow() {
     let servicesHTML = '';
     servicesHTML += `<div class="row">
                         <div class="section-title text-center">
                             <h2>My services</h2>
-                                <div class="horizontal-line">
-                                    <div class="top-line"></div>
-                                    <div class="bottom-line"></div>
-                                </div>
+                            <div class="horizontal-line">
+                                <div class="top-line"></div>
+                                <div class="bottom-line"></div>
                             </div>
-                        </div>   
-                    <div class="row" id="transferServices">
-
-                    </div>`;
+                        </div>
+                    </div>   
+                    <div class="row" id="transferServices"></div>`;
     return document.querySelector('#services').innerHTML = servicesHTML;
 
 }
-renderServicesRow();
-renderServices(services);
 
-export default renderServices;
+renderServicesRow();
+
+function setUpServices() {
+    renderServices(services);
+}
+
+export default setUpServices;

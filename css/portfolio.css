@@ -11,8 +11,9 @@
         .gallery > .filter > .item {
             display: inline-block;
             float: left;
+            position: relative;
             padding: 5px 10px;
-            font-family: "Montserrat",sans-serif;
+            font-family: 'Montserrat',sans-serif;
             font-size: 12px;
             letter-spacing: .22px;
             line-height: 28px;
@@ -21,9 +22,6 @@
             color: var(--color-class-grey-10);
             transition: all .3s ease 0s;
         }  
-        .row .filter > .item {
-            position: relative;
-        }
         .row .filter > .item::after {
             display: inline-block;
             content: '';
@@ -95,7 +93,7 @@
                 left: 0;
                 display: inline-block;
             }
-            .item .hover > .fa-link {
+            .item .hover > a > .fa-link {
                 display: inline-block;
                 position: absolute;
                 top: 50%;
@@ -139,7 +137,7 @@
                     }
                 .item > .portfolio-img {
                     object-fit: cover;
-                    height: auto;
+                    height: 100%;
                     width: 100%;
                     transition: all .5s;
                     transform: scale(1,1);
@@ -233,7 +231,7 @@
         font-size: 15px;
        line-height: 15px;
     }
-    .item .hover > .fa-link  {
+    .item .hover > a > .fa-link  {
         font-size: 25px;
         line-height: 25px;
         padding: 12px;
@@ -249,7 +247,7 @@
        line-height: 10px;
        margin: 12px 0 0 0;
     }
-    .item .hover > .fa-link  {
+    .item .hover > a > .fa-link  {
         font-size: 20px;
         line-height: 20px;
         padding: 10px;
@@ -277,7 +275,7 @@
         line-height: 15px;
         margin: 20px 0 0 0;
      }
-     .item .hover > .fa-link  {
+     .item .hover > a > .fa-link  {
          font-size: 25px;
          line-height: 25px;
          padding: 12px;

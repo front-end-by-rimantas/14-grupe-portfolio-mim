@@ -43,6 +43,7 @@ h4 {
     font-family: 'Montserrat',sans-serif;
     font-size: 18px;
     font-weight: 400;
+    word-break: keep-all;
 }
 
 /* Modificators */
@@ -73,10 +74,6 @@ h4 {
 
 .font-20 {
     font-size: 20px;
-}
-
-.light-bg {
-    background-color: var(--color-class-white);
 }
 
 /* Layout */
@@ -208,3 +205,40 @@ h4 {
     .horizontal-line > div.bottom-line {
         width: 80px;
     }
+
+    /* Footer */
+    footer > .container {
+        display: inline-block;
+        width: 100%;
+        float: left;
+        padding: 10px 40px 20px;
+        background-color: var(--color-class-grey-1);
+    }
+            #main_footer .row .f-left {
+                display: inline-block;
+                float: left;
+                padding-top: 10px;
+                font-size: 13px;
+                line-height: 19px;
+                font-family: 'montserratlight';
+                text-align: center;
+                word-break: keep-all;
+                color: var(--color-class-grey-7);
+            }
+            #main_footer .f-right {
+                display: inline-block;
+                float: right;
+                padding: 10px 10px 0;
+                text-align: center;
+            }
+                #main_footer .f-right > a {
+                    display: inline-block;
+                    padding: 0 10px 0;
+                    font-size: 13px;
+                    line-height: 19px;
+                    font-family: 'montserratlight';
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    word-break: keep-all;
+                    color: var(--color-class-grey-10);
+                }
