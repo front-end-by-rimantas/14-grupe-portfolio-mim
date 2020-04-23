@@ -1,12 +1,17 @@
 "use strict"
 
-import sidemenu from './layout/sidemenu.js';
-import filterGallery from './layout/portfolio.js';
+import setUpSideMenu from './layout/sidemenu.js';
+import setUpPortfolio from './layout/portfolio.js';
 import AboutSectionClass from'./layout/about.js';
-import { headerScroll, fixedHeader } from'./layout/header.js';
-import renderServices from'./layout/services.js';
-import scrollFunction from'./layout/backtotopbtn.js';
-import renderExperience from './layout/experience.js';
+import setUpHeader from'./layout/header.js';
+import setUpServices from'./layout/services.js';
+import setUpBlog from'./layout/blog.js';
+import setUpBackToTopButton from'./layout/backtotopbtn.js';
+import setUpTestimonials from'./layout/testimonials.js';
+import setUpFooter from'./layout/footer.js';
+import setUpContacts from'./layout/contacts.js';
+
+
 /*
 import from './reset.js';
 import from'./main.js';
@@ -23,9 +28,17 @@ import from'./contacts.js';
 import from'./site-navigation.js';
 import from'./footer.js';*/
 
-headerScroll();
-fixedHeader();
 
-renderExperience(exp);
+setUpHeader();
+setUpSideMenu();
+setUpPortfolio();
+setUpServices();
+setUpTestimonials();
+setUpBlog();
+setUpBackToTopButton();
+setUpFooter();
+setUpContacts();
+
+
 
 new AboutSectionClass('about');

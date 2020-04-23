@@ -83,45 +83,6 @@ const skills_data_Arr = [
     }
 ];
 
-// experience
-
-const exp = [ 
-    
-    {
-        company:'Behance',
-        year:'2007-2008',
-        icon:'fa-check-circle',
-        position:'Graphic Designer',
-        text:'There are many variations of passages of Lorem Ipsum available, but the majority',
-        
-    },
-    {
-        company:'RegalTheme',
-        year:'2008-2010',
-        icon:'fa-check-circle',
-        position:'Web Designer & Developer',
-        text:'There are many variations of passages of Lorem Ipsum available, but the majority',
-        
-    },
-    {
-        company:'Wipux',
-        year:'2010-2014',
-        icon:'fa-check-circle',
-        position:'Web & Print Designer',
-        text:'There are many variations of passages of Lorem Ipsum available, but the majority',
-        
-    },
-    {
-        company:'ThemeForest',
-        year:'2014-2017',
-        icon:'fa-check-circle',
-        position:'Programmer & Developer',
-        text:'There are many variations of passages of Lorem Ipsum available, but the majority',
-        
-    }
-    
-];
-
 // Portfolio + gallery section
 const works = [
     {
