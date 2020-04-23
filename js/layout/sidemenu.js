@@ -3,7 +3,7 @@ function renderContentOfSideMenu() {
     let contentHTML = '';
         contentHTML += `<div class="element bot-border element-one">
                             <div class="close fa fa-times-circle-o"></div>
-                            <a href="#"><img class="logoS logoMin" src="./img/light-logo.png" alt="Logo"></a>
+                            <a href="https://front-end-by-rimantas.github.io/14-grupe-portfolio-mim/#"><img class="logoS logoMin" src="./img/light-logo.png" alt="Logo"></a>
                         </div>
                         <nav>
                             <div id="transferSideMenu">
@@ -77,3 +77,4 @@ function setUpSideMenu(params) {
 }
 
 export default setUpSideMenu;
+

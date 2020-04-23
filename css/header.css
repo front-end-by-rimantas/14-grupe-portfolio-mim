@@ -39,19 +39,16 @@
 
 @keyframes fade {
     0% {opacity: 1;}
- 
     100% {opacity: 0;}
 }
 
 @keyframes fadeL {
     0% {opacity: 1;}
-   
     100% {opacity: 0;}
 }
 
 @keyframes fadeS {
     0% {opacity: 1;}
-   
     100% {opacity: 0;}
 }
 
@@ -101,8 +98,7 @@
 
 .header .logo{
     display: inline-block;
-    float: left;
-    
+    float: left;   
 }
 
 .header .logo:hover{
@@ -135,8 +131,7 @@
             }
 
             nav .ref::after,
-            nav > a.active::after
-            {
+            nav > a.active::after{
                 content: "";
                 transition: all 500ms ease;
                 width: 0;
@@ -147,15 +142,14 @@
                 margin-top: -1px;
                 position: absolute;
                 top: 50%;
-                }
+            }
     
                 .header > .row nav a:hover{
                     color: var(--color-class-grey-2);
                 }
     
                 nav .ref:hover::after,
-                nav > a.active::after
-                {
+                nav > a.active::after{
                     width: 100%;
                 }    
 
@@ -182,7 +176,6 @@
 
         .introduction > .row{
             display: inline-block;
-
         }
 
             .introduction > .row .text{
@@ -191,24 +184,24 @@
             }
 
                 h5{
-                color: var(--color-class-grey-7);
-                text-transform: uppercase;
-                font-family: 'montserratsemibold';
-                font-size: 16px;
-                letter-spacing: 1px;
-                margin: 0 0 15px;
-                font-weight: 700;
-                text-transform: uppercase;
+                    color: var(--color-class-grey-7);
+                    text-transform: uppercase;
+                    font-family: 'montserratsemibold';
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    margin: 0 0 15px;
+                    font-weight: 700;
+                    text-transform: uppercase;
                 }
 
                 h1{
-                color: var(--color-class-grey-14);
-                font-size: 44px;
-                line-height: 28px;
-                margin: 0 0 15px;
-                font-family: 'Montserrat',sans-serif;
-                font-weight: 700;
-                text-transform: uppercase;
+                    color: var(--color-class-grey-14);
+                    font-size: 44px;
+                    line-height: 28px;
+                    margin: 0 0 15px;
+                    font-family: 'Montserrat',sans-serif;
+                    font-weight: 700;
+                    text-transform: uppercase;
                 }
 
                 .text > p{
@@ -237,6 +230,7 @@
             h1{      
                 font-size: 38px;     
             }
+
             .introduction img{
                 height: 617px;
                 width: 345px;
@@ -250,11 +244,11 @@
             #intro{
                 padding: 0;
             }
+
             #main_header {
                 height: 140px;
             }
         }
-
 
         @media (max-width: 900px){
             .introduction img{
@@ -342,7 +336,6 @@
                 display: inline-block;
                 margin-top: 50px;
                 text-align: center;
-                
             }
 
             .introduction > .row p{
@@ -350,15 +343,14 @@
                 line-height: 30px;
                 text-align: center;
                 width: 270px;
-               
             }
 
             .introduction > .row .image{
                 width: 100%;
             }
-
-
         }
 
-                
+.row > .min-width-0 {
+    min-width: 0;
+}              
 
