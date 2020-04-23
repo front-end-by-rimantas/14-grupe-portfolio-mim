@@ -56,7 +56,9 @@ function renderBlog(blogContent){
     }
 }
 
-renderBlog(blog)
+
+function renderOverlay() {
+    
 
 //animacijos nuo paspaudimo ant blogo paveiksliukų
 
@@ -105,6 +107,14 @@ for (let i = 0; i<blogThirdArr.length; i++){
     }
 
 }
+}
+
+function setUpBlog() {
+    renderBlog(blog);
+    renderOverlay();
+}
+
+export default setUpBlog;
 
 
 
