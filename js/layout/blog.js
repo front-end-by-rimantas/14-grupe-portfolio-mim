@@ -66,8 +66,6 @@ let blogRow = document.querySelector(".row.blog");
 let blogImArr = blogRow.querySelectorAll("img")
 let body = document.querySelector("body");
 
-console.log(blogImArr)
-
 for (let i = 0; i<blogImArr.length; i++){
     let activeElement = blogImArr[i];
  

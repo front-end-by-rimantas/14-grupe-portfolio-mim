@@ -13,7 +13,7 @@ function renderServices( serviceList ) {
     
     for (let i = 0; i < serviceList.length; i++) {
         const serviceSection = serviceList[i];
-        HTML += `<div class="col-3 col-md-6 col-xxs-service-12 ${serviceSection.class}">
+        HTML += `<div class="col-3 col-md-6 col-xxs-service-12 ${serviceSection.class} min-width-180">
                     <div class="box-inside">
                         <i class="fa ${serviceSection.icon}"></i>
                         <h4>${serviceSection.title}</h4>
