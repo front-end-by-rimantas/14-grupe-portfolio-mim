@@ -18,7 +18,6 @@ export default class SkillClass {
 
     initiateAnimationMeth() {
         if ( this.skillBarDom.offsetTop - window.innerHeight < window.scrollY ) {
-            console.log( this.percentage, 'visible' )
             window.removeEventListener( 'scroll', this.scrollListenerFunc )
 
             this.markDom.animate(

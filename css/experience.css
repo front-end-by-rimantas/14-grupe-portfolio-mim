@@ -37,57 +37,99 @@
 /* Section content start */
 
 .expierence-box {
-    display: inline-block;
+    display:inline-block;
     width: 100%;
     position: relative;
-    /* margin-bottom: 40px; */
-}
-
-.expierence-box:nth-child(1){
+    display: flex;
     margin-bottom: 40px;
 }
+    
+
 
     .exp-time{
+        display: inline-block;
         width: 30%;
         float: left;
         color: var(--color-class-grey-6);
     }
-        .exp-time > .dashed-line {
-
+        
+        .exp-time > h4 {
+            display: inline-block;
+            width: 100%;
+            font-size: 18px;
+            line-height: 18px;
+            font-weight: 400;
+            color: var(--color-class-grey-11);
         }
-        .exp-time > i {
+        .expierence-box > i {
+            display: inline-block;
+            font-size: 24px;
             float: left;
             position: relative;
         }
 
-        .exp-time > p,
+        .exp-time > p {
+            display: inline-block;
+            font-size: 15px;
+            line-height: 22px;
+            color: var(--color-class-grey-6);
+        }
+        .dash {
+            border-left: 2px dashed;
+            position: absolute;
+            color: var(--color-class-grey-12);
+            left: calc(30% + 2px);
+            height: 120%;
+            top: 20px;
+        }
+
+        
+    .experience {
+        display: inline-block;
+        width: 70%;
+        float: left;
+        padding-left: 40px;
+        position: relative;
+        text-align: left;
+    }
+        
+        .experience > h3 {
+            display: inline-block;
+            float: left;
+            font-size: 20px;
+            line-height: 20px;
+            color: var(--color-class-grey-12);
+            font-weight: bold;
+            width: 100%;
+            word-break: break-word;
+        }
+        
         .experience > p {
+            display: inline-block;
             font-size: 15px;
             line-height: 22px;
             color: var(--color-class-grey-6);
             margin: 15px 0;
         }
 
-        .exp-time > h4 {
-            font-size: 18px;
-            line-height: 18px;
-            font-weight: 400;
-            color: var(--color-class-grey-11);
-        }
-    .experience {
-        width: 70%;
-        float: left;
-        padding-left: 40px;
-        position: relative;
+
+@media (max-width: 1100px){
+        
     }
 
-        .experience > h3 {
-            font-size: 20px;
-            line-height: 20px;
-            color: var(--color-class-grey-12);
-            position: absolute;
-            top: -22px;
-        }
-
+@media (max-width: 700px){
+    .expierence-box >.experience,
+    .exp-time  {
+        text-align: center;
+    }
+    .exp-time > .dash{
+        display: none;
+    }
+    .expierence-box > i {
+        display: none;
+    }
+}
 
 /* Section content end */
+
+

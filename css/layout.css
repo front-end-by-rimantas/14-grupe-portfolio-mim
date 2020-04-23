@@ -357,3 +357,11 @@
     .row > .m-r-xxs-12 { margin-right: var(--margin-12); }
 
 }
+
+.row > .min-width-0 {
+    min-width: 0;
+}
+
+.row > .min-width-180 {
+    min-width: 180px;
+}

@@ -3,7 +3,7 @@
 function renderIntroduction(){
     let introHTML = "";
     introHTML += `<div class="row">
-    <div class = "col-6 col-md-7 m-l-md-0 col-sm-11 m-l-sm-1 col-xs-11 m-l-xs-1">
+    <div class = "col-6 col-md-7 m-l-md-0 col-sm-12 col-xs-11 m-l-xs-1">
         <div class = "text">
             <h5>Hello, my name is</h5>
             <h1>Andrew Jordan</h1>
@@ -12,7 +12,7 @@ function renderIntroduction(){
             <a class="btn lg-btn" href="#portfolio">MY WORK</a>
         </div>
     </div>
-    <div class = "col-6 col-md-5 m-l-md-0 col-sm-11 m-l-sm-1 col-xs-11 m-l-xs-1">
+    <div class = "col-6 col-md-5 m-l-md-0 col-sm-12 col-xs-11 m-l-xs-1">
         <div class = "image">
         <img src="./img/author.png" alt="author">
         </div>

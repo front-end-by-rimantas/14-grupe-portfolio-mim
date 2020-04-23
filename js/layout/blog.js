@@ -56,15 +56,15 @@ function renderBlog(blogContent){
     }
 }
 
-renderBlog(blog)
+
+function renderOverlay() {
+    
 
 //animacijos nuo paspaudimo ant blogo paveiksliukų
 
 let blogRow = document.querySelector(".row.blog");
 let blogImArr = blogRow.querySelectorAll("img")
 let body = document.querySelector("body");
-
-console.log(blogImArr)
 
 for (let i = 0; i<blogImArr.length; i++){
     let activeElement = blogImArr[i];
@@ -105,6 +105,14 @@ for (let i = 0; i<blogThirdArr.length; i++){
     }
 
 }
+}
+
+function setUpBlog() {
+    renderBlog(blog);
+    renderOverlay();
+}
+
+export default setUpBlog;
 
 
 
