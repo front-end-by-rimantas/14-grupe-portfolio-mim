@@ -1,34 +1,52 @@
-"use strict"
+"use strict";
 
 
-function renderExperience( expList ) {
+function renderExperience(expList) {
     let HTML = '';
+    let col1 = '';
+    let col2 = '';
+    if (!Array.isArray(expList)) {
+        return;
+    }
+    if (expList.length === 0) {
+        return console.log('ERROR: arrey cannot be empty');
+    }
+    let dash = '';
 
-    if ( !Array.isArray(expList) ) {
-        return console.log('ERROR: data is not arrey..');  
-    }
-    if ( expList.length === 0 ) {
-        return console.log('ERROR: arrey cannot be empty');  
-    }
-    
     for (let i = 0; i < expList.length; i++) {
         const experienceSection = expList[i];
-            HTML += `<div class="expierence-box">
-                        <div class="exp-time">
-                            <div class="dashed-line"></div>
-                            <h4>${experienceSection.company}</h4>
-                            <p>${experienceSection.year}</p>
-                        </div>
-                        <i class="fa ${experienceSection.icon}"></i>
-                        <div class="experience">
-                            <h3>${experienceSection.position}</h3>
-                            <p>${experienceSection.text}</p>
-                        </div>
-                    </div>`;
+        if (i % 2 === 0) {
+            dash = 'dash';
+        } else {
+            dash = '';
+        }
+        HTML = 
+        `
+        <div class="expierence-box" >
+        <div class="exp-time">
+        <div class="${dash}"></div>
+        <h4>${experienceSection.company}</h4>
+        <p>${experienceSection.year}</p>
+        </div>
+        <i class="fa ${experienceSection.icon}"></i>
+        <div class="experience">
+        <h3>${experienceSection.position}</h3>
+        <p>${experienceSection.text}</p>
+        </div>
+        </div>`;
+
+        if (i === 1 || i === 0) {
+            col1 += HTML
+        } else if (i === 2 || i === 3) {
+            col2 += HTML
+        };
     }
-    return document.querySelector('#expContent').innerHTML = HTML;
-}
-function renderExperienceRow() {
+    col1 = `<div class="col-6 col-sm-6 col-xs-12" >` + col1 + `</div>`;
+    col2 = `<div class="col-6 col-sm-6 col-xs-12" >` + col2 + `</div>`;
+    return document.querySelector('#expContent').innerHTML = col1 + col2;
+};
+// section title start
+function renderExperienceTitleRow() {
     let experienceHTML = '';
     experienceHTML += `<div class="row">
                         <div class="section-title text-center">
@@ -39,12 +57,14 @@ function renderExperienceRow() {
                                 </div>
                             </div>
                         </div>   
-                    <div class="row" id="expContent">
+                    <div class="row" id = "expContent">
                     </div>`;
     return document.querySelector('#experience').innerHTML = experienceHTML;
 
 }
-renderExperienceRow();
+// section title end
+
+renderExperienceTitleRow();
 renderExperience(experience);
 
 export default renderExperience;
