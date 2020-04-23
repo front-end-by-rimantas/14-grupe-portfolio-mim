@@ -18,8 +18,8 @@ function renderFooter(footerList) {
     }
     
     let HTML = `<div class="row">
-                    <div class="f-left col-3 col-lg-3 col-md-4 col-sm-4 col-xs-12">Copyright © 2020 IVTT</div>
-                    <div class="f-right col-4 col-lg-5 col-md-6 col-sm-7 col-xs-12">
+                    <div class="f-left col-3 col-lg-3 col-md-4 col-sm-4 col-xs-12  min-width-0">Copyright © 2020 IVTT</div>
+                    <div class="f-right col-4 col-lg-5 col-md-6 col-sm-7 col-xs-12  min-width-0">
                     ${footerHTML}
                     </div>
                 </div>`;

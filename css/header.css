@@ -363,9 +363,4 @@
             .introduction > .row .image{
                 width: 100%;
             }
-        }
-
-.row > .min-width-0 {
-    min-width: 0;
-}              
-
+        }             
