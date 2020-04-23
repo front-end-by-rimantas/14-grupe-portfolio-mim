@@ -93,6 +93,7 @@ carouselSlide.addEventListener('transitionend', () => {
 function setUpTestimonials() {
     renderTestimonials(testimonials);
     testimonialSlide();
+    window.addEventListener("resize", testimonialSlide);
 }
 
 export default setUpTestimonials;
