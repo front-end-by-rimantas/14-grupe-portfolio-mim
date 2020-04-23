@@ -213,11 +213,15 @@
                     word-break: keep-all;
                 }
 
+            .introduction > .row .image{
+                display: inline-block;
+                width: 100%;
+            }
 
-        .introduction img{
-            display: inline-block;
-            float: right;
-        }
+                .introduction img{
+                    display: inline-block;
+                    float: right;
+                }
 
         @media (max-width: 1300px){
             .header > .row nav a{
@@ -251,14 +255,20 @@
         }
 
         @media (max-width: 900px){
+            .introduction > .row .image{
+                width: 100%;
+            }
+            
             .introduction img{
                 height: 750px;
                 width: 419px;
                 text-align: center;
-                margin-right: 50px;
-                padding-top: 50px;
                 float: left;
+                margin-left: calc((100% - 419px) / 2);
+                padding-top: 50px;
             }
+
+           
 
             #intro{
                 padding: 0;
@@ -266,6 +276,7 @@
 
             .introduction > .row .text {
                 display: inline-block;
+                margin-left: calc((100% - 419px) / 2);
                 margin-top: 50px;
                 text-align: center;
             }
@@ -279,6 +290,10 @@
                 line-height: 30px;
                 width: 400px;
                 font-size: 16px;
+            }
+
+            .introduction > .row .image{
+                width: 100%;
             }
 
         }
