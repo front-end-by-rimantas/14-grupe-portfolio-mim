@@ -1,6 +1,89 @@
 "use strict";
 
-function renderIntroduction(){
+class HeaderSection {
+    constructor( parentId ) {
+        this.parent = document.getElementById( parentId )
+        this.init()
+    }
+
+    init() {
+        this.render()
+    }
+
+    render() {
+        let header = document.createElement( 'div' )
+        header.classList = 'container header'
+        header.id = 'new'
+        // header.classList.add()
+        // header.classList.remove()
+        this.parent.appendChild( header )
+        header.innerHTML = `
+            <div class="row">
+                <div class = "col-6 col-lg-5 min-width-0">
+                    <a href="#"><img class="logo" src="./img/dark-logo.png" alt="Logo"></a>
+                </div>
+                <div class = "col-6 col-lg-7 min-width-0">
+                    <nav />
+                    <div class="menuIcon">
+                        <div class="mIcon"></div>
+                        <div class="mIcon"></div>
+                        <div class="mIcon" data-something="0"></div>
+
+                        object.dataset.something
+
+                    </div>
+                </div>
+            </div> 
+        `
+
+        const extra = 'this is extra Side Menu'
+
+        this.parent.insertAdjacentHTML( 'beforeend', 
+            `
+                <div class="side-menu" id="transferSideMenuContent">
+                    ${extra}
+                </div>
+            `
+        )
+    }
+}
+
+export default HeaderSection
+
+// /*const A = */new HeaderSection( 'main_header' )
+
+// const B = new HeaderSection( 'bbb' )
+// B.render()
+// B.value = 'bbb'
+
+// static classes
+// import HeaderSection from ''
+// HeaderSection.method( a + b )
+
+// export default A - A.js
+// export default A - B.js
+
+// import alias from'./A.js'
+// import alias from'./B.js'
+
+// same file + default
+// export const C
+// export let Arr
+
+// import alias, { C, Arr } from '...'
+
+// be strict: import X from 'source' - be .js
+// import X from 'directory' - be index.js/.html
+
+//static class
+// method( a, b ) {
+//     return a + b
+// } 
+
+// this.value - statinis
+
+
+/*function renderIntroduction(){
     let introHTML = "";
     introHTML += `<div class="row">
     <div class = "col-6 col-md-7 m-l-md-0 col-sm-12 col-xs-11 m-l-xs-1">
@@ -183,3 +266,5 @@ function setUpHeader(){
 }
 
 export default setUpHeader;
+
+*/
