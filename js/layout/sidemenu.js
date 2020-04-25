@@ -1,5 +1,5 @@
 "use strict"
-function renderContentOfSideMenu() {
+/*function renderContentOfSideMenu() {
     let contentHTML = '';
         contentHTML += `<div class="element bot-border element-one">
                             <div class="close fa fa-times-circle-o"></div>
@@ -27,6 +27,7 @@ function renderContentOfSideMenu() {
                         </nav>`;
     return document.querySelector('#transferSideMenuContent').innerHTML = contentHTML;
 }
+
 
 renderContentOfSideMenu();
 
@@ -76,5 +77,5 @@ function setUpSideMenu(params) {
     renderElement(side);
 }
 
-export default setUpSideMenu;
+export default setUpSideMenu;*/
 

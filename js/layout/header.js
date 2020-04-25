@@ -1,9 +1,104 @@
 "use strict";
+import navigation from '../header_data.js';
+
+class Header{
+    constructor(target){
+        this.target = target
+        
+
+        this.init();
+    }
+
+    init(){
+        const DOM = document.querySelector(this.target);
+        if ( !DOM ) {
+            throw 'ERROR: header target location was not found.';
+        }
+        this.DOM = DOM;
+
+        this.renderHeader();
+        this.renderHeaderMenu();
+        this.removeOverlay();
+        this.openOverlay ();
+    }
+
+    renderHeader(){
+        let HTML = "";
+        HTML = `
+        <div class="container header">
+        <div class="row">
+            <div class = "col-6 col-lg-5 min-width-0">
+                <a href="#"><img class="logo" src="./img/dark-logo.png" alt="Logo"></a>
+            </div>
+            <div class = "col-6 col-lg-7 min-width-0">
+                <nav>
+               
+                </nav>
+                <div class="menuIcon">
+                    <div class="mIcon"></div>
+                    <div class="mIcon"></div>
+                    <div class="mIcon"></div>
+                </div>
+             </div>
+        </div> 
+    </div>    
+    <div class="side-menu" id="transferSideMenuContent">
+        Side menu
+    </div>
+        `  
+        this.DOM.innerHTML = HTML;
+    }
+
+    renderHeaderMenu(){
+        if (!Array.isArray(navigation)){
+            return console.error("Reikia Array");
+        }
+       
+        let HTML = "";
+        for (let i = 0; i < navigation.length; i++){
+            HTML += `<a href=${navigation[i].ref} class = ${navigation[i].class}>
+               ${navigation[i].text}</a>`
+        }
+    
+        let headerMenu = document.querySelector('nav');
+        headerMenu.innerHTML = HTML;
+    }
+
+    removeOverlay(){
+        let overlay = document.querySelector(".overlay")
+        setTimeout(function(){
+          overlay.remove();
+        }, 2000);
+    
+    }
 
 
+    openOverlay (){
+        const logo = document.querySelector(".logo");
+        
+        let body = document.querySelector("body");
+        
+       logo.addEventListener('click', () => {
+        body.insertAdjacentHTML ("afterbegin", `<div class = "overlayLogo">
+        <div class = "logoWhite">
+            <img src="./img/light-logo.png" alt="Logo">
+        </div>
+    </div>`)
+        } );
+        
+        let overlayLogo = document.querySelector(".overlayLogo")
 
+        console.log(overlayLogo)
 
+        setTimeout(function(){
+            overlayLogo.remove();
+        }, 2000);
+            
+    }
+    
+}
 
+/*
 function renderHeaderMenu(dataHMenu){
     if (!Array.isArray(dataHMenu)){
         return console.error("Reikia Array");
@@ -19,7 +114,6 @@ function renderHeaderMenu(dataHMenu){
 }
 
 
-
 /// nuimame overlay klas4, kuri atsiranda tik užkrovus puslapį
 function removeOverlay(){
     let overlay = document.querySelector(".overlay")
@@ -28,7 +122,6 @@ function removeOverlay(){
     }, 2000);
     return
 }
-
 
 ////// pridedame animaciją - papildomą klasę logo paspaudimui
 const logo = document.querySelector(".logo");
@@ -162,4 +255,7 @@ function setUpHeader(){
     removeOverlay()
 }
 
-export default setUpHeader;
+export default setUpHeader;*/
+
+export default Header
+
