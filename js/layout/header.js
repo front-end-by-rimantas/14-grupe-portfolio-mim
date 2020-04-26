@@ -69,8 +69,8 @@ setTimeout(function(){
     return
 }
 
-let logoS = document.querySelector(".logoS");
-logoS.addEventListener('click', openOverlayS);
+// let logoS = document.querySelector(".logoS");
+// logoS.addEventListener('click', openOverlayS);
 
 function openOverlayS (){
     body.insertAdjacentHTML("afterbegin", `<div class = "overlayLogoS">
