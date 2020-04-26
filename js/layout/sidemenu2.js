@@ -1,5 +1,5 @@
 "use strict"
-import side from './SideMenuData.js';
+import side from '../SideMenuData.js';
 
 export default class renderSideList {
     constructor(render) {
