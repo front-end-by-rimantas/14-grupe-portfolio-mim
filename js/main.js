@@ -17,7 +17,7 @@ import setUpContacts from'./layout/contacts.js';
 
 //setUpHeader();
 
-////setUpSideMenu();
+//setUpSideMenu();
 renderExperience(exp);
 setUpPortfolio();
 setUpServices();

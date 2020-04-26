@@ -20,6 +20,10 @@ class Header{
         this.renderHeaderMenu();
         this.removeOverlay();
         this.openOverlay ();
+        //this.openOverlayS ()
+        this.renderScroll();
+        this.headerScroll();
+        this.fixedHeader();
     }
 
     renderHeader(){
@@ -72,7 +76,6 @@ class Header{
     
     }
 
-
     openOverlay (){
         const logo = document.querySelector(".logo");
         
@@ -84,21 +87,116 @@ class Header{
             <img src="./img/light-logo.png" alt="Logo">
         </div>
     </div>`)
-        } );
-        
-        let overlayLogo = document.querySelector(".overlayLogo")
+    let overlayLogo = document.querySelector(".overlayLogo")
 
-        console.log(overlayLogo)
-
-        setTimeout(function(){
-            overlayLogo.remove();
-        }, 2000);
-            
+    setTimeout(function(){
+        overlayLogo.remove();
+    }, 2000);
+    } 
+        );   
     }
+/*
+    openOverlayS (){
+        const logoS = document.querySelector(".logoS");
+        
+       logoS.addEventListener('click', () => {
+        body.insertAdjacentHTML ("afterbegin", `<div class = "overlayLogoS">
+        <div class = "logoWhite">
+            <img src="./img/light-logo.png" alt="Logo">
+        </div>
+    </div>`)
+    let overlayLogo = document.querySelector(".overlayLogoS")
+
+    setTimeout(function(){
+        overlayLogo.remove();
+    }, 2000);
+    } 
+        );   
+    }*/
+
+    renderScroll() {
+        window.addEventListener('scroll', () => {
+            this.headerScroll();  
+            this.fixedHeader();
+        });
+    }
+
+    headerScroll(){
+        //einamoji scrolo vieta (aukstis)
+        //susidarome sarasa
+        let links = [];
+        let DOMlinks = document.querySelectorAll(".header > .row nav a");
+        let headerHeight = document.querySelector(".container.header").offsetHeight;
     
+        let height = window.scrollY + headerHeight;
+        for(let i = 0; i<DOMlinks.length; i++){
+            let link = DOMlinks[i];
+           let href = link.href;
+           let split = href.split("#");
+           if(split.length > 1){
+            links.push("#" + split[1]);
+           }
+        }
+       
+        //randame aukscio pozicija
+        let sectionHeigths = [];
+            for (let i = 0; i<links.length; i++){
+                let link = links[i];
+                console.log()
+                if (link === "#"){
+                    sectionHeigths.push(0);
+                    
+                }else{
+                    let section = document.querySelector(link)
+                    sectionHeigths.push(section.offsetTop)
+                    
+                }
+            }
+    
+        let wantedSection = 0;
+        //nustatome kuri is dominanciu yra artimiausia mano esamai pozicijai
+        for(let i=0; i<sectionHeigths.length; i++){
+            let sectionH = sectionHeigths[i];
+            
+            if(sectionH <= height){
+                wantedSection = i;
+            }else{
+               
+                break;
+            }
+        }
+            //jeigu randame artimiausia dominancia
+                //pries tia buvusi nuoroda header > nav netenka active klases
+                //naujoji nuoroda
+                document.querySelector(`#main_header nav > a.active`).classList.remove('active');
+                document.querySelector(`#main_header nav > a[href = "${links[wantedSection]}"]`).classList.add('active'); 
+       
+    }
+
+    fixedHeader() {
+        let firstHeader = document.querySelector('.container.header')
+        let minLogo = document.querySelector('.logo')
+      // let headerActive = document.querySelector(`#main_header nav > a.ref.active`)
+     
+        if (window.scrollY > 200) {
+            firstHeader.classList.add('fixedHeader');
+            minLogo.classList.add('logoMin');
+        }
+    
+        if (window.scrollY <= 200){
+            firstHeader.classList.remove('fixedHeader');
+            minLogo.classList.remove('logoMin');
+           //headerActive.classList.remove('active');
+            //firstHeader.classList.remove('logoMin');
+        }   
+    }
 }
 
 /*
+function  
+}
+/*
+
 function renderHeaderMenu(dataHMenu){
     if (!Array.isArray(dataHMenu)){
         return console.error("Reikia Array");
@@ -108,11 +206,9 @@ function renderHeaderMenu(dataHMenu){
         HTML += `<a href=${dataHMenu[i].ref} class = ${dataHMenu[i].class}>
            ${dataHMenu[i].text}</a>`
     }
-
     let headerMenu = document.querySelector('nav');
     return headerMenu.innerHTML = HTML;
 }
-
 
 /// nuimame overlay klas4, kuri atsiranda tik užkrovus puslapį
 function removeOverlay(){
@@ -160,9 +256,7 @@ setTimeout(function(){
 }
 
 //nuimame papildomą overlayLogo klase
-
 window.addEventListener('scroll', funcScroll);
-
 function funcScroll(){
     return
 }
@@ -171,7 +265,6 @@ window.addEventListener('scroll', () => {
     headerScroll();  
     fixedHeader();
 });
-
 
 function headerScroll(){
     //einamoji scrolo vieta (aukstis)
@@ -226,6 +319,8 @@ function headerScroll(){
     return;
 
 }
+
+
 function fixedHeader() {
     let firstHeader = document.querySelector('.container.header')
     let minLogo = document.querySelector('.logo')
