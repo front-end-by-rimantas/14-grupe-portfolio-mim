@@ -1,5 +1,7 @@
-"use strict"
+/** @format */
 
+"use strict";
+/*
 // Side-menu section
 const side = [
     {
@@ -34,4 +36,4 @@ const side = [
     }
 ];
 
-export default side;
+export default side;*/

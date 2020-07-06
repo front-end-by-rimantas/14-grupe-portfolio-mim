@@ -1,16 +1,17 @@
-@import './reset.css';
-@import './font-awesome.css';
-@import './layout.css';
-@import './variables.css';
-@import './main.css';
-@import './header.css';
-@import './side-menu.css';
+/** @format */
 
+@import "./reset.css";
+@import "./font-awesome.css";
+@import "./layout.css";
+@import "./variables.css";
+@import "./main.css";
+@import "./header.css";
+@import "./side-menu.css";
 
-@import './about.css';
-@import './experience.css';
-@import './portfolio.css';
-@import './services.css';
-@import './testimonials.css';
-@import './blog.css';
-@import './contacts.css';
+@import "./about.css";
+@import "./experience.css";
+@import "./portfolio.css";
+@import "./services.css";
+@import "./testimonials.css";
+@import "./blog.css";
+@import "./contacts.css";

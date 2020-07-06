@@ -1,5 +1,5 @@
 "use strict"
-import side from '../SideMenuData.js';
+/*import side from '../SideMenuData.js';
 
 export default class renderSideList {
     constructor(render) {
@@ -28,4 +28,4 @@ export default class renderSideList {
             }
             this.render.insertAdjacentHTML('afterbegin', HTML);
         }
-}
+}*/

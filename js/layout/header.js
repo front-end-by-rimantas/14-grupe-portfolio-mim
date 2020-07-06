@@ -1,34 +1,35 @@
+/** @format */
+
 "use strict";
-import navigation from '../header_data.js';
+import navigation from "../header_data.js";
 
-class Header{
-    constructor(target){
-        this.target = target
-        
+class Header {
+  constructor(target) {
+    this.target = target;
 
-        this.init();
+    this.init();
+  }
+
+  init() {
+    const DOM = document.querySelector(this.target);
+    if (!DOM) {
+      throw "ERROR: header target location was not found.";
     }
+    this.DOM = DOM;
 
-    init(){
-        const DOM = document.querySelector(this.target);
-        if ( !DOM ) {
-            throw 'ERROR: header target location was not found.';
-        }
-        this.DOM = DOM;
+    this.renderHeader();
+    this.renderHeaderMenu();
+    this.removeOverlay();
+    this.openOverlay();
+    //this.openOverlayS ()
+    this.renderScroll();
+    this.headerScroll();
+    this.fixedHeader();
+  }
 
-        this.renderHeader();
-        this.renderHeaderMenu();
-        this.removeOverlay();
-        this.openOverlay ();
-        //this.openOverlayS ()
-        this.renderScroll();
-        this.headerScroll();
-        this.fixedHeader();
-    }
-
-    renderHeader(){
-        let HTML = "";
-        HTML = `
+  renderHeader() {
+    let HTML = "";
+    HTML = `
         <div class="container header">
         <div class="row">
             <div class = "col-6 col-lg-5 min-width-0">
@@ -49,53 +50,54 @@ class Header{
     <div class="side-menu" id="transferSideMenuContent">
         Side menu
     </div>
-        `  
-        this.DOM.innerHTML = HTML;
+        `;
+    this.DOM.innerHTML = HTML;
+  }
+
+  renderHeaderMenu() {
+    if (!Array.isArray(navigation)) {
+      return console.error("Reikia Array");
     }
 
-    renderHeaderMenu(){
-        if (!Array.isArray(navigation)){
-            return console.error("Reikia Array");
-        }
-       
-        let HTML = "";
-        for (let i = 0; i < navigation.length; i++){
-            HTML += `<a href=${navigation[i].ref} class = ${navigation[i].class}>
-               ${navigation[i].text}</a>`
-        }
-    
-        let headerMenu = document.querySelector('nav');
-        headerMenu.innerHTML = HTML;
+    let HTML = "";
+    for (let i = 0; i < navigation.length; i++) {
+      HTML += `<a href=${navigation[i].ref} class = ${navigation[i].class}>
+               ${navigation[i].text}</a>`;
     }
 
-    removeOverlay(){
-        let overlay = document.querySelector(".overlay")
-        setTimeout(function(){
-          overlay.remove();
-        }, 2000);
-    
-    }
+    let headerMenu = document.querySelector("nav");
+    headerMenu.innerHTML = HTML;
+  }
 
-    openOverlay (){
-        const logo = document.querySelector(".logo");
-        
-        let body = document.querySelector("body");
-        
-       logo.addEventListener('click', () => {
-        body.insertAdjacentHTML ("afterbegin", `<div class = "overlayLogo">
+  removeOverlay() {
+    let overlay = document.querySelector(".overlay");
+    setTimeout(function () {
+      overlay.remove();
+    }, 2000);
+  }
+
+  openOverlay() {
+    const logo = document.querySelector(".logo");
+
+    let body = document.querySelector("body");
+
+    logo.addEventListener("click", () => {
+      body.insertAdjacentHTML(
+        "afterbegin",
+        `<div class = "overlayLogo">
         <div class = "logoWhite">
             <img src="./img/light-logo.png" alt="Logo">
         </div>
-    </div>`)
-    let overlayLogo = document.querySelector(".overlayLogo")
+    </div>`
+      );
+      let overlayLogo = document.querySelector(".overlayLogo");
 
-    setTimeout(function(){
+      setTimeout(function () {
         overlayLogo.remove();
-    }, 2000);
-    } 
-        );   
-    }
-/*
+      }, 2000);
+    });
+  }
+  /*
     openOverlayS (){
         const logoS = document.querySelector(".logoS");
         
@@ -114,82 +116,82 @@ class Header{
         );   
     }*/
 
-    renderScroll() {
-        window.addEventListener('scroll', () => {
-            this.headerScroll();  
-            this.fixedHeader();
-        });
+  renderScroll() {
+    window.addEventListener("scroll", () => {
+      this.headerScroll();
+      this.fixedHeader();
+    });
+  }
+
+  headerScroll() {
+    //einamoji scrolo vieta (aukstis)
+    //susidarome sarasa
+    let links = [];
+    let DOMlinks = document.querySelectorAll(".header > .row nav a");
+    let headerHeight = document.querySelector(".container.header").offsetHeight;
+
+    let height = window.scrollY + headerHeight;
+    for (let i = 0; i < DOMlinks.length; i++) {
+      let link = DOMlinks[i];
+      let href = link.href;
+      let split = href.split("#");
+      if (split.length > 1) {
+        links.push("#" + split[1]);
+      }
     }
 
-    headerScroll(){
-        //einamoji scrolo vieta (aukstis)
-        //susidarome sarasa
-        let links = [];
-        let DOMlinks = document.querySelectorAll(".header > .row nav a");
-        let headerHeight = document.querySelector(".container.header").offsetHeight;
-    
-        let height = window.scrollY + headerHeight;
-        for(let i = 0; i<DOMlinks.length; i++){
-            let link = DOMlinks[i];
-           let href = link.href;
-           let split = href.split("#");
-           if(split.length > 1){
-            links.push("#" + split[1]);
-           }
-        }
-       
-        //randame aukscio pozicija
-        let sectionHeigths = [];
-            for (let i = 0; i<links.length; i++){
-                let link = links[i];
-                console.log()
-                if (link === "#"){
-                    sectionHeigths.push(0);
-                    
-                }else{
-                    let section = document.querySelector(link)
-                    sectionHeigths.push(section.offsetTop)
-                    
-                }
-            }
-    
-        let wantedSection = 0;
-        //nustatome kuri is dominanciu yra artimiausia mano esamai pozicijai
-        for(let i=0; i<sectionHeigths.length; i++){
-            let sectionH = sectionHeigths[i];
-            
-            if(sectionH <= height){
-                wantedSection = i;
-            }else{
-               
-                break;
-            }
-        }
-            //jeigu randame artimiausia dominancia
-                //pries tia buvusi nuoroda header > nav netenka active klases
-                //naujoji nuoroda
-                document.querySelector(`#main_header nav > a.active`).classList.remove('active');
-                document.querySelector(`#main_header nav > a[href = "${links[wantedSection]}"]`).classList.add('active'); 
-       
+    //randame aukscio pozicija
+    let sectionHeigths = [];
+    for (let i = 0; i < links.length; i++) {
+      let link = links[i];
+      console.log();
+      if (link === "#") {
+        sectionHeigths.push(0);
+      } else {
+        let section = document.querySelector(link);
+        sectionHeigths.push(section.offsetTop);
+      }
     }
 
-    fixedHeader() {
-        let firstHeader = document.querySelector('.container.header')
-        let minLogo = document.querySelector('.logo')
-      // let headerActive = document.querySelector(`#main_header nav > a.ref.active`)
-     
-        if (window.scrollY > 200) {
-            firstHeader.classList.add('fixedHeader');
-            minLogo.classList.add('logoMin');
-        }
-    
-        if (window.scrollY <= 200){
-            firstHeader.classList.remove('fixedHeader');
-            minLogo.classList.remove('logoMin');
-           //headerActive.classList.remove('active');
-            //firstHeader.classList.remove('logoMin');
-        }   
+    let wantedSection = 0;
+    //nustatome kuri is dominanciu yra artimiausia mano esamai pozicijai
+    for (let i = 0; i < sectionHeigths.length; i++) {
+      let sectionH = sectionHeigths[i];
+
+      if (sectionH <= height) {
+        wantedSection = i;
+      } else {
+        break;
+      }
     }
+    //jeigu randame artimiausia dominancia
+    //pries tia buvusi nuoroda header > nav netenka active klases
+    //naujoji nuoroda
+    document
+      .querySelector(`#main_header nav > a.active`)
+      .classList.remove("active");
+    document
+      .querySelector(`#main_header nav > a[href = "${links[wantedSection]}"]`)
+      .classList.add("active");
+  }
+
+  fixedHeader() {
+    let firstHeader = document.querySelector(".container.header");
+    let minLogo = document.querySelector(".logo");
+    // let headerActive = document.querySelector(`#main_header nav > a.ref.active`)
+
+    if (window.scrollY > 200) {
+      firstHeader.classList.add("fixedHeader");
+      minLogo.classList.add("logoMin");
+    }
+
+    if (window.scrollY <= 200) {
+      firstHeader.classList.remove("fixedHeader");
+      minLogo.classList.remove("logoMin");
+      //headerActive.classList.remove('active');
+      //firstHeader.classList.remove('logoMin');
+    }
+  }
 }
 
 /*
@@ -352,5 +354,4 @@ function setUpHeader(){
 
 export default setUpHeader;*/
 
-export default Header
-
+export default Header;

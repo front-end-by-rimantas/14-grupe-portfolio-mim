@@ -1,19 +1,21 @@
-"use strict"
+/** @format */
 
-class Introduction{
-    constructor(target){
-        this.target = target;
-        this.render()
+"use strict";
+
+class Introduction {
+  constructor(target) {
+    this.target = target;
+    this.render();
+  }
+
+  render() {
+    const DOM = document.getElementById(this.target);
+    if (!DOM) {
+      throw "ERROR: OMG.. go fix Achievements!!";
     }
 
-    render(){
-        const DOM = document.getElementById(this.target);
-        if ( !DOM ) {
-            throw 'ERROR: OMG.. go fix Achievements!!';
-        }
-
-        let HTML = '';
-        HTML += `<div class="row">
+    let HTML = "";
+    HTML += `<div class="row">
         <div class = "col-6 col-md-7 m-l-md-0 col-sm-12 col-xs-11 m-l-xs-1">
             <div class = "text">
                 <h5>Hello, my name is</h5>
@@ -28,11 +30,10 @@ class Introduction{
             <img src="./img/author.png" alt="author">
             </div>
         </div> 
-    </div>`
-    
-        return DOM.innerHTML = HTML;
+    </div>`;
 
-    }
+    return (DOM.innerHTML = HTML);
+  }
 }
 
 export default Introduction;
